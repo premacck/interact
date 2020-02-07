@@ -1,0 +1,214 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlHighlight">@color/color_e5e5e5</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!-- Starting activity theme -->
+    <style name="AppTheme.Launcher">
+        <item name="windowActionBar">false</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowBackground">@drawable/splash</item>
+    </style>
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/enter_anim</item>
+        <item name="android:windowExitAnimation">@anim/exit_anim</item>
+    </style>
+
+    <style name="full_screen_dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="ErrorEditText">
+        <item name="android:textSize">8sp</item>
+        <item name="android:textColor">@android:color/holo_red_dark</item>
+    </style>
+
+    <style name="HintEditText">
+        <item name="android:textSize">@dimen/txt_size_12sp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="loginEditTex">
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textColorHint">@color/colorPrimaryDark</item>
+        <item name="android:textSize">@dimen/txt_size_12sp</item>
+        <item name="android:backgroundTint">@color/Red</item>
+        <item name="colorAccent">@color/LimeGreen</item>
+    </style>
+
+    <style name="MatchWidthMatchHeight">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="MatchWidthWrapHeight">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="WrapWidthWrapHeight">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="WrapWidthMatchHeight">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="ThinLine">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/margin_1dp</item>
+        <item name="android:background">@color/color_e5e5e5</item>
+    </style>
+
+    <style name="MediumThinLine">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/margin_2dp</item>
+        <item name="android:background">@color/color_e5e5e5</item>
+    </style>
+
+    <style name="ShadowTop" parent="MatchWidthWrapHeight">
+        <item name="android:layout_height">@dimen/margin_28dp</item>
+        <item name="android:background">@drawable/shadow_top</item>
+    </style>
+
+    <style name="ShadowBottom" parent="MatchWidthWrapHeight">
+        <item name="android:layout_height">@dimen/margin_28dp</item>
+        <item name="android:background">@drawable/shadow_bottom</item>
+    </style>
+
+    <!-- set the rounded drawable as registration_background to your bottom sheet -->
+    <style name="BottomSheet" parent="@style/Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/rounded_dialog</item>
+    </style>
+
+    <style name="BaseBottomSheetDialog" parent="@style/Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="android:statusBarColor">@color/transparent</item>
+        <item name="bottomSheetStyle">@style/BottomSheet</item>
+    </style>
+
+    <style name="TextWrapWrap" parent="WrapWidthWrapHeight">
+        <item name="android:textSize">@dimen/txt_size_14sp</item>
+        <item name="android:textColor">@color/color_5B5B5F</item>
+    </style>
+
+    <style name="TextMatchWrap" parent="MatchWidthWrapHeight">
+        <item name="android:textSize">@dimen/txt_size_14sp</item>
+        <item name="android:textColor">@color/color_5B5B5F</item>
+    </style>
+
+    <style name="Text12WrapWrap" parent="TextWrapWrap">
+        <item name="android:textSize">@dimen/txt_size_12sp</item>
+    </style>
+
+    <style name="Text12MatchWrap" parent="TextMatchWrap">
+        <item name="android:textSize">@dimen/txt_size_12sp</item>
+    </style>
+
+    <style name="Text12BoldWrapWrap" parent="TextWrapWrap">
+        <item name="android:textSize">@dimen/txt_size_12sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text16BoldWrapWrap" parent="TextWrapWrap">
+        <item name="android:textSize">@dimen/txt_size_16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text16BoldMatchWrap" parent="TextMatchWrap">
+        <item name="android:textSize">@dimen/txt_size_16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text16MatchWrap" parent="TextMatchWrap">
+        <item name="android:textSize">@dimen/txt_size_16sp</item>
+    </style>
+
+    <style name="Text16WrapWrap" parent="TextWrapWrap">
+        <item name="android:textSize">@dimen/txt_size_16sp</item>
+    </style>
+
+    <style name="Text18BoldWrapWrap" parent="TextWrapWrap">
+        <item name="android:textSize">@dimen/txt_size_18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text18BoldMatchWrap" parent="TextMatchWrap">
+        <item name="android:textSize">@dimen/txt_size_18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text14BoldMatchWrap" parent="TextMatchWrap">
+        <item name="android:textSize">@dimen/txt_size_14sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text14BoldWrapWrap" parent="TextWrapWrap">
+        <item name="android:textSize">@dimen/txt_size_14sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text14WrapWrap" parent="TextWrapWrap">
+        <item name="android:textSize">@dimen/txt_size_14sp</item>
+    </style>
+
+    <style name="Text12BoldMatchWrap" parent="TextMatchWrap">
+        <item name="android:textSize">@dimen/txt_size_12sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text14MatchWrap" parent="TextMatchWrap">
+        <item name="android:textSize">@dimen/txt_size_14sp</item>
+    </style>
+
+    <style name="Text12ItalicWrapWrap" parent="TextWrapWrap">
+        <item name="android:textSize">@dimen/txt_size_12sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="BorderlessButton" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/txt_size_14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/DodgerBlue</item>
+    </style>
+
+    <style name="ButtonPrimary" parent="Widget.AppCompat.Button">">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/bg_btn_primary</item>
+        <item name="android:textSize">@dimen/txt_size_16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+</resources>

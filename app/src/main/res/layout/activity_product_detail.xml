@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+  <androidx.drawerlayout.widget.DrawerLayout
+    android:id="@+id/dl_product_detail"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    app:layout_constraintBottom_toTopOf="@+id/v_cashback_top_indicator"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <include layout="@layout/content_product_detail" />
+
+    <include layout="@layout/drawer_product_detail" />
+
+  </androidx.drawerlayout.widget.DrawerLayout>
+
+  <View
+    android:id="@+id/v_cashback_top_indicator"
+    style="@style/MediumThinLine"
+    android:background="@color/color_F4D700"
+    app:layout_constraintBottom_toTopOf="@+id/tv_cashback_members_info"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent" />
+
+  <TextView
+    android:id="@+id/tv_cashback_members_info"
+    android:layout_width="@dimen/margin_0dp"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:drawableStart="@drawable/ic_arrow_right_blue"
+    android:drawableEnd="@drawable/ic_info"
+    android:drawablePadding="@dimen/margin_16dp"
+    android:foreground="?android:selectableItemBackground"
+    android:paddingStart="@dimen/margin_20dp"
+    android:paddingTop="@dimen/margin_8dp"
+    android:paddingEnd="@dimen/margin_20dp"
+    android:paddingBottom="@dimen/margin_8dp"
+    android:text="@string/get_cashback_detail_info_x"
+    app:layout_constraintBottom_toTopOf="@+id/cv_bottom_layout"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    tools:ignore="UnusedAttribute" />
+
+  <androidx.constraintlayout.widget.Group
+    android:id="@+id/group_cashback_info"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:visibility="gone"
+    app:constraint_referenced_ids="v_cashback_top_indicator,tv_cashback_members_info" />
+
+  <include layout="@layout/item_add_product" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

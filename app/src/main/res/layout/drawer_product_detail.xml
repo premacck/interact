@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="300dp"
+  android:layout_height="match_parent"
+  android:layout_gravity="end"
+  android:background="@color/white"
+  android:fillViewport="true">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+      android:id="@+id/tv_drawer_header"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:paddingTop="@dimen/margin_26dp"
+      android:paddingBottom="@dimen/margin_26dp"
+      android:paddingStart="@dimen/margin_16dp"
+      android:paddingEnd="@dimen/margin_16dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      android:textStyle="bold"
+      android:textSize="@dimen/txt_size_18sp"
+      android:text="@string/product_details" />
+
+    <TextView
+      android:id="@+id/tv_product_description"
+      style="@style/Text14MatchWrap"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:padding="@dimen/margin_16dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tv_drawer_header"
+      tools:text="@string/product_one_description" />
+
+    <ImageView
+      android:id="@+id/iv_check_1"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/margin_20dp"
+      android:layout_marginTop="@dimen/margin_22dp"
+      android:contentDescription="@string/image"
+      android:paddingTop="@dimen/margin_4dp"
+      android:src="@drawable/ic_check_dark"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tv_product_description" />
+
+    <TextView
+      android:id="@+id/tv_point_1"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/margin_22dp"
+      android:paddingStart="@dimen/margin_20dp"
+      android:paddingEnd="@dimen/margin_16dp"
+      android:text="@string/point_one_description"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toEndOf="@+id/iv_check_1"
+      app:layout_constraintTop_toBottomOf="@+id/tv_product_description" />
+
+    <ImageView
+      android:id="@+id/iv_check_2"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/margin_20dp"
+      android:layout_marginTop="@dimen/margin_22dp"
+      android:contentDescription="@string/image"
+      android:paddingTop="@dimen/margin_4dp"
+      android:src="@drawable/ic_check_dark"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tv_point_1" />
+
+    <TextView
+      android:id="@+id/tv_point_2"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/margin_22dp"
+      android:paddingStart="@dimen/margin_20dp"
+      android:paddingEnd="@dimen/margin_16dp"
+      android:text="@string/point_two_description"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toEndOf="@+id/iv_check_2"
+      app:layout_constraintTop_toBottomOf="@+id/tv_point_1" />
+
+    <androidx.constraintlayout.widget.Group
+      android:id="@+id/group_check_point"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:visibility="gone"
+      app:constraint_referenced_ids="iv_check_1,iv_check_2,tv_point_1,tv_point_2" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

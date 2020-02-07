@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="InteraToolbar">
+        <attr name="backgroundColor" format="color" />
+        <attr name="backNavigationDrawable" format="reference" />
+        <attr name="toolbarTitle" format="reference" />
+        <attr name="titleTextColor" format="color" />
+        <attr name="menuResource" format="reference" />
+        <attr name="toolbarElevation" format="float" />
+    </declare-styleable>
+
+    <declare-styleable name="ProductItem">
+        <attr name="productThumbnailResource" format="reference" />
+        <attr name="productCaption" format="string" />
+        <attr name="productCompany" format="string" />
+        <attr name="productPrice" format="string" />
+        <attr name="productPriceAssociated" format="string" />
+        <attr name="productPriceAdditionalAssociated" format="string" />
+        <attr name="isInList" format="boolean" />
+        <attr name="showBars" format="boolean" />
+    </declare-styleable>
+
+</resources>

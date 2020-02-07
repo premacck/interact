@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:fillViewport="true">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.techmesystem.intera.base.view.InteraToolbar
+      android:id="@+id/toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:backNavigationDrawable="@drawable/ic_back_arrow"
+      app:backgroundColor="@color/white"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:menuResource="@menu/menu_favorite_share"
+      app:toolbarElevation="8" />
+
+    <ImageView
+      android:id="@+id/iv_image_thumbnails"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:contentDescription="@string/image"
+      android:padding="@dimen/margin_24dp"
+      android:src="@drawable/product_two"
+      app:layout_constraintDimensionRatio="16:9"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <com.airbnb.epoxy.Carousel
+      android:id="@+id/c_tags"
+      android:layout_width="@dimen/margin_0dp"
+      android:layout_height="wrap_content"
+      app:itemSpacing="@dimen/margin_24dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/iv_image_thumbnails"
+      tools:listitem="@layout/item_tag" />
+
+    <TextView
+      android:id="@+id/tv_caption"
+      style="@style/Text16BoldMatchWrap"
+      android:layout_marginTop="@dimen/margin_16dp"
+      android:paddingStart="@dimen/margin_16dp"
+      android:paddingEnd="@dimen/margin_16dp"
+      android:text="@string/medicamento"
+      android:textColor="@color/color_4063A5"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/c_tags" />
+
+    <TextView
+      android:id="@+id/tv_company"
+      style="@style/Text12MatchWrap"
+      android:paddingStart="@dimen/margin_16dp"
+      android:paddingEnd="@dimen/margin_16dp"
+      android:text="@string/merck"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tv_caption" />
+
+    <TextView
+      android:id="@+id/tv_price"
+      style="@style/Text16WrapWrap"
+      android:layout_width="0dp"
+      android:layout_marginStart="@dimen/margin_16dp"
+      android:layout_marginEnd="@dimen/margin_4dp"
+      android:paddingStart="@dimen/margin_8dp"
+      android:paddingTop="@dimen/margin_8dp"
+      android:paddingEnd="@dimen/margin_0dp"
+      android:paddingBottom="@dimen/margin_8dp"
+      android:text="@string/average_price_x"
+      app:layout_constraintEnd_toStartOf="@+id/btn_compare_and_prove"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="@+id/btn_compare_and_prove" />
+
+    <Button
+      android:id="@+id/btn_compare_and_prove"
+      style="@style/BorderlessButton"
+      android:layout_width="0dp"
+      android:layout_marginStart="@dimen/margin_4dp"
+      android:layout_marginTop="@dimen/margin_18dp"
+      android:layout_marginEnd="@dimen/margin_16dp"
+      android:text="@string/compare_and_prove"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toEndOf="@+id/tv_price"
+      app:layout_constraintTop_toBottomOf="@+id/tv_company" />
+
+    <androidx.constraintlayout.widget.Barrier
+      android:id="@+id/b_bottom_1"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:barrierDirection="bottom"
+      app:constraint_referenced_ids="btn_compare_and_prove,tv_price" />
+
+    <View
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:background="@drawable/bg_rounded_corners"
+      app:layout_constraintBottom_toBottomOf="@+id/b_bottom_1"
+      app:layout_constraintEnd_toEndOf="@+id/btn_compare_and_prove"
+      app:layout_constraintStart_toStartOf="@+id/tv_price"
+      app:layout_constraintTop_toTopOf="@+id/btn_compare_and_prove" />
+
+    <TextView
+      android:id="@+id/tv_not_associated_header"
+      style="@style/Text14WrapWrap"
+      android:layout_marginStart="@dimen/margin_16dp"
+      android:layout_marginTop="@dimen/margin_10dp"
+      android:paddingTop="@dimen/margin_10dp"
+      android:text="@string/not_associated"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/b_bottom_1" />
+
+    <TextView
+      android:id="@+id/tv_not_associated_text"
+      style="@style/Text14BoldWrapWrap"
+      android:layout_marginStart="@dimen/margin_16dp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tv_not_associated_header"
+      tools:text="R$ 26,71" />
+
+    <LinearLayout
+      android:id="@+id/ll_associated"
+      android:layout_width="@dimen/margin_0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="@dimen/margin_16dp"
+      android:background="@drawable/bg_rounded_corners"
+      android:orientation="vertical"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="@+id/tv_not_associated_header"
+      app:layout_constraintWidth_percent="0.45">
+
+      <TextView
+        android:id="@+id/tv_associated_header"
+        style="@style/Text14WrapWrap"
+        android:layout_marginStart="@dimen/margin_16dp"
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:text="@string/not_associated" />
+
+      <TextView
+        android:id="@+id/tv_associated_text"
+        style="@style/Text14BoldWrapWrap"
+        android:layout_marginStart="@dimen/margin_16dp"
+        tools:text="R$ 26,71" />
+
+      <TextView
+        android:id="@+id/tv_additional_associated_text"
+        style="@style/Text14WrapWrap"
+        android:layout_marginStart="@dimen/margin_16dp"
+        android:layout_marginBottom="@dimen/margin_24dp"
+        android:textColor="@color/Blue"
+        tools:text="+ R$1,89 Interacash" />
+
+    </LinearLayout>
+
+    <TextView
+      android:id="@+id/tv_cashback"
+      style="@style/Text12WrapWrap"
+      android:background="@drawable/bg_filled_yellow_rounded_corner"
+      android:drawableEnd="@drawable/ic_next"
+      android:gravity="center"
+      android:paddingStart="@dimen/margin_16dp"
+      android:paddingTop="@dimen/margin_2dp"
+      android:paddingEnd="@dimen/margin_2dp"
+      android:paddingBottom="@dimen/margin_2dp"
+      android:stateListAnimator="@animator/scale_on_touch"
+      android:text="@string/cashback_x"
+      app:layout_constraintBottom_toBottomOf="@+id/ll_associated"
+      app:layout_constraintEnd_toEndOf="@+id/ll_associated"
+      app:layout_constraintStart_toStartOf="@+id/ll_associated"
+      app:layout_constraintTop_toBottomOf="@+id/ll_associated" />
+
+    <androidx.constraintlayout.widget.Group
+      android:id="@+id/group_in_stock"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:constraint_referenced_ids="tv_not_associated_header,tv_not_associated_text,ll_associated,tv_cashback" />
+
+    <TextView
+      android:id="@+id/tv_out_of_stock_header"
+      style="@style/Text16BoldWrapWrap"
+      android:layout_marginStart="@dimen/margin_16dp"
+      android:layout_marginTop="@dimen/margin_10dp"
+      android:text="@string/product_out_of_stock"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/b_bottom_1" />
+
+    <TextView
+      android:id="@+id/tv_tell_me_when_it_arrives_text"
+      style="@style/Text12WrapWrap"
+      android:layout_marginStart="@dimen/margin_16dp"
+      android:layout_marginTop="@dimen/margin_10dp"
+      android:text="@string/tell_me_when_it_arrives"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tv_out_of_stock_header"
+      app:layout_goneMarginTop="@dimen/margin_10dp" />
+
+    <EditText
+      android:id="@+id/et_notify_name"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/margin_16dp"
+      android:layout_marginTop="@dimen/margin_10dp"
+      android:layout_marginEnd="@dimen/margin_16dp"
+      android:background="@drawable/bg_rounded_corners"
+      android:ellipsize="end"
+      android:hint="@string/type_your_name"
+      android:importantForAutofill="no"
+      android:inputType="textCapWords"
+      android:padding="@dimen/margin_16dp"
+      android:paddingStart="@dimen/margin_16dp"
+      android:paddingEnd="130dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/tv_tell_me_when_it_arrives_text"
+      tools:text="@tools:sample/lorem/random" />
+
+    <TextView
+      android:id="@+id/tv_notify_me"
+      style="@style/Text16BoldWrapWrap"
+      android:layout_width="wrap_content"
+      android:layout_height="0dp"
+      android:background="@drawable/bg_btn_primary"
+      android:elevation="0dp"
+      android:gravity="center"
+      android:paddingStart="@dimen/margin_28dp"
+      android:paddingEnd="@dimen/margin_28dp"
+      android:text="@string/notify_me"
+      android:textAllCaps="true"
+      android:textColor="@color/white"
+      app:layout_constraintBottom_toBottomOf="@+id/et_notify_name"
+      app:layout_constraintEnd_toEndOf="@+id/et_notify_name"
+      app:layout_constraintTop_toTopOf="@+id/et_notify_name" />
+
+    <androidx.constraintlayout.widget.Group
+      android:id="@+id/group_out_of_stock"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:visibility="invisible"
+      app:constraint_referenced_ids="et_notify_name,tv_tell_me_when_it_arrives_text,tv_out_of_stock_header,tv_notify_me" />
+
+    <androidx.constraintlayout.widget.Barrier
+      android:id="@+id/b_stock_layout_bottom"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:barrierDirection="bottom"
+      app:constraint_referenced_ids="et_notify_name,tv_cashback" />
+
+    <View
+      android:id="@+id/separator_1"
+      style="@style/ThinLine"
+      android:layout_marginStart="@dimen/margin_16dp"
+      android:layout_marginTop="@dimen/margin_28dp"
+      android:layout_marginEnd="@dimen/margin_16dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/b_stock_layout_bottom" />
+
+    <TextView
+      android:id="@+id/tv_product_detail"
+      style="@style/Text16MatchWrap"
+      android:background="?android:selectableItemBackground"
+      android:drawableEnd="@drawable/ic_next"
+      android:gravity="center_vertical"
+      android:padding="@dimen/margin_16dp"
+      android:text="@string/product_details"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/separator_1" />
+
+    <View
+      android:id="@+id/separator_2"
+      style="@style/ThinLine"
+      android:layout_marginStart="@dimen/margin_16dp"
+      android:layout_marginEnd="@dimen/margin_16dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tv_product_detail" />
+
+    <TextView
+      android:id="@+id/tv_package_leaflet"
+      style="@style/Text16MatchWrap"
+      android:background="?android:selectableItemBackground"
+      android:drawableEnd="@drawable/ic_next"
+      android:gravity="center_vertical"
+      android:padding="@dimen/margin_16dp"
+      android:text="@string/package_leaflet"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/separator_2" />
+
+    <View
+      android:id="@+id/separator_3"
+      style="@style/ThinLine"
+      android:layout_marginStart="@dimen/margin_16dp"
+      android:layout_marginEnd="@dimen/margin_16dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tv_package_leaflet" />
+
+    <androidx.constraintlayout.widget.Group
+      android:id="@+id/group_package_leaflet"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:constraint_referenced_ids="separator_3,tv_package_leaflet" />
+
+    <ImageView
+      android:id="@+id/iv_draw_cup"
+      android:layout_width="@dimen/margin_0dp"
+      android:layout_height="@dimen/margin_0dp"
+      android:layout_marginStart="@dimen/margin_16dp"
+      android:layout_marginTop="@dimen/margin_16dp"
+      android:contentDescription="@string/image"
+      android:src="@drawable/draw_cup"
+      app:layout_constraintDimensionRatio="1:1"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/separator_2"
+      app:layout_constraintWidth_percent="0.3" />
+
+    <TextView
+      android:id="@+id/tv_next_draw_starts_in_text"
+      android:layout_width="@dimen/margin_0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/margin_18dp"
+      android:layout_marginEnd="@dimen/margin_16dp"
+      android:text="@string/next_draw_of_x_in"
+      android:textColor="@color/DodgerBlue"
+      android:textStyle="bold"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toEndOf="@id/iv_draw_cup"
+      app:layout_constraintTop_toBottomOf="@id/separator_2" />
+
+    <View
+      android:id="@+id/separator_draw"
+      style="@style/ThinLine"
+      android:layout_width="0dp"
+      android:layout_marginTop="@dimen/margin_10dp"
+      android:layout_marginEnd="@dimen/margin_36dp"
+      android:background="@color/color_5B5B5F"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toEndOf="@+id/iv_draw_cup"
+      app:layout_constraintTop_toBottomOf="@id/tv_next_draw_starts_in_text" />
+
+    <douglasspgyn.com.github.circularcountdown.CircularCountdown
+      android:id="@+id/cc_hours"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:layout_marginStart="@dimen/margin_16dp"
+      android:layout_marginTop="@dimen/margin_16dp"
+      app:countdownBackgroundColor="@color/colorPrimary"
+      app:countdownForegroundColor="@color/LightBlue"
+      app:countdownTextColor="@color/buttonPrimary"
+      app:countdownTextSize="@dimen/txt_size_14sp"
+      app:layout_constraintDimensionRatio="1:1"
+      app:layout_constraintStart_toEndOf="@+id/iv_draw_cup"
+      app:layout_constraintTop_toBottomOf="@+id/separator_draw"
+      app:layout_constraintWidth_percent="0.15" />
+
+    <TextView
+      android:id="@+id/tv_hours"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/hours"
+      android:textColor="@color/color_5B5B5F"
+      android:textSize="@dimen/txt_size_14sp"
+      android:textStyle="bold"
+      app:layout_constraintEnd_toEndOf="@+id/cc_hours"
+      app:layout_constraintStart_toStartOf="@+id/cc_hours"
+      app:layout_constraintTop_toBottomOf="@+id/cc_hours" />
+
+    <douglasspgyn.com.github.circularcountdown.CircularCountdown
+      android:id="@+id/cc_minutes"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:layout_marginStart="@dimen/margin_16dp"
+      android:layout_marginTop="@dimen/margin_16dp"
+      app:countdownBackgroundColor="@color/colorPrimary"
+      app:countdownForegroundColor="@color/LightBlue"
+      app:countdownTextColor="@color/buttonPrimary"
+      app:countdownTextSize="@dimen/txt_size_14sp"
+      app:layout_constraintDimensionRatio="1:1"
+      app:layout_constraintStart_toEndOf="@+id/cc_hours"
+      app:layout_constraintTop_toBottomOf="@+id/separator_draw"
+      app:layout_constraintWidth_percent="0.15" />
+
+    <TextView
+      android:id="@+id/tv_minutes"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/minutes"
+      android:textColor="@color/color_5B5B5F"
+      android:textSize="@dimen/txt_size_14sp"
+      android:textStyle="bold"
+      app:layout_constraintEnd_toEndOf="@+id/cc_minutes"
+      app:layout_constraintStart_toStartOf="@+id/cc_minutes"
+      app:layout_constraintTop_toBottomOf="@+id/cc_minutes" />
+
+    <douglasspgyn.com.github.circularcountdown.CircularCountdown
+      android:id="@+id/cc_seconds"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:layout_marginStart="@dimen/margin_16dp"
+      android:layout_marginTop="@dimen/margin_16dp"
+      app:countdownBackgroundColor="@color/colorPrimary"
+      app:countdownForegroundColor="@color/LightBlue"
+      app:countdownTextColor="@color/buttonPrimary"
+      app:countdownTextSize="@dimen/txt_size_14sp"
+      app:layout_constraintDimensionRatio="1:1"
+      app:layout_constraintStart_toEndOf="@+id/cc_minutes"
+      app:layout_constraintTop_toBottomOf="@+id/separator_draw"
+      app:layout_constraintWidth_percent="0.15" />
+
+    <TextView
+      android:id="@+id/tv_seconds"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/seconds"
+      android:textColor="@color/color_5B5B5F"
+      android:textSize="@dimen/txt_size_14sp"
+      android:textStyle="bold"
+      app:layout_constraintEnd_toEndOf="@+id/cc_seconds"
+      app:layout_constraintStart_toStartOf="@+id/cc_seconds"
+      app:layout_constraintTop_toBottomOf="@+id/cc_seconds" />
+
+    <androidx.constraintlayout.widget.Barrier
+      android:id="@+id/b_bottom_3"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:barrierDirection="bottom"
+      app:constraint_referenced_ids="iv_draw_cup,tv_seconds" />
+
+    <Button
+      android:id="@+id/btn_buy_and_participate"
+      android:layout_width="@dimen/margin_0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/margin_16dp"
+      android:layout_marginTop="@dimen/margin_10dp"
+      android:layout_marginEnd="@dimen/margin_16dp"
+      android:background="@drawable/bg_blue_curved_bottom"
+      android:text="@string/buy_and_participate"
+      android:textColor="@color/white"
+      android:textStyle="bold"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/b_bottom_3" />
+
+    <androidx.constraintlayout.widget.Group
+      android:id="@+id/group_next_draw"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:visibility="gone"
+      app:constraint_referenced_ids="iv_draw_cup,tv_next_draw_starts_in_text,separator_draw,cc_hours,tv_hours,cc_minutes,tv_minutes,cc_seconds,tv_seconds,btn_buy_and_participate" />
+
+    <androidx.constraintlayout.widget.Barrier
+      android:id="@+id/b_bottom_2"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:barrierDirection="bottom"
+      app:constraint_referenced_ids="separator_3,btn_buy_and_participate" />
+
+    <TextView
+      android:id="@+id/tv_equivalent_drugs"
+      style="@style/Text16BoldWrapWrap"
+      android:layout_marginStart="@dimen/margin_16dp"
+      android:layout_marginTop="@dimen/margin_20dp"
+      android:text="@string/equivalent_drugs"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/b_bottom_2" />
+
+    <com.techmesystem.intera.productdetail.view.ProductItem
+      android:id="@+id/pi_equivalent_drugs"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/margin_20dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tv_equivalent_drugs"
+      app:productCaption="@string/product_two_caption_short"
+      app:productCompany="@string/product_two_company"
+      app:productPrice="26,71"
+      app:productPriceAdditionalAssociated="1,89"
+      app:productPriceAssociated="18,95"
+      app:productThumbnailResource="@drawable/product_two" />
+
+    <TextView
+      android:id="@+id/tv_also_check_it_out"
+      style="@style/Text16BoldWrapWrap"
+      android:layout_marginStart="@dimen/margin_16dp"
+      android:layout_marginTop="@dimen/margin_20dp"
+      android:text="@string/also_check_it_out"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/pi_equivalent_drugs" />
+
+    <com.techmesystem.intera.productdetail.view.ProductItem
+      android:id="@+id/pi_also_check_it_out"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/margin_20dp"
+      android:layout_marginBottom="@dimen/margin_28dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tv_also_check_it_out"
+      app:productCaption="@string/product_one_caption"
+      app:productCompany="@string/product_one_company"
+      app:productPrice="70,00"
+      app:productPriceAdditionalAssociated="7,00"
+      app:productPriceAssociated="70,00"
+      app:productThumbnailResource="@drawable/product_one" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

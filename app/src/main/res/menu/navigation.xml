@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/intera_ids"
+        android:icon="@drawable/home_icon"
+        android:title="Intera" />
+
+    <item
+        android:id="@+id/favourite_ids"
+        android:icon="@drawable/favorite_icon"
+        android:title="S + T" />
+
+    <item
+        android:id="@+id/support_ids"
+        android:icon="@drawable/support_icon"
+        android:title="Ajuda 24h" />
+
+    <item
+        android:id="@+id/social_ids"
+        android:icon="@drawable/social_icon"
+        android:title="Sacola" />
+
+    <item
+        android:id="@+id/profile_ids"
+        android:icon="@drawable/profile_icon"
+        android:title="Perfil" />
+</menu>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+  <View
+    android:id="@+id/add_product_top_shadow"
+    android:layout_width="@dimen/margin_0dp"
+    android:layout_height="@dimen/margin_28dp"
+    android:background="@drawable/shadow_top"
+    app:layout_constraintBottom_toTopOf="@+id/cv_bottom_layout"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent" />
+
+  <androidx.cardview.widget.CardView
+    android:id="@+id/cv_bottom_layout"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    app:cardElevation="@dimen/margin_36dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+      <androidx.cardview.widget.CardView
+        android:id="@+id/cv_selection_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_8dp"
+        android:layout_marginTop="@dimen/margin_8dp"
+        android:layout_marginEnd="@dimen/margin_4dp"
+        android:layout_marginBottom="@dimen/margin_8dp"
+        app:cardCornerRadius="@dimen/margin_6dp"
+        app:cardElevation="@dimen/margin_4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_add_product"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+          android:id="@+id/tv_selection_count"
+          style="@style/Text16BoldWrapWrap"
+          android:background="@drawable/bg_grey_round_6dp"
+          android:drawableEnd="@drawable/ic_half_arrow_down"
+          android:drawablePadding="@dimen/margin_16dp"
+          android:gravity="center"
+          android:padding="@dimen/margin_16dp"
+          android:textColor="@color/black"
+          tools:text="1" />
+
+      </androidx.cardview.widget.CardView>
+
+      <Button
+        android:id="@+id/btn_add_product"
+        style="@style/ButtonPrimary"
+        android:layout_width="0dp"
+        android:layout_marginStart="@dimen/margin_4dp"
+        android:layout_marginTop="@dimen/margin_8dp"
+        android:layout_marginEnd="@dimen/margin_8dp"
+        android:layout_marginBottom="@dimen/margin_8dp"
+        android:paddingTop="@dimen/margin_16dp"
+        android:paddingBottom="@dimen/margin_16dp"
+        android:text="@string/add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_favorite"
+        app:layout_constraintStart_toEndOf="@+id/cv_selection_count"
+        app:layout_constraintTop_toTopOf="parent" />
+
+      <ImageView
+        android:id="@+id/btn_favorite"
+        android:layout_width="@dimen/margin_0dp"
+        android:layout_height="@dimen/margin_0dp"
+        android:layout_marginTop="@dimen/margin_8dp"
+        android:layout_marginEnd="@dimen/margin_8dp"
+        android:layout_marginBottom="@dimen/margin_8dp"
+        android:background="@drawable/bg_grey_round_6dp"
+        android:contentDescription="@string/image"
+        android:padding="@dimen/margin_10dp"
+        android:src="@drawable/ic_favorite_thin"
+        android:stateListAnimator="@animator/scale_on_touch"
+        android:tint="@color/color_5B5B5F"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_add_product"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.13" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+  </androidx.cardview.widget.CardView>
+</merge>

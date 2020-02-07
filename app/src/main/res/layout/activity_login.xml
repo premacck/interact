@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/White"
+    android:orientation="vertical"
+    tools:context=".LoginActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/backMe_ids"
+            android:layout_width="@dimen/margin_56dp"
+            android:layout_height="@dimen/margin_56dp"
+            android:padding="@dimen/margin_4dp"
+            android:src="@drawable/ic_back_arrow" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Login"
+            android:textStyle="bold"
+            android:textSize="@dimen/txt_size_18sp" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/margin_16dp"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_24dp"
+            android:hint="Digite seu e-mail"
+            android:textColorHint="@color/black"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusBottomEnd="@dimen/margin_4dp"
+            app:boxCornerRadiusBottomStart="@dimen/margin_4dp"
+            app:boxCornerRadiusTopEnd="@dimen/margin_4dp"
+            app:boxCornerRadiusTopStart="@dimen/margin_4dp"
+            app:boxStrokeColor="@color/colorPrimary"
+            app:boxStrokeWidth="@dimen/margin_1dp"
+            app:errorTextAppearance="@style/ErrorEditText"
+            app:hintTextAppearance="@style/HintEditText">
+
+            <AutoCompleteTextView
+                android:id="@+id/userNameEt_ids"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:paddingLeft="@dimen/margin_8dp"
+                android:paddingTop="@dimen/margin_16dp"
+                android:paddingRight="@dimen/margin_8dp"
+                android:paddingBottom="@dimen/margin_16dp"
+                android:singleLine="true"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/txt_size_14sp"
+                android:theme="@style/loginEditTex"
+                tools:ignore="MissingPrefix" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16dp"
+            android:hint="Digite sua senha"
+            android:textColorHint="@color/black"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusBottomEnd="@dimen/margin_4dp"
+            app:boxCornerRadiusBottomStart="@dimen/margin_4dp"
+            app:boxCornerRadiusTopEnd="@dimen/margin_4dp"
+            app:boxCornerRadiusTopStart="@dimen/margin_4dp"
+            app:boxStrokeColor="@color/colorPrimary"
+            app:boxStrokeWidth="@dimen/margin_1dp"
+            app:errorTextAppearance="@style/ErrorEditText"
+            app:hintTextAppearance="@style/HintEditText"
+            app:passwordToggleEnabled="true">
+
+            <AutoCompleteTextView
+                android:id="@+id/passwordEt_ids"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:maxLength="25"
+                android:maxLines="1"
+                android:paddingLeft="@dimen/margin_8dp"
+                android:paddingRight="@dimen/margin_8dp"
+                android:singleLine="true"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/txt_size_14sp"
+                android:theme="@style/loginEditTex"
+                tools:ignore="MissingPrefix" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginTop="@dimen/margin_8dp"
+            android:text="Esqueceu sua senha?"
+            android:textSize="@dimen/txt_size_16sp" />
+
+        <Button
+            android:id="@+id/loginBtn_ids"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_36dp"
+            android:layout_marginTop="@dimen/margin_16dp"
+            android:background="@color/appThemeColor"
+            android:text="ENTRAR"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+</RelativeLayout>

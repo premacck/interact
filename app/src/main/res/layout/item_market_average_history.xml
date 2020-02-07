@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  tools:layout_height="wrap_content"
+  tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+  <View
+    android:id="@+id/view_1"
+    android:layout_width="@dimen/margin_0dp"
+    android:layout_height="@dimen/margin_0dp"
+    android:background="@color/CornflowerBlue"
+    app:layout_constraintBottom_toBottomOf="@id/tv_market_average_price"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="@+id/tv_market_average_price" />
+
+  <TextView
+    style="@style/Text14WrapWrap"
+    android:layout_marginStart="@dimen/margin_16dp"
+    android:text="@string/market_average"
+    android:textColor="@color/white"
+    app:layout_constraintBottom_toBottomOf="@id/tv_market_average_price"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="@+id/tv_market_average_price" />
+
+  <TextView
+    android:id="@+id/tv_market_average_price"
+    style="@style/Text16BoldWrapWrap"
+    android:padding="@dimen/margin_16dp"
+    android:textColor="@color/white"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:text="R$ 26,71" />
+
+  <Button
+    android:id="@+id/btn_average_market_price_history"
+    style="?android:borderlessButtonStyle"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/margin_16dp"
+    android:layout_marginTop="@dimen/margin_48dp"
+    android:layout_marginEnd="@dimen/margin_16dp"
+    android:layout_marginBottom="@dimen/margin_28dp"
+    android:background="@drawable/ripple_bg_grey_round_6dp"
+    android:drawableEnd="@drawable/ic_trending_down"
+    android:gravity="center_vertical"
+    android:padding="@dimen/margin_16dp"
+    android:text="@string/average_market_history"
+    android:textAllCaps="true"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/view_1" />
+
+</merge>

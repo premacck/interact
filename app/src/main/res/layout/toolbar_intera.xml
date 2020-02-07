@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <androidx.appcompat.widget.Toolbar
+    android:id="@+id/intera_toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:gravity="center_vertical"
+    app:contentInsetStartWithNavigation="0dp"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+    <TextView
+      android:id="@+id/tv_toolbar_title"
+      style="@style/Text14BoldWrapWrap"
+      android:layout_gravity="center"
+      android:textColor="@color/color_5B5B5F" />
+
+  </androidx.appcompat.widget.Toolbar>
+</merge>

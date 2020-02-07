@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/WhiteSmoke"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="@dimen/margin_8dp"
+                android:src="@drawable/text_logo" />
+
+            <ImageView
+                android:id="@+id/groupIcon"
+                android:layout_width="@dimen/margin_56dp"
+                android:layout_height="@dimen/margin_56dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:padding="@dimen/margin_12dp"
+                android:src="@drawable/group_icon" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginEnd="@dimen/margin_4dp"
+                android:layout_toStartOf="@+id/groupIcon"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="R$ 0,00"
+                    android:textSize="@dimen/txt_size_16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="interaCash"
+                    android:textSize="@dimen/txt_size_16sp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_8dp"
+            app:cardCornerRadius="@dimen/margin_4dp"
+            app:cardElevation="@dimen/margin_8dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_48dp">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_36dp"
+                    android:layout_centerInParent="true"
+                    android:layout_toStartOf="@+id/barCodeIcon"
+                    android:background="@null"
+                    android:ellipsize="end"
+                    android:hint="Compare e comprove"
+                    android:imeOptions="actionDone"
+                    android:focusableInTouchMode="true"
+                    android:padding="@dimen/margin_4dp"
+                    android:singleLine="true" />
+
+                <ImageView
+                    android:id="@+id/barCodeIcon"
+                    android:layout_width="@dimen/margin_48dp"
+                    android:layout_height="@dimen/margin_48dp"
+                    android:layout_centerInParent="true"
+                    android:layout_toStartOf="@+id/searchIcon"
+                    android:padding="@dimen/margin_10dp"
+                    android:src="@drawable/bar_code_icon" />
+
+                <ImageView
+                    android:id="@+id/searchIcon"
+                    android:layout_width="@dimen/margin_48dp"
+                    android:layout_height="@dimen/margin_48dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:padding="@dimen/margin_10dp"
+                    android:src="@drawable/ic_search" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:text="Categoria"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_size_16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:text="Ver todas"
+                android:textColor="@color/appThemeColor"
+                android:textSize="@dimen/txt_size_14sp" />
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/categoryRecycler_ids"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_8dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/productRecycler_ids"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_8dp"
+            android:textColor="@color/black"
+            android:text="Destaques em Autocuidado"
+            android:textSize="@dimen/txt_size_16sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/productTwoRecycler_ids"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_8dp"
+            android:text="Servicos"
+            android:textColor="@color/black"
+            android:textSize="@dimen/txt_size_16sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/homeCervicesRecycler_ids"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_8dp"
+            android:textColor="@color/black"
+            android:text="Destaques em Cosmeticos"
+            android:textSize="@dimen/txt_size_16sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/casmaticRecycler_ids"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_8dp" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

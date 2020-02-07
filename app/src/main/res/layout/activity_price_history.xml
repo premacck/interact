@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:fillViewport="true">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="HardcodedText">
+
+    <com.techmesystem.intera.base.view.InteraToolbar
+      android:id="@+id/toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:backNavigationDrawable="@drawable/ic_back_arrow"
+      app:backgroundColor="@color/white"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:toolbarElevation="8"
+      app:toolbarTitle="@string/price_history" />
+
+    <TextView
+      android:id="@+id/tv_number_of_months"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/margin_16dp"
+      android:text="6 Meses"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <!--region Left markings-->
+    <TextView
+      android:id="@+id/tv_graph_40"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/margin_16dp"
+      android:layout_marginTop="@dimen/margin_28dp"
+      android:text="40"
+      app:layout_constraintBottom_toTopOf="@id/tv_graph_30"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tv_number_of_months" />
+
+    <TextView
+      android:id="@+id/tv_graph_30"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="30"
+      app:layout_constraintBottom_toTopOf="@id/tv_graph_20"
+      app:layout_constraintStart_toStartOf="@+id/tv_graph_40"
+      app:layout_constraintTop_toBottomOf="@id/tv_graph_40" />
+
+    <TextView
+      android:id="@+id/tv_graph_20"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="20"
+      app:layout_constraintBottom_toTopOf="@id/tv_graph_10"
+      app:layout_constraintStart_toStartOf="@+id/tv_graph_40"
+      app:layout_constraintTop_toBottomOf="@id/tv_graph_30" />
+
+    <TextView
+      android:id="@+id/tv_graph_10"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="10"
+      app:layout_constraintBottom_toTopOf="@id/tv_graph_0"
+      app:layout_constraintStart_toStartOf="@+id/tv_graph_40"
+      app:layout_constraintTop_toBottomOf="@id/tv_graph_20" />
+
+    <TextView
+      android:id="@+id/tv_graph_0"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:text="0"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="@id/tv_graph_40"
+      app:layout_constraintStart_toStartOf="@+id/tv_graph_40"
+      app:layout_constraintTop_toBottomOf="@id/tv_graph_20" />
+    <!--endregion-->
+
+    <!--region Graph lines-->
+    <View
+      android:id="@+id/tv_graph_40_line"
+      style="@style/ThinLine"
+      android:layout_width="@dimen/margin_0dp"
+      android:layout_margin="@dimen/margin_16dp"
+      app:layout_constraintBottom_toBottomOf="@id/tv_graph_40"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toEndOf="@id/tv_graph_40"
+      app:layout_constraintTop_toTopOf="@id/tv_graph_40" />
+
+    <View
+      android:id="@+id/tv_graph_30_line"
+      style="@style/ThinLine"
+      android:layout_width="@dimen/margin_0dp"
+      android:layout_margin="@dimen/margin_16dp"
+      app:layout_constraintBottom_toBottomOf="@id/tv_graph_30"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toEndOf="@id/tv_graph_30"
+      app:layout_constraintTop_toTopOf="@id/tv_graph_30" />
+
+    <View
+      android:id="@+id/tv_graph_20_line"
+      style="@style/ThinLine"
+      android:layout_width="@dimen/margin_0dp"
+      android:layout_margin="@dimen/margin_16dp"
+      app:layout_constraintBottom_toBottomOf="@id/tv_graph_20"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toEndOf="@id/tv_graph_20"
+      app:layout_constraintTop_toTopOf="@id/tv_graph_20" />
+
+    <View
+      android:id="@+id/tv_graph_10_line"
+      style="@style/ThinLine"
+      android:layout_width="@dimen/margin_0dp"
+      android:layout_margin="@dimen/margin_16dp"
+      app:layout_constraintBottom_toBottomOf="@id/tv_graph_10"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toEndOf="@id/tv_graph_10"
+      app:layout_constraintTop_toTopOf="@id/tv_graph_10" />
+
+    <View
+      android:id="@+id/tv_graph_0_line"
+      style="@style/ThinLine"
+      android:layout_width="@dimen/margin_0dp"
+      android:layout_margin="@dimen/margin_16dp"
+      app:layout_constraintBottom_toBottomOf="@id/tv_graph_0"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toEndOf="@id/tv_graph_0"
+      app:layout_constraintTop_toTopOf="@id/tv_graph_0" />
+    <!--endregion-->
+
+    <!--region Bottom markings-->
+    <TextView
+      android:id="@+id/tv_month_1"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/margin_28dp"
+      android:layout_marginTop="@dimen/margin_18dp"
+      android:text="Jul"
+      app:layout_constraintEnd_toStartOf="@+id/tv_month_2"
+      app:layout_constraintHorizontal_chainStyle="spread_inside"
+      app:layout_constraintStart_toStartOf="@id/tv_graph_0_line"
+      app:layout_constraintTop_toBottomOf="@id/tv_graph_0_line" />
+
+    <TextView
+      android:id="@+id/tv_month_2"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Set"
+      app:layout_constraintEnd_toStartOf="@+id/tv_month_3"
+      app:layout_constraintStart_toEndOf="@id/tv_month_1"
+      app:layout_constraintTop_toTopOf="@id/tv_month_1" />
+
+    <TextView
+      android:id="@+id/tv_month_3"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Nov"
+      app:layout_constraintEnd_toStartOf="@+id/tv_month_4"
+      app:layout_constraintStart_toEndOf="@id/tv_month_2"
+      app:layout_constraintTop_toTopOf="@id/tv_month_1" />
+
+    <TextView
+      android:id="@+id/tv_month_4"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Atual"
+      app:layout_constraintEnd_toEndOf="@id/tv_graph_0_line"
+      app:layout_constraintStart_toEndOf="@id/tv_month_3"
+      app:layout_constraintTop_toTopOf="@id/tv_month_1" />
+    <!--endregion-->
+
+    <TextView
+      style="@style/Text14BoldWrapWrap"
+      android:layout_marginBottom="@dimen/margin_12dp"
+      android:text="Mercado"
+      android:textColor="@color/color_EF4E74"
+      app:layout_constraintBottom_toTopOf="@id/v_graph_plot_1"
+      app:layout_constraintEnd_toEndOf="@id/v_graph_plot_1"
+      app:layout_constraintStart_toStartOf="@id/v_graph_plot_1" />
+
+    <View
+      android:id="@+id/v_graph_plot_1"
+      android:layout_width="@dimen/margin_0dp"
+      android:layout_height="@dimen/margin_8dp"
+      android:layout_marginBottom="@dimen/margin_16dp"
+      android:background="@drawable/graph_line"
+      app:layout_constraintBottom_toTopOf="@id/tv_graph_20_line"
+      app:layout_constraintEnd_toEndOf="@id/tv_graph_20_line"
+      app:layout_constraintStart_toStartOf="@id/tv_graph_20_line" />
+
+    <TextView
+      style="@style/Text14BoldWrapWrap"
+      android:layout_marginBottom="@dimen/margin_12dp"
+      android:text="Intera"
+      android:textColor="@color/buttonPrimary"
+      app:layout_constraintBottom_toTopOf="@id/v_graph_plot_2"
+      app:layout_constraintEnd_toEndOf="@id/v_graph_plot_2"
+      app:layout_constraintStart_toStartOf="@id/v_graph_plot_2" />
+
+    <View
+      android:id="@+id/v_graph_plot_2"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:layout_marginTop="@dimen/margin_48dp"
+      android:background="@color/color_e5e5e5"
+      app:layout_constraintBottom_toBottomOf="@id/tv_graph_0_line"
+      app:layout_constraintEnd_toEndOf="@id/tv_graph_0_line"
+      app:layout_constraintStart_toStartOf="@id/tv_graph_0_line"
+      app:layout_constraintTop_toBottomOf="@id/tv_graph_20_line" />
+
+    <View
+      android:id="@+id/v_graph_plot_2_top_border"
+      android:layout_width="@dimen/margin_0dp"
+      android:layout_height="@dimen/margin_2dp"
+      android:background="@color/buttonPrimary"
+      app:layout_constraintBottom_toTopOf="@id/v_graph_plot_2"
+      app:layout_constraintEnd_toEndOf="@id/v_graph_plot_2"
+      app:layout_constraintStart_toStartOf="@id/v_graph_plot_2" />
+  </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

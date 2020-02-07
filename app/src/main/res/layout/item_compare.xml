@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:id="@+id/cl_root"
+  android:background="?android:selectableItemBackground"
+  android:layout_height="wrap_content">
+
+  <ImageView
+    android:id="@+id/iv_comparison_company_logo"
+    android:layout_width="@dimen/margin_0dp"
+    android:layout_height="@dimen/margin_0dp"
+    android:layout_marginStart="@dimen/margin_16dp"
+    android:layout_marginTop="@dimen/margin_4dp"
+    android:layout_marginBottom="@dimen/margin_4dp"
+    android:contentDescription="@string/image"
+    android:scaleType="centerCrop"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintDimensionRatio="100:32"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintWidth_percent="0.3"
+    tools:src="@tools:sample/backgrounds/scenic" />
+
+  <TextView
+    android:id="@+id/tv_price"
+    style="@style/Text16BoldWrapWrap"
+    android:layout_marginEnd="@dimen/margin_16dp"
+    android:textColor="@color/color_333333"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:text="R$ 26,71" />
+
+  <TextView
+    android:id="@+id/tv_percentage"
+    style="@style/Text14WrapWrap"
+    android:layout_marginEnd="@dimen/margin_16dp"
+    android:textColor="@color/color_80000000"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toStartOf="@id/tv_price"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_goneMarginEnd="@dimen/margin_36dp"
+    tools:text="+29%" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
