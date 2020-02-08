@@ -196,6 +196,9 @@ class ProductDetailActivity : BaseActivity() {
     btn_compare_and_prove.onDebounceClick {
       CompareAndProveActivity.launch(this, mainProduct)
     }
+    btn_add_product.onDebounceClick {
+      ProductAddedBottomSheet().show(supportFragmentManager)
+    }
   }
 
   override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:layout_gravity="bottom"
+  android:orientation="vertical"
+  tools:background="@drawable/bg_bottom_sheet">
+
+  <TextView
+    android:id="@+id/tv_title"
+    style="@style/Text18BoldWrapWrap"
+    android:layout_gravity="center"
+    android:layout_marginTop="@dimen/margin_20dp"
+    android:gravity="center"
+    android:paddingTop="@dimen/margin_20dp"
+    android:paddingBottom="@dimen/margin_20dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:text="@string/product_added" />
+
+  <TextView
+    android:id="@+id/tv_message"
+    style="@style/Text14WrapWrap"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:paddingTop="@dimen/margin_20dp"
+    android:paddingBottom="@dimen/margin_20dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/tv_title"
+    tools:text="@string/product_added" />
+
+  <Button
+    android:id="@+id/btn_positive"
+    style="@style/ButtonPrimary"
+    android:layout_width="@dimen/margin_0dp"
+    android:layout_marginTop="@dimen/margin_20dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/tv_message"
+    app:layout_constraintWidth_percent="0.75"
+    tools:text="@string/product_added" />
+
+  <Button
+    android:id="@+id/btn_negative"
+    style="@style/ButtonGhost"
+    android:layout_width="@dimen/margin_0dp"
+    android:layout_marginTop="@dimen/margin_16dp"
+    android:layout_marginBottom="40dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/btn_positive"
+    app:layout_constraintWidth_percent="0.75"
+    tools:text="@string/product_added" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

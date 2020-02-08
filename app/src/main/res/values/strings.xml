@@ -44,5 +44,9 @@
   <string name="market_average">Média de Mercado</string>
   <string name="average_market_history">Histórico média do Mercado (R$)</string>
   <string name="price_history">Histórico de preços</string>
+  <string name="product_added">Produto adicionado!</string>
+  <string name="you_saved_x">Voce ecomomizou R$ %1$s</string>
+  <string name="checkout">Finalizar Compra</string>
+  <string name="keep_buying">Continuar Comprando</string>
 </resources>
 <!--\u000D-->
