@@ -13,6 +13,7 @@ import com.techmesystem.intera.compareandprove.model.Comparison
 import com.techmesystem.intera.compareandprove.view.comparisonItem
 import com.techmesystem.intera.compareandprove.view.marketAverageHistoryItem
 import com.techmesystem.intera.productdetail.model.Product
+import com.techmesystem.intera.productdetail.ui.ProductAddedBottomSheet
 import com.techmesystem.intera.util.buildModels
 import com.techmesystem.intera.util.onDebounceClick
 import com.techmesystem.intera.util.orZero
@@ -88,6 +89,9 @@ class CompareAndProveActivity : BaseActivity() {
     btn_favorite.onDebounceClick {
       product.isFavorite = !product.isFavorite
       btn_favorite.isSelected = product.isFavorite
+    }
+    btn_add_product.onDebounceClick {
+      ProductAddedBottomSheet().show(supportFragmentManager)
     }
   }
 
