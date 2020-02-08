@@ -64,5 +64,24 @@
   <string name="choose_your_best_option">Escolha sua melhor opção:</string>
   <string name="make_a_wish">Fazer pedido</string>
   <string name="your_bag_is_empty">Sua sacola está vazia</string>
+  <string name="intera">Intera</string>
+  <string name="favorite_label">S + T</string>
+  <string name="help_24h">Ajuda 24h</string>
+  <string name="profile">Perfil</string>
+  <string name="hi_bruna">Olá, Bruna</string>
+  <string name="hi_x">Olá, %1$s</string>
+  <string name="my_interacash_balance">Meu saldo de InteraCash</string>
+  <string name="transfer">Transferir</string>
+  <string name="extract">Extrato</string>
+  <string name="refer_a_friend">Indique um amigo</string>
+  <string name="notifications">Notificações</string>
+  <string name="favorites">Favoritos</string>
+  <string name="forms_of_payment">Formas de pagamento</string>
+  <string name="sweepstakes">Sorteios</string>
+  <string name="requests">Pedidos</string>
+  <string name="personal_data">Dados pessoais</string>
+  <string name="qualidoc">Qualidoc</string>
+  <string name="allow_fingerprint">Permitir biometria</string>
+  <string name="cancel_account">Cancelar conta</string>
 </resources>
 <!--\u000D-->

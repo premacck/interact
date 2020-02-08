@@ -7,8 +7,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.techmesystem.intera.Model.HomeDataModel;
 import com.techmesystem.intera.R;
+import com.techmesystem.intera.home.model.HomeDataModel;
 
 import java.util.ArrayList;
 

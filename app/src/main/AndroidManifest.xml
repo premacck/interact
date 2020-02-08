@@ -35,7 +35,9 @@
     <activity
       android:name=".HomeActivity"
       android:screenOrientation="portrait"
-      android:theme="@style/AppTheme.NoActionBar" />
+      android:exported="true"
+      android:theme="@style/AppTheme.NoActionBar"
+      android:windowSoftInputMode="adjustPan" />
 
     <activity
       android:name=".BiometricActivity"

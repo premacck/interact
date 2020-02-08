@@ -1,4 +1,4 @@
-package com.techmesystem.intera.Model;
+package com.techmesystem.intera.home.model;
 
 import java.io.Serializable;
 
