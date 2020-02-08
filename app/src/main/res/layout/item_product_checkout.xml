@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:background="@drawable/bg_rounded_corners">
+
+  <ImageView
+    android:id="@+id/iv_product_thumbnail"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_margin="@dimen/margin_8dp"
+    android:contentDescription="@string/image"
+    android:padding="@dimen/margin_8dp"
+    app:layout_constraintDimensionRatio="1:1"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintWidth_percent="0.15"
+    tools:src="@drawable/product_one" />
+
+  <TextView
+    android:id="@+id/tv_caption"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/margin_8dp"
+    android:layout_marginTop="@dimen/margin_16dp"
+    android:ellipsize="end"
+    android:maxLines="2"
+    android:textColor="@color/black"
+    app:layout_constraintEnd_toStartOf="@id/btn_remove"
+    app:layout_constraintStart_toEndOf="@+id/iv_product_thumbnail"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:text="Allegra pediatrico\n6 mg/ml" />
+
+  <TextView
+    android:id="@+id/tv_company"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin_4dp"
+    android:ellipsize="end"
+    android:maxLines="2"
+    android:textAllCaps="true"
+    app:layout_constraintEnd_toStartOf="@id/btn_remove"
+    app:layout_constraintStart_toStartOf="@+id/tv_caption"
+    app:layout_constraintTop_toBottomOf="@+id/tv_caption"
+    tools:text="SANOFI" />
+
+  <TextView
+    android:id="@+id/tv_price_text"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin_8dp"
+    android:ellipsize="end"
+    android:maxLines="2"
+    app:layout_constraintStart_toStartOf="@id/tv_caption"
+    app:layout_constraintTop_toBottomOf="@id/tv_company"
+    tools:text="Media Mercado\nR$ 26,71" />
+
+  <TextView
+    android:id="@+id/tv_selection_count"
+    style="@style/Text16BoldWrapWrap"
+    android:layout_marginTop="@dimen/margin_16dp"
+    android:layout_marginBottom="@dimen/margin_8dp"
+    android:background="@drawable/bg_grey_round_6dp"
+    android:drawableEnd="@drawable/ic_half_arrow_down"
+    android:drawablePadding="@dimen/margin_24dp"
+    android:gravity="center"
+    android:paddingStart="@dimen/margin_24dp"
+    android:paddingTop="@dimen/margin_16dp"
+    android:paddingEnd="@dimen/margin_16dp"
+    android:paddingBottom="@dimen/margin_16dp"
+    android:stateListAnimator="@animator/scale_on_touch"
+    android:textColor="@color/black"
+    app:layout_constraintBottom_toTopOf="@+id/tv_cashback_members_info"
+    app:layout_constraintStart_toStartOf="@id/tv_caption"
+    app:layout_constraintTop_toBottomOf="@id/tv_price_text"
+    tools:text="1" />
+
+  <View
+    android:id="@+id/separator_1"
+    android:layout_width="@dimen/margin_2dp"
+    android:layout_height="@dimen/margin_0dp"
+    android:layout_marginStart="@dimen/margin_8dp"
+    android:background="#1A000000"
+    app:layout_constraintBottom_toTopOf="@id/tv_selection_count"
+    app:layout_constraintStart_toEndOf="@+id/tv_price_text"
+    app:layout_constraintTop_toTopOf="@id/tv_price_text" />
+
+  <TextView
+    android:id="@+id/tv_associated_text"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/margin_12dp"
+    android:ellipsize="end"
+    android:maxLines="2"
+    android:textColor="@color/black"
+    app:layout_constraintEnd_toStartOf="@+id/btn_remove"
+    app:layout_constraintStart_toEndOf="@+id/separator_1"
+    app:layout_constraintTop_toTopOf="@+id/separator_1"
+    tools:text="Associado\n R$ 18,95" />
+
+  <TextView
+    android:id="@+id/tv_additional_associated_text"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:ellipsize="end"
+    android:maxLines="2"
+    android:textAllCaps="true"
+    android:textColor="@color/color_4063A5"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="@id/tv_associated_text"
+    app:layout_constraintTop_toBottomOf="@+id/b_additional_associated_top"
+    tools:text="+ R$ 1,89 interaCash" />
+
+  <androidx.constraintlayout.widget.Barrier
+    android:id="@+id/b_additional_associated_top"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:barrierDirection="bottom"
+    app:constraint_referenced_ids="tv_associated_text,btn_favorite" />
+
+  <ImageButton
+    android:id="@+id/btn_remove"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="?android:selectableItemBackgroundBorderless"
+    android:contentDescription="@string/image"
+    android:padding="@dimen/margin_16dp"
+    android:src="@drawable/ic_cross_grey"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+  <ImageButton
+    android:id="@+id/btn_favorite"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="?android:selectableItemBackgroundBorderless"
+    android:contentDescription="@string/image"
+    android:padding="@dimen/margin_14dp"
+    android:src="@drawable/ic_favorite"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/btn_remove" />
+
+  <TextView
+    android:id="@+id/tv_cashback_members_info"
+    style="@style/Text12WrapWrap"
+    android:layout_width="@dimen/margin_0dp"
+    android:background="@drawable/bg_blue_curved_bottom"
+    android:backgroundTint="@color/color_ffd400"
+    android:drawableEnd="@drawable/ic_info_dark"
+    android:drawablePadding="@dimen/margin_8dp"
+    android:gravity="center_vertical"
+    android:padding="@dimen/margin_8dp"
+    android:text="@string/members_receive_x_on_this_purchase"
+    android:visibility="gone"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

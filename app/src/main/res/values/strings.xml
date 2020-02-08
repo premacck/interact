@@ -48,5 +48,21 @@
   <string name="you_saved_x">Voce ecomomizou R$ %1$s</string>
   <string name="checkout">Finalizar Compra</string>
   <string name="keep_buying">Continuar Comprando</string>
+  <string name="bag">Sacola</string>
+  <string name="members_receive_x_on_this_purchase">Associados recebem R$ %1$s de volta nesta compra.</string>
+  <string name="missing_x_for">Falta(m) R$ 40 para</string>
+  <string name="free_shipping_caps">FRETE GRÁTIS&#160;</string>
+  <string name="calculate_shipping">Calculas Frete</string>
+  <string name="calculate_shipping_format">xxxxx - xxx</string>
+  <string name="calculate">Calcular</string>
+  <string name="express_shipping_x_up_to_y_hours">EXPRESS: R$ 10,00 até 4 horas</string>
+  <string name="sedex_shipping_x_for_y_working_days">SEDEX: R$ 5,00 de 7 dias úteis</string>
+  <string name="total_purchase_amount">Valor total da compra</string>
+  <string name="associated_total">Total associado:</string>
+  <string name="unassociated_total">Total não associado:</string>
+  <string name="proceed_with_order">prosseguir com pedido</string>
+  <string name="choose_your_best_option">Escolha sua melhor opção:</string>
+  <string name="make_a_wish">Fazer pedido</string>
+  <string name="your_bag_is_empty">Sua sacola está vazia</string>
 </resources>
 <!--\u000D-->

@@ -109,7 +109,7 @@
     android:maxLines="2"
     android:text="+ R$ 1,89 interaCash"
     android:textAllCaps="true"
-    android:textColor="@color/appThemeColor"
+    android:textColor="@color/color_4063A5"
     app:layout_constraintBottom_toBottomOf="@id/iv_product_thumbnail"
     app:layout_constraintEnd_toEndOf="@+id/marker_end"
     app:layout_constraintStart_toEndOf="@+id/tv_caption"

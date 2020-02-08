@@ -156,7 +156,7 @@
         style="@style/Text14WrapWrap"
         android:layout_marginStart="@dimen/margin_16dp"
         android:layout_marginBottom="@dimen/margin_24dp"
-        android:textColor="@color/Blue"
+        android:textColor="@color/color_4063A5"
         tools:text="+ R$1,89 Interacash" />
 
     </LinearLayout>

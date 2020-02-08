@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:fillViewport="true">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/cl_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <com.techmesystem.intera.base.view.InteraToolbar
+      android:id="@+id/toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:backNavigationDrawable="@drawable/ic_back_arrow"
+      app:backgroundColor="@color/white"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:toolbarElevation="8"
+      app:toolbarTitle="@string/bag" />
+
+    <com.airbnb.epoxy.EpoxyRecyclerView
+      android:id="@+id/erv_product"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:padding="@dimen/margin_16dp"
+      app:itemSpacing="@dimen/margin_8dp"
+      app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/toolbar"
+      tools:itemCount="2"
+      tools:listitem="@layout/item_product_checkout" />
+
+    <ProgressBar
+      android:id="@+id/pb_remaining_free_shipping_amount"
+      style="?android:progressBarStyleHorizontal"
+      android:layout_width="@dimen/margin_0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/margin_16dp"
+      android:layout_marginEnd="@dimen/margin_16dp"
+      android:max="100"
+      android:progress="75"
+      android:progressDrawable="@drawable/bg_progress_primary"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/erv_product" />
+
+    <TextView
+      android:id="@+id/tv_missing_amount_for"
+      style="@style/Text12WrapWrap"
+      android:layout_marginTop="@dimen/margin_12dp"
+      android:text="@string/missing_x_for"
+      app:layout_constraintEnd_toStartOf="@id/tv_free_shipping_text"
+      app:layout_constraintHorizontal_chainStyle="packed"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/pb_remaining_free_shipping_amount" />
+
+    <TextView
+      android:id="@+id/tv_free_shipping_text"
+      style="@style/Text12BoldWrapWrap"
+      android:layout_marginStart="@dimen/margin_4dp"
+      android:text="@string/free_shipping_caps"
+      android:textColor="@color/buttonPrimary"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toEndOf="@+id/tv_missing_amount_for"
+      app:layout_constraintTop_toTopOf="@id/tv_missing_amount_for" />
+
+    <TextView
+      android:id="@+id/tv_tell_me_when_it_arrives_text"
+      style="@style/Text12WrapWrap"
+      android:layout_marginStart="@dimen/margin_16dp"
+      android:layout_marginTop="@dimen/margin_10dp"
+      android:text="@string/calculate_shipping"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tv_missing_amount_for"
+      app:layout_goneMarginTop="@dimen/margin_10dp" />
+
+    <EditText
+      android:id="@+id/et_shipping_calculation"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/margin_16dp"
+      android:layout_marginTop="@dimen/margin_10dp"
+      android:layout_marginEnd="@dimen/margin_16dp"
+      android:background="@drawable/bg_rounded_corners"
+      android:ellipsize="end"
+      android:hint="@string/calculate_shipping_format"
+      android:importantForAutofill="no"
+      android:inputType="textCapWords"
+      android:padding="@dimen/margin_16dp"
+      android:paddingStart="@dimen/margin_16dp"
+      android:paddingEnd="130dp"
+      android:textColor="@color/color_805B5B5F"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/tv_tell_me_when_it_arrives_text" />
+
+    <TextView
+      android:id="@+id/tv_calculate"
+      style="@style/Text16BoldWrapWrap"
+      android:layout_width="wrap_content"
+      android:layout_height="0dp"
+      android:background="@drawable/bg_btn_primary"
+      android:elevation="0dp"
+      android:gravity="center"
+      android:paddingStart="@dimen/margin_28dp"
+      android:paddingEnd="@dimen/margin_28dp"
+      android:text="@string/calculate"
+      android:textAllCaps="true"
+      android:textColor="@color/white"
+      app:layout_constraintBottom_toBottomOf="@+id/et_shipping_calculation"
+      app:layout_constraintEnd_toEndOf="@+id/et_shipping_calculation"
+      app:layout_constraintTop_toTopOf="@+id/et_shipping_calculation" />
+
+    <RadioGroup
+      android:id="@+id/rg_shipping_mode"
+      android:layout_width="@dimen/margin_0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/margin_12dp"
+      android:orientation="vertical"
+      android:paddingStart="@dimen/margin_16dp"
+      android:paddingTop="@dimen/margin_16dp"
+      android:paddingEnd="@dimen/margin_16dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/et_shipping_calculation">
+
+      <RadioButton
+        android:id="@+id/rb_shipping_express"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:paddingStart="@dimen/margin_12dp"
+        android:paddingEnd="@dimen/margin_12dp"
+        android:text="@string/express_shipping_x_up_to_y_hours" />
+
+      <RadioButton
+        android:id="@+id/rb_shipping_sedex"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:paddingStart="@dimen/margin_12dp"
+        android:paddingEnd="@dimen/margin_12dp"
+        android:text="@string/sedex_shipping_x_for_y_working_days" />
+    </RadioGroup>
+
+    <TextView
+      android:id="@+id/tv_choose_your_best_option"
+      style="@style/Text14WrapWrap"
+      android:layout_width="@dimen/margin_0dp"
+      android:layout_marginStart="@dimen/margin_16dp"
+      android:layout_marginTop="@dimen/margin_28dp"
+      android:text="@string/choose_your_best_option"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/rg_shipping_mode" />
+
+    <View
+      android:id="@+id/cl_associated"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:layout_marginStart="@dimen/margin_16dp"
+      android:layout_marginTop="@dimen/margin_16dp"
+      android:layout_marginEnd="@dimen/margin_16dp"
+      android:background="@drawable/bg_rounded_corners"
+      app:layout_constraintBottom_toBottomOf="@+id/rb_associated_total_text"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/tv_choose_your_best_option" />
+
+    <TextView
+      android:id="@+id/tv_total_purchase_amount_header"
+      style="@style/Text14WrapWrap"
+      android:layout_marginStart="@dimen/margin_72dp"
+      android:layout_marginTop="32dp"
+      android:text="@string/total_purchase_amount"
+      android:textColor="@color/color_cc5b5b5f"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintEnd_toStartOf="@+id/tv_total_purchase_amount"
+      app:layout_constraintHorizontal_bias="0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/tv_choose_your_best_option" />
+
+    <TextView
+      android:id="@+id/tv_total_purchase_amount"
+      style="@style/Text14BoldWrapWrap"
+      android:layout_marginEnd="32dp"
+      android:text="R$ 88,95"
+      android:textColor="#cc5b5b5f"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="@+id/tv_total_purchase_amount_header" />
+
+    <TextView
+      android:id="@+id/tv_interacash_header"
+      style="@style/Text14WrapWrap"
+      android:layout_marginStart="@dimen/margin_72dp"
+      android:layout_marginTop="@dimen/margin_12dp"
+      android:text="@string/total_purchase_amount"
+      android:textColor="@color/color_cc5b5b5f"
+      app:layout_constraintEnd_toStartOf="@+id/tv_interacash"
+      app:layout_constraintHorizontal_bias="0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/tv_total_purchase_amount_header" />
+
+    <TextView
+      android:id="@+id/tv_interacash"
+      style="@style/Text14BoldWrapWrap"
+      android:layout_marginEnd="32dp"
+      android:text="R$ 8,95"
+      android:textColor="#cc5b5b5f"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="@+id/tv_interacash_header" />
+
+    <RadioButton
+      android:id="@+id/rb_associated_total_text"
+      style="@style/Text16BoldWrapWrap"
+      android:layout_width="0dp"
+      android:layout_marginStart="@dimen/margin_28dp"
+      android:paddingStart="@dimen/margin_12dp"
+      android:paddingTop="@dimen/margin_16dp"
+      android:paddingEnd="@dimen/margin_12dp"
+      android:paddingBottom="@dimen/margin_16dp"
+      android:text="@string/associated_total"
+      app:layout_constraintEnd_toStartOf="@+id/tv_associated_total_amount"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tv_interacash_header" />
+
+    <TextView
+      android:id="@+id/tv_associated_total_amount"
+      style="@style/Text16BoldWrapWrap"
+      android:layout_marginEnd="32dp"
+      android:text="R$ 97,84"
+      android:textColor="@color/color_cc5b5b5f"
+      app:layout_constraintBottom_toBottomOf="@+id/rb_associated_total_text"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="@+id/rb_associated_total_text" />
+
+    <View
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:layout_marginStart="@dimen/margin_16dp"
+      android:layout_marginEnd="@dimen/margin_16dp"
+      android:background="@drawable/bg_rounded_corners"
+      app:layout_constraintBottom_toBottomOf="@+id/rb_unassociated_total_text"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="@+id/rb_unassociated_total_text" />
+
+    <RadioButton
+      android:id="@+id/rb_unassociated_total_text"
+      style="@style/Text16BoldWrapWrap"
+      android:layout_width="0dp"
+      android:layout_marginStart="@dimen/margin_28dp"
+      android:layout_marginTop="@dimen/margin_8dp"
+      android:layout_marginBottom="@dimen/margin_16dp"
+      android:paddingStart="@dimen/margin_12dp"
+      android:paddingTop="@dimen/margin_16dp"
+      android:paddingEnd="@dimen/margin_12dp"
+      android:paddingBottom="@dimen/margin_16dp"
+      android:text="@string/unassociated_total"
+      app:layout_constraintBottom_toTopOf="@id/btn_proceed_with_order"
+      app:layout_constraintEnd_toStartOf="@+id/tv_unassociated_total_amount"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/cl_associated" />
+
+    <TextView
+      android:id="@+id/tv_unassociated_total_amount"
+      style="@style/Text16BoldWrapWrap"
+      android:layout_marginEnd="32dp"
+      android:text="R$ 8,95"
+      android:textColor="#cc5b5b5f"
+      app:layout_constraintBottom_toBottomOf="@+id/rb_unassociated_total_text"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="@+id/rb_unassociated_total_text" />
+
+    <com.techmesystem.intera.base.view.FlatRadioGroup
+      android:id="@+id/rg_payment_type"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:constraint_referenced_ids="rb_associated_total_text,rb_unassociated_total_text"
+      tools:ignore="MissingConstraints" />
+
+    <Button
+      android:id="@+id/btn_proceed_with_order"
+      style="@style/ButtonPrimary"
+      android:layout_width="@dimen/margin_0dp"
+      android:layout_marginStart="@dimen/margin_16dp"
+      android:layout_marginEnd="@dimen/margin_16dp"
+      android:layout_marginBottom="@dimen/margin_16dp"
+      android:text="@string/proceed_with_order"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Group
+      android:id="@+id/group_calculate_shipping"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:visibility="gone"
+      app:constraint_referenced_ids="et_shipping_calculation,tv_tell_me_when_it_arrives_text,tv_calculate" />
+
+    <androidx.constraintlayout.widget.Group
+      android:id="@+id/group_content_layout"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:constraint_referenced_ids="erv_product,pb_remaining_free_shipping_amount,tv_missing_amount_for,tv_free_shipping_text,rg_shipping_mode,tv_choose_your_best_option,rg_payment_type" />
+
+    <TextView
+      android:id="@+id/tv_no_content"
+      style="@style/Text18BoldWrapWrap"
+      android:drawableTop="@drawable/ic_crying_face"
+      android:drawablePadding="@dimen/margin_48dp"
+      android:text="@string/your_bag_is_empty"
+      android:visibility="gone"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

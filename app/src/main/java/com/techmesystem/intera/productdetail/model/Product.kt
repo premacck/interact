@@ -19,7 +19,7 @@ import kotlinx.android.parcel.Parcelize
   val priceNotAssociated: String? = null,
   val priceAdditional: String = "",
   @StringRes val description: Int = 0,
-  var selectionCount: Int = 0,
+  var selectionCount: Int = 1,
   val cashback: String? = null,
   val captionShort: String? = null,
   val isInStock: Boolean = true,

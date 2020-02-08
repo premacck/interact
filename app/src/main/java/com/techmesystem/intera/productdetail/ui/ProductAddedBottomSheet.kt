@@ -2,6 +2,7 @@ package com.techmesystem.intera.productdetail.ui
 
 import com.techmesystem.intera.R
 import com.techmesystem.intera.base.bottomsheet.InteraBottomSheet
+import com.techmesystem.intera.checkout.ui.CheckoutActivity
 
 /**
  * Prem's creation, on 2020-02-08
@@ -21,7 +22,7 @@ class ProductAddedBottomSheet : InteraBottomSheet() {
   override val negativeButtonText: CharSequence?
     get() = context?.getString(R.string.keep_buying)
   override val positiveButtonAction: () -> Unit
-    get() = { /*TODO: open checkout*/ }
+    get() = { CheckoutActivity.launch(context) }
   override val negativeButtonAction: () -> Unit
     get() = { /*TODO: open home and open bottom sheet*/ }
 }

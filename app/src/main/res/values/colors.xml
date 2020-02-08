@@ -194,5 +194,9 @@
     <color name="color_80000000">#80000000</color>
     <color name="color_EF4E74">#EF4E74</color>
     <color name="color_1A000000">#1A000000</color>
+    <color name="color_ffd400">#ffd400</color>
+    <color name="color_f9f7ec">#F9F7EC</color>
+    <color name="color_cc5b5b5f">#cc5b5b5f</color>
+    <color name="color_f9f7eb">#F9F7EB</color>
 
 </resources>
