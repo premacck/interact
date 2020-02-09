@@ -1,7 +1,162 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:background="@color/Red"
-    android:layout_height="match_parent">
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
 
-</LinearLayout>
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f9f7ec"
+    android:orientation="vertical">
+
+    <com.techmesystem.intera.base.view.InteraToolbar
+      android:id="@+id/toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:backNavigationDrawable="@drawable/ic_back_arrow"
+      app:backgroundColor="@color/white"
+      app:toolbarElevation="8"
+      app:toolbarTitle="@string/bag" />
+
+    <View
+      android:id="@+id/v_top_shadow"
+      style="@style/ShadowBottom"
+      android:layout_marginStart="@dimen/margin_8dp"
+      android:layout_marginEnd="@dimen/margin_8dp" />
+
+    <TextView
+      style="@style/Text14BoldWrapWrap"
+      android:layout_gravity="center_horizontal"
+      android:layout_marginTop="-14dp"
+      android:drawableStart="@drawable/ic_history_dark"
+      android:drawablePadding="@dimen/margin_10dp"
+      android:gravity="center_vertical"
+      android:text="@string/service_available_24_hours_a_day" />
+
+    <androidx.cardview.widget.CardView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/margin_16dp"
+      android:layout_marginTop="@dimen/margin_14dp"
+      android:layout_marginEnd="@dimen/margin_16dp"
+      app:cardCornerRadius="@dimen/margin_4dp">
+
+      <EditText
+        android:id="@+id/et_help_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:drawableEnd="@drawable/ic_search"
+        android:gravity="center_vertical"
+        android:hint="@string/how_can_we_help"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:paddingStart="@dimen/margin_16dp"
+        android:paddingTop="@dimen/margin_12dp"
+        android:paddingEnd="@dimen/margin_16dp"
+        android:paddingBottom="@dimen/margin_12dp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+      style="@style/Text16BoldWrapWrap"
+      android:layout_marginStart="@dimen/margin_16dp"
+      android:layout_marginTop="@dimen/margin_56dp"
+      android:text="@string/common_questions" />
+
+    <View
+      style="@style/ThinLine"
+      android:layout_marginStart="@dimen/margin_16dp"
+      android:layout_marginTop="@dimen/margin_16dp"
+      android:layout_marginEnd="@dimen/margin_16dp"
+      android:background="@color/color_1A000000" />
+
+    <com.techmesystem.intera.base.view.CustomTextView
+      android:id="@+id/ctv_advantages_of_being_associated"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:ctv_mainText="@string/advantages_of_being_associated" />
+
+    <com.techmesystem.intera.base.view.CustomTextView
+      android:id="@+id/ctv_how_to_load_my_wallet"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:ctv_mainText="@string/how_to_load_my_wallet" />
+
+    <com.techmesystem.intera.base.view.CustomTextView
+      android:id="@+id/ctv_how_interacash_works"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:ctv_mainText="@string/how_interacash_works" />
+
+    <com.techmesystem.intera.base.view.CustomTextView
+      android:id="@+id/ctv_how_to_enter_the_draw"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:ctv_mainText="@string/how_to_enter_the_draw" />
+
+    <TextView
+      style="@style/Text16BoldWrapWrap"
+      android:layout_marginStart="@dimen/margin_16dp"
+      android:layout_marginTop="@dimen/margin_56dp"
+      android:text="@string/my_requests" />
+
+    <View
+      style="@style/ThinLine"
+      android:layout_marginStart="@dimen/margin_16dp"
+      android:layout_marginTop="@dimen/margin_16dp"
+      android:layout_marginEnd="@dimen/margin_16dp"
+      android:background="@color/color_1A000000" />
+
+    <com.techmesystem.intera.base.view.CustomTextView
+      android:id="@+id/ctv_track_my_order"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:ctv_mainText="@string/track_my_order" />
+
+    <com.techmesystem.intera.base.view.CustomTextView
+      android:id="@+id/ctv_payment_questions"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:ctv_mainText="@string/payment_questions" />
+
+    <com.techmesystem.intera.base.view.CustomTextView
+      android:id="@+id/ctv_cancel_order"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:ctv_mainText="@string/cancel_order" />
+
+    <TextView
+      style="@style/Text16BoldWrapWrap"
+      android:layout_marginStart="@dimen/margin_16dp"
+      android:layout_marginTop="@dimen/margin_56dp"
+      android:text="@string/categories" />
+
+    <View
+      style="@style/ThinLine"
+      android:layout_marginStart="@dimen/margin_16dp"
+      android:layout_marginTop="@dimen/margin_16dp"
+      android:layout_marginEnd="@dimen/margin_16dp"
+      android:background="@color/color_1A000000" />
+
+    <com.techmesystem.intera.base.view.CustomTextView
+      android:id="@+id/ctv_payments"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:ctv_mainText="@string/payments" />
+
+    <com.techmesystem.intera.base.view.CustomTextView
+      android:id="@+id/ctv_products_and_services"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:ctv_mainText="@string/products_and_services" />
+
+    <com.techmesystem.intera.base.view.CustomTextView
+      android:id="@+id/ctv_policies_and_terms_of_use"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="@dimen/margin_56dp"
+      app:ctv_mainText="@string/policies_and_terms_of_use" />
+  </LinearLayout>
+</androidx.core.widget.NestedScrollView>

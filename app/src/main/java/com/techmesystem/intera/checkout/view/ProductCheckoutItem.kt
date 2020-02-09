@@ -23,9 +23,35 @@ import org.jetbrains.anko.imageResource
 ) : FrameLayout(context, attrs, defStyleAttr) {
 
   private lateinit var product: Product
+  private var isRemoveAllowed: Boolean = true
 
   init {
     attachLayout(R.layout.item_product_checkout)
+
+    val array = context.obtainStyledAttributes(attrs, R.styleable.ProductCheckoutItem)
+
+    removeAllowed(array.getBoolean(R.styleable.ProductCheckoutItem_removeAllowed, true))
+    editAllowed(array.getBoolean(R.styleable.ProductCheckoutItem_editAllowed, true))
+    cashbackAllowed(array.getBoolean(R.styleable.ProductCheckoutItem_cashbackAllowed, true))
+
+    array.recycle()
+  }
+
+  private fun cashbackAllowed(allowed: Boolean) {
+    tv_cashback_members_info?.showOrHide(allowed)
+  }
+
+  private fun removeAllowed(allowed: Boolean) {
+    isRemoveAllowed = allowed
+    btn_remove?.showOrHide(allowed)
+  }
+
+  private fun editAllowed(allowed: Boolean) {
+    tv_selection_count?.showOrHide(allowed)
+    if (isRemoveAllowed) {
+      btn_remove?.showOrHide(allowed)
+    }
+    btn_favorite?.showOrHide(allowed)
   }
 
   @ModelProp fun withProduct(product: Product) {
@@ -47,7 +73,7 @@ import org.jetbrains.anko.imageResource
 
   private fun withMembersCashback(cashback: String?) {
     tv_cashback_members_info?.showOrHide(!cashback.isNullOrEmpty()) {
-      it.text = cashback
+      it.text = context.getString(R.string.members_receive_x_on_this_purchase, cashback)
     }
   }
 

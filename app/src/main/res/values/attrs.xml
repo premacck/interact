@@ -20,4 +20,51 @@
         <attr name="showBars" format="boolean" />
     </declare-styleable>
 
+    <declare-styleable name="CustomEditText">
+        <attr name="cet_title" format="string" />
+        <attr name="cet_doubleFields" format="boolean" />
+        <attr name="cet_hintOne" format="string" />
+        <attr name="cet_hintTwo" format="string" />
+        <attr name="cet_inputType" format="enum">
+            <enum name="normal" value="0" />
+            <enum name="number" value="1" />
+            <enum name="password" value="2" />
+            <enum name="email" value="3" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="CustomTextView">
+        <attr name="ctv_title" format="string" />
+        <attr name="ctv_mainText" format="string" />
+        <attr name="ctv_boldTitle" format="boolean" />
+        <attr name="ctv_drawableStart" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomTextInputEditText">
+        <attr name="ctiet_title" format="string" />
+        <attr name="ctiet_mainText" format="string" />
+        <attr name="ctiet_boldTitle" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="RequestItem">
+        <attr name="bottomLayoutVisible" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="ProductCheckoutItem">
+        <attr name="editAllowed" format="boolean" />
+        <attr name="removeAllowed" format="boolean" />
+        <attr name="cashbackAllowed" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="TotalAmountItem">
+        <attr name="borderEnabled" format="boolean" />
+        <attr name="amount_purchaseAmount" format="string" />
+        <attr name="amount_shippingCost" format="string" />
+        <attr name="amount_interaCash" format="string" />
+        <attr name="amount_cashbackAllowed" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="OrderLogistics">
+        <attr name="ol_viewsEnabled" format="boolean" />
+    </declare-styleable>
 </resources>

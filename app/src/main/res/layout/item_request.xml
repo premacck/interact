@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:id="@+id/cl_root"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:background="@drawable/bg_rounded_corners">
+
+  <TextView
+    android:id="@+id/tv_cashback_info"
+    style="@style/Text12WrapWrap"
+    android:layout_width="@dimen/margin_0dp"
+    android:background="@drawable/bg_curved_top"
+    android:backgroundTint="@color/color_ffd400"
+    android:drawableEnd="@drawable/ic_arrow_right_grey"
+    android:drawablePadding="@dimen/margin_8dp"
+    android:gravity="center"
+    android:paddingStart="@dimen/margin_16dp"
+    android:paddingTop="@dimen/margin_8dp"
+    android:paddingEnd="@dimen/margin_16dp"
+    android:paddingBottom="@dimen/margin_8dp"
+    android:text="@string/you_received_50_back_on_this_purchase"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+  <TextView
+    android:id="@+id/tv_request_number"
+    style="@style/Text14BoldWrapWrap"
+    android:layout_margin="@dimen/margin_16dp"
+    android:text="@string/sample_request_number"
+    android:textColor="@color/color_5C5B60"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/tv_cashback_info" />
+
+  <TextView
+    android:id="@+id/tv_request_date_text"
+    style="@style/Text12WrapWrap"
+    android:layout_marginStart="@dimen/margin_16dp"
+    android:layout_marginTop="@dimen/margin_8dp"
+    android:text="@string/request_date"
+    android:textColor="@color/color_5C5B60"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/tv_request_number" />
+
+  <TextView
+    android:id="@+id/tv_request_date"
+    style="@style/Text14BoldWrapWrap"
+    android:layout_marginStart="@dimen/margin_16dp"
+    android:layout_marginTop="@dimen/margin_4dp"
+    android:text="@string/sample_request_date"
+    android:textColor="@color/color_5C5B60"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/tv_request_date_text" />
+
+  <TextView
+    android:id="@+id/tv_total_text"
+    style="@style/Text12WrapWrap"
+    android:layout_marginEnd="@dimen/margin_16dp"
+    android:text="@string/total"
+    android:textColor="@color/color_5C5B60"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="@id/tv_request_date_text" />
+
+  <TextView
+    android:id="@+id/tv_total_amount"
+    style="@style/Text14BoldWrapWrap"
+    android:layout_marginTop="@dimen/margin_4dp"
+    android:layout_marginEnd="@dimen/margin_16dp"
+    android:text="@string/sample_total_amount"
+    android:textColor="@color/color_5C5B60"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/tv_total_text" />
+
+  <androidx.constraintlayout.widget.Barrier
+    android:id="@+id/b_divider_1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:barrierDirection="bottom"
+    app:constraint_referenced_ids="tv_request_date,tv_total_amount" />
+
+  <View
+    android:id="@+id/divider_1"
+    style="@style/ThinLine"
+    android:layout_width="@dimen/margin_0dp"
+    android:layout_margin="@dimen/margin_16dp"
+    android:background="@color/color_33000000"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/b_divider_1" />
+
+  <include
+    android:id="@+id/product_1"
+    layout="@layout/item_request_product"
+    android:layout_width="@dimen/margin_0dp"
+    android:layout_height="wrap_content"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/divider_1" />
+
+  <View
+    android:id="@+id/divider_2"
+    style="@style/ThinLine"
+    android:layout_width="@dimen/margin_0dp"
+    android:layout_margin="@dimen/margin_16dp"
+    android:background="@color/color_33000000"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/product_1" />
+
+  <include
+    android:id="@+id/product_2"
+    layout="@layout/item_request_product"
+    android:layout_width="@dimen/margin_0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margin_20dp"
+    app:layout_constraintBottom_toTopOf="@+id/view_bottom"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/divider_2" />
+
+  <View
+    android:id="@+id/view_bottom"
+    android:layout_width="@dimen/margin_0dp"
+    android:layout_height="@dimen/margin_0dp"
+    android:background="@drawable/bg_blue_curved_bottom"
+    android:backgroundTint="@color/color_e8e8e8"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/product_2"
+    app:layout_goneMarginBottom="@dimen/margin_20dp" />
+
+  <Button
+    android:id="@+id/btn_details"
+    style="@style/BorderlessButton"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin_20dp"
+    android:text="@string/details"
+    android:textSize="@dimen/txt_size_12sp"
+    app:layout_constraintEnd_toStartOf="@id/separator_2"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/product_2" />
+
+  <View
+    android:id="@+id/separator_2"
+    android:layout_width="@dimen/margin_2dp"
+    android:layout_height="@dimen/margin_0dp"
+    android:layout_marginTop="@dimen/margin_26dp"
+    android:layout_marginBottom="@dimen/margin_8dp"
+    android:background="@color/color_1A000000"
+    app:layout_constraintBottom_toBottomOf="@+id/btn_details"
+    app:layout_constraintEnd_toStartOf="@id/btn_ask_again"
+    app:layout_constraintStart_toEndOf="@+id/btn_details"
+    app:layout_constraintTop_toBottomOf="@+id/product_2" />
+
+  <Button
+    android:id="@+id/btn_ask_again"
+    style="@style/BorderlessButton"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin_20dp"
+    android:text="@string/ask_again"
+    android:textSize="@dimen/txt_size_12sp"
+    app:layout_constraintEnd_toStartOf="@id/separator_3"
+    app:layout_constraintStart_toEndOf="@id/separator_2"
+    app:layout_constraintTop_toBottomOf="@+id/product_2" />
+
+  <View
+    android:id="@+id/separator_3"
+    android:layout_width="@dimen/margin_2dp"
+    android:layout_height="@dimen/margin_0dp"
+    android:layout_marginTop="@dimen/margin_26dp"
+    android:layout_marginBottom="@dimen/margin_8dp"
+    android:background="@color/color_1A000000"
+    app:layout_constraintBottom_toBottomOf="@+id/btn_ask_again"
+    app:layout_constraintEnd_toStartOf="@+id/btn_help"
+    app:layout_constraintStart_toEndOf="@id/btn_ask_again"
+    app:layout_constraintTop_toBottomOf="@+id/product_2" />
+
+  <Button
+    android:id="@+id/btn_help"
+    style="@style/BorderlessButton"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin_20dp"
+    android:text="@string/help"
+    android:textSize="@dimen/txt_size_12sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="@id/separator_3"
+    app:layout_constraintTop_toBottomOf="@+id/product_2" />
+
+  <androidx.constraintlayout.widget.Group
+    android:id="@+id/group_bottom_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:constraint_referenced_ids="btn_help,separator_3,btn_ask_again,separator_2,btn_details,view_bottom" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

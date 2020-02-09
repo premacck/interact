@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:id="@+id/cl_root"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:layout_marginStart="@dimen/margin_16dp"
+  android:layout_marginEnd="@dimen/margin_16dp"
+  android:background="@drawable/bg_rounded_corners">
+
+  <TextView
+    android:id="@+id/tv_cashback_info"
+    style="@style/Text12WrapWrap"
+    android:layout_width="@dimen/margin_0dp"
+    android:background="@drawable/bg_curved_top"
+    android:backgroundTint="@color/color_ffd400"
+    android:drawableEnd="@drawable/ic_arrow_right_grey"
+    android:drawablePadding="@dimen/margin_8dp"
+    android:gravity="center"
+    android:paddingStart="@dimen/margin_16dp"
+    android:paddingTop="@dimen/margin_8dp"
+    android:paddingEnd="@dimen/margin_16dp"
+    android:paddingBottom="@dimen/margin_8dp"
+    android:text="@string/you_received_50_back_on_this_purchase"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+  <TextView
+    android:id="@+id/tv_total_purchase_amount_text"
+    style="@style/Text14WrapWrap"
+    android:layout_marginStart="@dimen/margin_20dp"
+    android:layout_marginTop="@dimen/margin_18dp"
+    android:text="@string/total_purchase_amount"
+    android:textColor="@color/color_5C5B60"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/tv_cashback_info" />
+
+  <TextView
+    android:id="@+id/tv_total_purchase_amount"
+    style="@style/Text14BoldWrapWrap"
+    android:layout_marginEnd="@dimen/margin_20dp"
+    android:text="@string/sample_total_amount"
+    android:textColor="@color/color_5C5B60"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="@+id/tv_total_purchase_amount_text" />
+
+  <TextView
+    android:id="@+id/tv_shipping_cost_text"
+    style="@style/Text14WrapWrap"
+    android:layout_marginStart="@dimen/margin_20dp"
+    android:layout_marginTop="@dimen/margin_8dp"
+    android:text="@string/shipping_cost"
+    android:textColor="@color/color_5C5B60"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/tv_total_purchase_amount_text" />
+
+  <TextView
+    android:id="@+id/tv_shipping_cost"
+    style="@style/Text14BoldWrapWrap"
+    android:layout_marginEnd="@dimen/margin_20dp"
+    android:text="@string/sample_total_amount"
+    android:textColor="@color/color_5C5B60"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="@+id/tv_shipping_cost_text" />
+
+  <TextView
+    android:id="@+id/tv_interacash_text"
+    style="@style/Text14WrapWrap"
+    android:layout_marginStart="@dimen/margin_20dp"
+    android:layout_marginTop="@dimen/margin_8dp"
+    android:text="@string/interacash"
+    android:textColor="@color/color_5C5B60"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/tv_shipping_cost_text" />
+
+  <TextView
+    android:id="@+id/tv_interacash"
+    style="@style/Text14BoldWrapWrap"
+    android:layout_marginEnd="@dimen/margin_20dp"
+    android:text="@string/sample_total_amount"
+    android:textColor="@color/color_5C5B60"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="@+id/tv_interacash_text" />
+
+  <TextView
+    android:id="@+id/tv_total_amount_text"
+    style="@style/Text16WrapWrap"
+    android:layout_marginStart="@dimen/margin_20dp"
+    android:layout_marginTop="@dimen/margin_16dp"
+    android:text="@string/interacash"
+    android:textColor="@color/color_5C5B60"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/tv_interacash_text" />
+
+  <TextView
+    android:id="@+id/tv_total_amount"
+    style="@style/Text16BoldWrapWrap"
+    android:layout_marginEnd="@dimen/margin_20dp"
+    android:layout_marginBottom="@dimen/margin_16dp"
+    android:text="@string/sample_total_amount"
+    android:textColor="@color/color_5C5B60"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="@+id/tv_total_amount_text" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

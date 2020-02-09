@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/color_f9f7ec">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.techmesystem.intera.base.view.InteraToolbar
+      android:id="@+id/toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:backNavigationDrawable="@drawable/ic_back_arrow"
+      app:backgroundColor="@color/white"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:toolbarElevation="0"
+      app:toolbarTitle="@string/order_summary" />
+
+    <View
+      android:id="@+id/v_top_shadow"
+      style="@style/ShadowBottom"
+      android:layout_marginStart="@dimen/margin_8dp"
+      android:layout_marginEnd="@dimen/margin_8dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <TextView
+      android:id="@+id/tv_delivery_man_on_his_way"
+      style="@style/Text12WrapWrap"
+      android:layout_margin="@dimen/margin_16dp"
+      android:text="@string/delivery_man_on_his_way"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <TextView
+      android:id="@+id/tv_estimated_delivery_text"
+      style="@style/Text14WrapWrap"
+      android:layout_marginStart="@dimen/margin_16dp"
+      android:layout_marginTop="@dimen/margin_6dp"
+      android:text="@string/estimated_delivery_"
+      android:textColor="@color/buttonPrimary"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/tv_delivery_man_on_his_way" />
+
+    <TextView
+      android:id="@+id/tv_estimated_delivery_time"
+      style="@style/Text14BoldWrapWrap"
+      android:text="@string/sample_estimated_delivery_time"
+      android:textColor="@color/buttonPrimary"
+      app:layout_constraintStart_toEndOf="@id/tv_estimated_delivery_text"
+      app:layout_constraintTop_toTopOf="@id/tv_estimated_delivery_text" />
+
+    <ImageView
+      android:id="@+id/iv_map"
+      android:layout_width="@dimen/margin_0dp"
+      android:layout_height="@dimen/margin_0dp"
+      android:layout_marginTop="@dimen/margin_16dp"
+      android:contentDescription="@string/image"
+      android:scaleType="centerCrop"
+      android:src="@drawable/map"
+      app:layout_constraintDimensionRatio="4:3"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tv_estimated_delivery_text" />
+
+    <TextView
+      android:id="@+id/tv_delivery_step_1"
+      android:layout_width="@dimen/margin_0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/margin_16dp"
+      android:layout_marginTop="@dimen/margin_24dp"
+      android:gravity="center"
+      android:text="Cadastrou\nEntrega"
+      app:layout_constraintEnd_toStartOf="@+id/tv_delivery_step_2"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/iv_map" />
+
+    <TextView
+      android:id="@+id/tv_delivery_step_2"
+      android:layout_width="@dimen/margin_0dp"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:text="Roterizou\nEntrega"
+      app:layout_constraintEnd_toStartOf="@+id/tv_delivery_step_3"
+      app:layout_constraintStart_toEndOf="@id/tv_delivery_step_1"
+      app:layout_constraintTop_toTopOf="@id/tv_delivery_step_1" />
+
+    <TextView
+      android:id="@+id/tv_delivery_step_3"
+      android:layout_width="@dimen/margin_0dp"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:text="Iniciou\nEntrega"
+      app:layout_constraintEnd_toStartOf="@+id/tv_delivery_step_4"
+      app:layout_constraintStart_toEndOf="@id/tv_delivery_step_2"
+      app:layout_constraintTop_toTopOf="@id/tv_delivery_step_1" />
+
+    <TextView
+      android:id="@+id/tv_delivery_step_4"
+      android:layout_width="@dimen/margin_0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="@dimen/margin_16dp"
+      android:gravity="center"
+      android:text="Finalizou\nEntrega"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toEndOf="@id/tv_delivery_step_3"
+      app:layout_constraintTop_toTopOf="@id/tv_delivery_step_1" />
+
+    <com.kofigyan.stateprogressbar.StateProgressBar
+      android:id="@+id/spb_delivery_progress"
+      android:layout_width="@dimen/margin_0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/margin_16dp"
+      android:layout_marginTop="@dimen/margin_16dp"
+      android:layout_marginEnd="@dimen/margin_16dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tv_delivery_step_4"
+      app:spb_checkStateCompleted="true"
+      app:spb_currentStateNumber="four"
+      app:spb_maxStateNumber="four"
+      app:spb_stateBackgroundColor="@color/transparent"
+      app:spb_stateForegroundColor="#B6C62C"
+      app:spb_stateLineThickness="@dimen/margin_2dp"
+      app:spb_stateNumberBackgroundColor="#808080"
+      app:spb_stateNumberForegroundColor="#B6C62C"
+      app:spb_stateSize="@dimen/margin_16dp" />
+
+    <TextView
+      android:id="@+id/tv_delivery_time_1"
+      android:layout_width="@dimen/margin_0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/margin_16dp"
+      android:layout_marginTop="@dimen/margin_16dp"
+      android:gravity="center"
+      android:text="07/08/2019\n09:43:55"
+      app:layout_constraintEnd_toStartOf="@+id/tv_delivery_time_2"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/spb_delivery_progress" />
+
+    <TextView
+      android:id="@+id/tv_delivery_time_2"
+      android:layout_width="@dimen/margin_0dp"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:text="07/08/2019\n09:47:10"
+      app:layout_constraintEnd_toStartOf="@+id/tv_delivery_time_3"
+      app:layout_constraintStart_toEndOf="@id/tv_delivery_time_1"
+      app:layout_constraintTop_toTopOf="@+id/tv_delivery_time_1" />
+
+    <TextView
+      android:id="@+id/tv_delivery_time_3"
+      android:layout_width="@dimen/margin_0dp"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:text="07/08/2019\n09:54:57"
+      app:layout_constraintEnd_toStartOf="@+id/tv_delivery_time_4"
+      app:layout_constraintStart_toEndOf="@id/tv_delivery_time_2"
+      app:layout_constraintTop_toTopOf="@+id/tv_delivery_time_1" />
+
+    <View
+      android:id="@+id/tv_delivery_time_4"
+      android:layout_width="@dimen/margin_0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="@dimen/margin_16dp"
+      android:gravity="center"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toEndOf="@id/tv_delivery_time_3"
+      app:layout_constraintTop_toTopOf="@+id/tv_delivery_time_1" />
+
+    <com.techmesystem.intera.base.view.OrderLogistics
+      android:id="@+id/order_logistics"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="32dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tv_delivery_time_1"
+      app:ol_viewsEnabled="false" />
+
+    <com.techmesystem.intera.base.view.CustomTextView
+      android:id="@+id/ctv_detail_1"
+      android:layout_width="@dimen/margin_0dp"
+      android:layout_height="wrap_content"
+      app:ctv_mainText="02 produtos"
+      app:ctv_title="Saúde e tratamento"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/order_logistics" />
+
+    <com.techmesystem.intera.base.view.CustomTextView
+      android:id="@+id/ctv_detail_2"
+      android:layout_width="@dimen/margin_0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="@dimen/margin_24dp"
+      app:ctv_mainText="02 produtos"
+      app:ctv_title="Saúde e tratamento"
+      app:layout_constraintBottom_toTopOf="@+id/cl_bottom_layout"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/ctv_detail_1" />
+
+    <View
+      style="@style/ShadowTop"
+      android:layout_width="0dp"
+      app:layout_constraintBottom_toTopOf="@+id/cl_bottom_layout"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+      android:id="@+id/cl_bottom_layout"
+      android:layout_width="@dimen/margin_0dp"
+      android:layout_height="wrap_content"
+      android:background="@color/white"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent">
+
+      <com.techmesystem.intera.base.view.TotalAmountItem
+        android:id="@+id/total_amount"
+        android:layout_width="@dimen/margin_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_20dp"
+        app:amount_cashbackAllowed="true"
+        app:amount_interaCash="8,95"
+        app:amount_purchaseAmount="88,95"
+        app:amount_shippingCost="10,00"
+        app:layout_constraintBottom_toTopOf="@+id/btn_cancel_order"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+      <Button
+        android:id="@+id/btn_cancel_order"
+        style="@style/ButtonGhost"
+        android:layout_width="@dimen/margin_0dp"
+        android:layout_margin="@dimen/margin_16dp"
+        android:text="@string/cancel_order"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/total_amount" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

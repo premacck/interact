@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.techmesystem.intera.base.view.InteraToolbar
+      android:id="@+id/toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:backNavigationDrawable="@drawable/ic_back_arrow"
+      app:backgroundColor="@color/white"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:toolbarElevation="0"
+      app:toolbarTitle="@string/order_summary" />
+
+    <View
+      android:id="@+id/v_top_shadow"
+      style="@style/ShadowBottom"
+      android:layout_marginStart="@dimen/margin_8dp"
+      android:layout_marginEnd="@dimen/margin_8dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <com.techmesystem.intera.base.view.OrderLogistics
+      android:id="@+id/order_logistics"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <TextView
+      android:id="@+id/tv_order_summary_header"
+      style="@style/Text16BoldWrapWrap"
+      android:layout_marginStart="@dimen/margin_16dp"
+      android:layout_marginTop="40dp"
+      android:text="@string/order_summary"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/order_logistics" />
+
+    <com.techmesystem.intera.checkout.view.ProductCheckoutItem
+      android:id="@+id/product_1"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/margin_16dp"
+      android:layout_marginTop="@dimen/margin_16dp"
+      android:layout_marginEnd="@dimen/margin_16dp"
+      app:cashbackAllowed="false"
+      app:editAllowed="false"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tv_order_summary_header" />
+
+    <com.techmesystem.intera.checkout.view.ProductCheckoutItem
+      android:id="@+id/product_2"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/margin_16dp"
+      android:layout_marginTop="@dimen/margin_8dp"
+      android:layout_marginEnd="@dimen/margin_16dp"
+      app:editAllowed="false"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/product_1" />
+
+    <TextView
+      android:id="@+id/tv_installment_header"
+      style="@style/Text12WrapWrap"
+      android:layout_marginStart="@dimen/margin_16dp"
+      android:layout_marginTop="@dimen/margin_24dp"
+      android:text="@string/installment"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/product_2" />
+
+    <TextView
+      android:id="@+id/tv_installment"
+      style="@style/Text16MatchWrap"
+      android:layout_width="@dimen/margin_0dp"
+      android:layout_marginStart="@dimen/margin_16dp"
+      android:layout_marginTop="@dimen/margin_8dp"
+      android:layout_marginEnd="@dimen/margin_16dp"
+      android:background="@drawable/bg_rounded_corners"
+      android:drawableEnd="@drawable/ic_half_arrow_down"
+      android:drawablePadding="@dimen/margin_16dp"
+      android:gravity="center_vertical"
+      android:paddingStart="@dimen/margin_16dp"
+      android:paddingTop="@dimen/margin_10dp"
+      android:paddingEnd="@dimen/margin_16dp"
+      android:paddingBottom="@dimen/margin_10dp"
+      android:text="@string/sample_installment_text"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/tv_installment_header" />
+
+    <com.techmesystem.intera.base.view.TotalAmountItem
+      android:id="@+id/total_amount"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/margin_8dp"
+      app:amount_interaCash="8,95"
+      app:amount_purchaseAmount="88,95"
+      app:amount_shippingCost="10,00"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tv_installment" />
+
+    <Button
+      android:id="@+id/btn_checkout"
+      style="@style/ButtonPrimary"
+      android:layout_width="@dimen/margin_0dp"
+      android:layout_margin="@dimen/margin_16dp"
+      android:text="@string/checkout"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/total_amount" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

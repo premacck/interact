@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools">
+
+  <ImageView
+    android:id="@+id/iv_product_thumbnail"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_margin="@dimen/margin_16dp"
+    android:contentDescription="@string/image"
+    android:padding="@dimen/margin_8dp"
+    app:layout_constraintDimensionRatio="1:1"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintWidth_percent="0.2"
+    tools:src="@drawable/product_one" />
+
+  <TextView
+    android:id="@+id/tv_caption"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/margin_8dp"
+    android:ellipsize="end"
+    android:maxLines="2"
+    android:text="Allegra pediatrico\n6 mg/ml"
+    android:textColor="@color/black"
+    app:layout_constraintStart_toEndOf="@+id/iv_product_thumbnail"
+    app:layout_constraintTop_toTopOf="@id/iv_product_thumbnail"
+    app:layout_constraintVertical_chainStyle="packed"
+    app:layout_constraintWidth_percent="0.35" />
+
+  <TextView
+    android:id="@+id/tv_company"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:ellipsize="end"
+    android:maxLines="2"
+    android:text="SANOFI"
+    android:textAllCaps="true"
+    app:layout_constraintStart_toStartOf="@+id/tv_caption"
+    app:layout_constraintTop_toBottomOf="@+id/tv_caption"
+    app:layout_constraintWidth_percent="0.3" />
+
+  <TextView
+    android:id="@+id/tv_total_amount"
+    style="@style/Text14BoldWrapWrap"
+    android:layout_marginTop="@dimen/margin_4dp"
+    android:layout_marginEnd="@dimen/margin_16dp"
+    android:text="@string/sample_total_amount"
+    android:textColor="@color/color_5C5B60"
+    app:layout_constraintStart_toStartOf="@+id/tv_caption"
+    app:layout_constraintTop_toBottomOf="@+id/tv_company" />
+
+  <TextView
+    android:id="@+id/tv_additional_interacash"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/margin_8dp"
+    android:ellipsize="end"
+    android:maxLines="2"
+    android:textSize="@dimen/txt_size_12sp"
+    android:text="+ R$ 1,89 interaCash"
+    android:textColor="@color/color_4063A5"
+    app:layout_constraintStart_toEndOf="@+id/tv_total_amount"
+    app:layout_constraintTop_toTopOf="@+id/tv_total_amount"
+    app:layout_constraintBottom_toBottomOf="@id/tv_total_amount"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,6 +6,7 @@ import androidx.annotation.DrawableRes
 import com.techmesystem.intera.R
 import com.techmesystem.intera.util.onDebounceClick
 import com.techmesystem.intera.util.setDrawables
+import com.techmesystem.intera.util.showOrHide
 import kotlinx.android.synthetic.main.bottom_sheet_intera.*
 
 /**
@@ -23,21 +24,28 @@ abstract class InteraBottomSheet : BaseBottomSheet() {
 
   abstract val positiveButtonAction: () -> Unit
 
-  abstract val negativeButtonText: CharSequence?
+  open val negativeButtonText: CharSequence? = null
 
-  abstract val negativeButtonAction: () -> Unit
+  open val negativeButtonAction: () -> Unit = {}
 
   override fun layoutRes(): Int = R.layout.bottom_sheet_intera
 
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-    tv_title?.text = title
-    tv_message?.text = message
+    tv_title?.showOrHide(!title.isNullOrEmpty()) {
+      it.text = title
+    }
+    tv_message?.showOrHide(!message.isNullOrEmpty()) {
+      it.text = message
+    }
     messageStartDrawable?.let { tv_message?.setDrawables(start = it) }
 
-    btn_positive?.text = positiveButtonText
-    btn_positive?.onDebounceClick { positiveButtonAction() }
-
-    btn_negative?.text = negativeButtonText
-    btn_negative?.onDebounceClick { negativeButtonAction() }
+    btn_positive?.showOrHide(!positiveButtonText.isNullOrEmpty()) {
+      it.text = positiveButtonText
+      it.onDebounceClick { positiveButtonAction() }
+    }
+    btn_negative?.showOrHide(!negativeButtonText.isNullOrEmpty()) {
+      it.text = negativeButtonText
+      it.onDebounceClick { negativeButtonAction() }
+    }
   }
 }

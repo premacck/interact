@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:layout_gravity="bottom">
+
+  <ImageButton
+    android:id="@+id/btn_close"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:contentDescription="@string/image"
+    android:padding="@dimen/margin_16dp"
+    android:src="@drawable/ic_cross_grey"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+  <TextView
+    android:id="@+id/tv_order_received_header"
+    style="@style/Text16BoldWrapWrap"
+    android:drawableTop="@drawable/ic_check_green"
+    android:drawablePadding="@dimen/margin_18dp"
+    android:text="@string/we_received_your_order"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/btn_close" />
+
+  <TextView
+    android:id="@+id/tv_reload_and_complete"
+    style="@style/Text18BoldWrapWrap"
+    android:layout_marginTop="@dimen/margin_72dp"
+    android:text="@string/reload_and_complete"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/tv_order_received_header" />
+
+  <TextView
+    android:id="@+id/tv_coins"
+    style="@style/Text18BoldWrapWrap"
+    android:layout_marginTop="@dimen/margin_12dp"
+    android:background="@drawable/bg_rounded_corners"
+    android:drawableBottom="@drawable/ic_coins_badge"
+    android:paddingStart="@dimen/margin_28dp"
+    android:paddingTop="@dimen/margin_28dp"
+    android:paddingEnd="@dimen/margin_28dp"
+    android:paddingBottom="@dimen/margin_10dp"
+    android:text="R$ 15.000\npor mês"
+    android:textSize="@dimen/txt_size_20sp"
+    app:layout_constraintEnd_toStartOf="@+id/tv_coins_2"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/tv_reload_and_complete" />
+
+  <TextView
+    android:id="@+id/tv_coins_2"
+    style="@style/Text18BoldWrapWrap"
+    android:background="@drawable/bg_rounded_corners"
+    android:drawableBottom="@drawable/ic_coins_2"
+    android:paddingStart="@dimen/margin_28dp"
+    android:paddingTop="@dimen/margin_28dp"
+    android:paddingEnd="@dimen/margin_28dp"
+    android:paddingBottom="@dimen/margin_10dp"
+    android:text="R$ 15.000\npor mês"
+    android:textSize="@dimen/txt_size_20sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="@+id/tv_coins"
+    app:layout_constraintTop_toTopOf="@+id/tv_coins" />
+
+  <TextView
+    android:id="@+id/tv_message_1"
+    style="@style/Text14WrapWrap"
+    android:layout_marginTop="@dimen/margin_14dp"
+    android:text="Além de Frete grátis na próxima compra"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/tv_coins" />
+
+  <View
+    android:id="@+id/separator_1"
+    style="@style/ThinLine"
+    android:layout_marginStart="@dimen/margin_16dp"
+    android:layout_marginTop="40dp"
+    android:layout_marginEnd="@dimen/margin_16dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/tv_message_1" />
+
+  <TextView
+    android:id="@+id/tv_message_2"
+    style="@style/Text14WrapWrap"
+    android:layout_marginTop="@dimen/margin_24dp"
+    android:gravity="center"
+    android:text="Basta carregar sua carteira digital Interae\nvocê já está participando."
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/separator_1" />
+
+  <Button
+    android:id="@+id/btn_upload_and_compete"
+    style="@style/ButtonPrimary"
+    android:layout_marginStart="@dimen/margin_16dp"
+    android:layout_marginTop="@dimen/margin_28dp"
+    android:layout_marginEnd="@dimen/margin_16dp"
+    android:layout_marginBottom="@dimen/margin_16dp"
+    android:text="@string/upload_and_compete"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/tv_message_2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

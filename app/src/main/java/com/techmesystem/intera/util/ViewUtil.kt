@@ -45,6 +45,25 @@ fun ViewGroup.attachLayout(@LayoutRes layoutRes: Int): View = RecyclerView.infla
 
 fun Context.getJustLayout(@LayoutRes layoutRes: Int): View = RecyclerView.inflate(this, layoutRes, null)
 
+fun View.disable(disableAlpha: Float = 0.2f) {
+  if (isEnabled) {
+    isEnabled = false
+    isClickable = false
+    alpha = disableAlpha
+  }
+}
+
+fun View.enable() {
+  if (!isEnabled) {
+    isEnabled = true
+    isClickable = true
+    alpha = 1.0f
+  }
+}
+
+fun View.enableOrDisable(enableCondition: Boolean, disableAlpha: Float = 0.2f) =
+  if (enableCondition) enable() else disable(disableAlpha)
+
 fun View.setMargins(left: Int? = null, top: Int? = null, right: Int? = null, bottom: Int? = null) {
   layoutParams = (layoutParams as? ViewGroup.MarginLayoutParams)?.apply {
     left?.let { leftMargin = it; }

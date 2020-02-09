@@ -68,6 +68,40 @@
       android:screenOrientation="portrait"
       android:theme="@style/AppTheme.NoActionBar" />
 
+    <activity
+      android:name=".profile.ui.PersonalDataActivity"
+      android:exported="true"
+      android:screenOrientation="portrait"
+      android:theme="@style/AppTheme.NoActionBar" />
+
+    <activity
+      android:name=".request.ui.RequestsActivity"
+      android:exported="true"
+      android:screenOrientation="portrait"
+      android:theme="@style/AppTheme.NoActionBar" />
+
+    <activity
+      android:name=".request.ui.RequestDetailActivity"
+      android:configChanges="keyboardHidden"
+      android:screenOrientation="portrait"
+      android:theme="@style/AppTheme.NoActionBar"
+      android:windowSoftInputMode="adjustResize" />
+
+    <activity
+      android:name=".help.ui.HelpActivity"
+      android:configChanges="keyboardHidden"
+      android:screenOrientation="portrait"
+      android:theme="@style/AppTheme.NoActionBar"
+      android:windowSoftInputMode="adjustResize" />
+
+    <activity
+      android:name=".checkout.ui.OrderSummaryActivity"
+      android:configChanges="keyboardHidden"
+      android:screenOrientation="portrait"
+      android:theme="@style/AppTheme.NoActionBar"
+      android:windowSoftInputMode="adjustResize" />
+    <activity android:name=".checkout.ui.OrderStatusActivity" />
+
   </application>
 
 </manifest>

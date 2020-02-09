@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.techmesystem.intera.base.view.InteraToolbar
+      android:id="@+id/toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:backNavigationDrawable="@drawable/ic_back_arrow"
+      app:backgroundColor="@color/white"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:toolbarElevation="0"
+      app:toolbarTitle="@string/request_detail" />
+
+    <View
+      android:id="@+id/v_top_shadow"
+      style="@style/ShadowBottom"
+      android:layout_marginStart="@dimen/margin_8dp"
+      android:layout_marginEnd="@dimen/margin_8dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <com.techmesystem.intera.request.view.RequestItem
+      android:id="@+id/ri_request_item"
+      android:layout_width="@dimen/margin_0dp"
+      android:layout_height="wrap_content"
+      android:layout_margin="@dimen/margin_16dp"
+      app:bottomLayoutVisible="false"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <com.techmesystem.intera.base.view.OrderLogistics
+      android:id="@+id/order_logistics"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:padding="@dimen/margin_20dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/ri_request_item" />
+
+    <com.techmesystem.intera.base.view.TotalAmountItem
+      android:id="@+id/total_amount"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      app:amount_interaCash="8,95"
+      app:amount_purchaseAmount="88,95"
+      app:amount_shippingCost="10,00"
+      app:borderEnabled="false"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/order_logistics" />
+
+    <Button
+      android:id="@+id/btn_ask_again"
+      style="@style/ButtonPrimary"
+      android:layout_marginStart="@dimen/margin_16dp"
+      android:layout_marginTop="@dimen/margin_8dp"
+      android:layout_marginEnd="@dimen/margin_16dp"
+      android:text="@string/ask_again"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/total_amount" />
+
+    <Button
+      android:id="@+id/btn_cancel"
+      style="@style/ButtonGhost"
+      android:layout_marginStart="@dimen/margin_16dp"
+      android:layout_marginTop="@dimen/margin_8dp"
+      android:layout_marginEnd="@dimen/margin_16dp"
+      android:text="@string/cancel"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/btn_ask_again" />
+
+    <Button
+      android:id="@+id/btn_help"
+      style="@style/ButtonGhost"
+      android:layout_marginStart="@dimen/margin_16dp"
+      android:layout_marginTop="@dimen/margin_8dp"
+      android:layout_marginEnd="@dimen/margin_16dp"
+      android:layout_marginBottom="@dimen/margin_24dp"
+      android:text="@string/help"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/btn_cancel" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

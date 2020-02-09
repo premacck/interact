@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:orientation="vertical">
+
+  <TextView
+    android:id="@+id/tv_title"
+    style="@style/Text14BoldWrapWrap"
+    android:layout_marginStart="@dimen/margin_16dp"
+    android:layout_marginTop="@dimen/margin_16dp"
+    android:textColor="@color/color_5C5B60"
+    tools:text="Title" />
+
+  <com.google.android.material.textfield.TextInputEditText
+    android:id="@+id/et_main_text"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/margin_12dp"
+    android:layout_marginEnd="@dimen/margin_12dp"
+    android:drawableEnd="@drawable/ic_next_small"
+    android:drawablePadding="@dimen/margin_16dp"
+    android:ellipsize="end"
+    android:gravity="center_vertical"
+    android:maxLines="4"
+    android:paddingStart="@dimen/margin_4dp"
+    android:paddingTop="@dimen/margin_10dp"
+    android:paddingEnd="@dimen/margin_16dp"
+    android:paddingBottom="@dimen/margin_18dp"
+    android:textColor="@color/color_5C5B60"
+    android:textSize="@dimen/txt_size_14sp"
+    android:theme="@style/Theme.App.Base.CustomEditText"
+    tools:text="@tools:sample/lorem/random" />
+</LinearLayout>

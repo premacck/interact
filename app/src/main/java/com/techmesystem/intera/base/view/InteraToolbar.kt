@@ -70,7 +70,7 @@ class InteraToolbar @JvmOverloads constructor(
 
   fun getMenu(): Menu? = intera_toolbar?.menu
 
-  private fun setBackNavigationEnabled(enabled: Boolean, @DrawableRes backIcon: Int = R.drawable.ic_arrow_left_white) {
+  fun setBackNavigationEnabled(enabled: Boolean, @DrawableRes backIcon: Int = R.drawable.ic_arrow_left_white) {
     isBackNavigationEnabled = enabled
     intera_toolbar?.run {
       if (enabled) {

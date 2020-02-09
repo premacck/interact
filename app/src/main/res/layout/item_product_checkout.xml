@@ -55,7 +55,7 @@
     android:maxLines="2"
     app:layout_constraintStart_toStartOf="@id/tv_caption"
     app:layout_constraintTop_toBottomOf="@id/tv_company"
-    tools:text="Media Mercado\nR$ 26,71" />
+    tools:text="@string/media_market_x" />
 
   <TextView
     android:id="@+id/tv_selection_count"
@@ -83,7 +83,7 @@
     android:layout_height="@dimen/margin_0dp"
     android:layout_marginStart="@dimen/margin_8dp"
     android:background="#1A000000"
-    app:layout_constraintBottom_toTopOf="@id/tv_selection_count"
+    app:layout_constraintBottom_toBottomOf="@id/tv_additional_associated_text"
     app:layout_constraintStart_toEndOf="@+id/tv_price_text"
     app:layout_constraintTop_toTopOf="@id/tv_price_text" />
 
@@ -98,7 +98,7 @@
     app:layout_constraintEnd_toStartOf="@+id/btn_remove"
     app:layout_constraintStart_toEndOf="@+id/separator_1"
     app:layout_constraintTop_toTopOf="@+id/separator_1"
-    tools:text="Associado\n R$ 18,95" />
+    tools:text="@string/associated_price_x" />
 
   <TextView
     android:id="@+id/tv_additional_associated_text"
@@ -106,12 +106,13 @@
     android:layout_height="wrap_content"
     android:ellipsize="end"
     android:maxLines="2"
-    android:textAllCaps="true"
+    app:layout_constraintBottom_toTopOf="@+id/tv_selection_count"
     android:textColor="@color/color_4063A5"
+    app:layout_constraintVertical_chainStyle="packed"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="@id/tv_associated_text"
     app:layout_constraintTop_toBottomOf="@+id/b_additional_associated_top"
-    tools:text="+ R$ 1,89 interaCash" />
+    tools:text="@string/additional_price_x" />
 
   <androidx.constraintlayout.widget.Barrier
     android:id="@+id/b_additional_associated_top"

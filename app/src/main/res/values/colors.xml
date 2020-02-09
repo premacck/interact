@@ -199,5 +199,9 @@
     <color name="color_cc5b5b5f">#cc5b5b5f</color>
     <color name="color_f9f7eb">#F9F7EB</color>
     <color name="color_999999">#999999</color>
+    <color name="color_665C5B60">#665C5B60</color>
+    <color name="color_5C5B60">#5C5B60</color>
+    <color name="color_cc5c5b60">#CC5C5B60</color>
+    <color name="color_33000000">#33000000</color>
 
 </resources>

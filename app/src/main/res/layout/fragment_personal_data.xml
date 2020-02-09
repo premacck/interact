@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:fillViewport="true">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.techmesystem.intera.base.view.CustomEditText
+      android:id="@+id/cet_full_name"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/margin_8dp"
+      app:cet_doubleFields="true"
+      app:cet_hintOne="@string/first_name"
+      app:cet_hintTwo="@string/surname"
+      app:cet_inputType="normal"
+      app:cet_title="@string/full_name" />
+
+    <com.techmesystem.intera.base.view.CustomEditText
+      android:id="@+id/cet_email"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/margin_4dp"
+      app:cet_hintOne="@string/first_name"
+      app:cet_inputType="email"
+      app:cet_title="@string/email" />
+
+    <com.techmesystem.intera.base.view.CustomEditText
+      android:id="@+id/cet_phone_number"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/margin_4dp"
+      app:cet_hintOne="@string/hint_number"
+      app:cet_inputType="number"
+      app:cet_title="@string/cell_phone_with_ddd" />
+
+    <com.techmesystem.intera.base.view.CustomEditText
+      android:id="@+id/cet_cpf"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/margin_4dp"
+      app:cet_hintOne="@string/enter_your_cpf"
+      app:cet_inputType="normal"
+      app:cet_title="@string/cpf" />
+
+    <com.techmesystem.intera.base.view.CustomEditText
+      android:id="@+id/cet_password"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/margin_4dp"
+      app:cet_hintOne="@string/type_the_password"
+      app:cet_inputType="password"
+      app:cet_title="@string/password" />
+
+    <com.techmesystem.intera.base.view.CustomEditText
+      android:id="@+id/cet_repeat_password"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/margin_4dp"
+      app:cet_hintOne="@string/type_the_password_again"
+      app:cet_inputType="password"
+      app:cet_title="@string/repeat_password" />
+
+    <Button
+      android:id="@+id/btn_continue"
+      style="@style/ButtonPrimary"
+      android:layout_marginStart="@dimen/margin_16dp"
+      android:layout_marginTop="@dimen/margin_24dp"
+      android:layout_marginEnd="@dimen/margin_16dp"
+      android:layout_marginBottom="@dimen/margin_48dp"
+      android:text="@string/continue_" />
+
+  </LinearLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:orientation="vertical">
+
+  <com.techmesystem.intera.base.view.CustomTextInputEditText
+    android:id="@+id/et_recipient"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:ctiet_boldTitle="false"
+    app:ctiet_mainText="@string/sample_recipient"
+    app:ctiet_title="@string/recipient" />
+
+  <com.techmesystem.intera.base.view.CustomTextInputEditText
+    android:id="@+id/et_address"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:ctiet_boldTitle="false"
+    app:ctiet_mainText="@string/home_address"
+    app:ctiet_title="@string/address" />
+
+  <com.techmesystem.intera.base.view.CustomTextView
+    android:id="@+id/tv_payment"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:ctv_boldTitle="false"
+    app:ctv_drawableStart="@drawable/ic_payment"
+    app:ctv_mainText="@string/sample_payment_text"
+    app:ctv_title="@string/form_of_payment" />
+
+</LinearLayout>

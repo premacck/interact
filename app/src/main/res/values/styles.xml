@@ -207,7 +207,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">@dimen/txt_size_14sp</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textColor">@color/DodgerBlue</item>
+        <item name="android:textColor">@color/buttonPrimary</item>
     </style>
 
     <style name="ButtonPrimary" parent="Widget.AppCompat.Button">">
@@ -234,4 +234,15 @@
         <item name="textAllCaps">false</item>
     </style>
 
+    <style name="CustomTabTextCapsBold" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">@dimen/txt_size_12sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/color_665C5B60</item>
+    </style>
+
+    <style name="Theme.App.Base.CustomEditText" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorControlNormal">@color/color_33000000</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
+        <item name="colorControlHighlight">@color/colorAccent</item>
+    </style>
 </resources>

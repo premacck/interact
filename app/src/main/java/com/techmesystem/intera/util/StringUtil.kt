@@ -5,6 +5,7 @@ import android.text.SpannableStringBuilder
 import android.text.Spanned
 import android.text.style.StyleSpan
 import java.util.regex.Pattern
+import kotlin.math.round
 
 /**
  * Prem's creation, on 2020-02-05
@@ -31,4 +32,10 @@ fun String.makeStarredPortionBold(): SpannableStringBuilder {
   matcher.appendTail(sb)
   result.append(sb.toString())
   return result
+}
+
+fun Float.round(decimals: Int = 2): Float {
+  var multiplier = 1.0
+  repeat(decimals) { multiplier *= 10 }
+  return (round(this * multiplier) / multiplier).toFloat()
 }
