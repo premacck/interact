@@ -100,7 +100,13 @@
       android:screenOrientation="portrait"
       android:theme="@style/AppTheme.NoActionBar"
       android:windowSoftInputMode="adjustResize" />
-    <activity android:name=".checkout.ui.OrderStatusActivity" />
+
+    <activity
+      android:name=".checkout.ui.OrderStatusActivity"
+      android:configChanges="keyboardHidden"
+      android:windowSoftInputMode="adjustResize"
+      android:screenOrientation="portrait"
+      android:theme="@style/AppTheme.NoActionBar" />
 
   </application>
 

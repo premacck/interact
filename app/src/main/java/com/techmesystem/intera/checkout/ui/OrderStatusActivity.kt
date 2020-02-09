@@ -4,6 +4,7 @@ import android.content.Context
 import android.os.Bundle
 import com.techmesystem.intera.R
 import com.techmesystem.intera.base.BaseActivity
+import kotlinx.android.synthetic.main.activity_order_status.*
 import org.jetbrains.anko.startActivity
 
 /**
@@ -18,6 +19,7 @@ class OrderStatusActivity : BaseActivity() {
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_order_status)
+    toolbar.onBackNavigation { onBackPressed() }
     OrderReceivedBottomSheet().show(supportFragmentManager)
   }
 }
