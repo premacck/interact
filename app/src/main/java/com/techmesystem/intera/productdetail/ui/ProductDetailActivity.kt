@@ -138,8 +138,8 @@ class ProductDetailActivity : BaseActivity() {
 
   private fun setCashbackLayout(product: Product) = product.run {
     tv_cashback?.run {
-      setDrawables(end = if (cashback.isNullOrEmpty()) 0 else R.drawable.ic_next)
-      setViewPadding(start = dip(if (cashback.isNullOrEmpty()) 8 else 16), end = dip(if (cashback.isNullOrEmpty()) 8 else 2))
+      setDrawables(end = if (cashback.isNullOrEmpty()) 0 else R.drawable.ic_next_small)
+      setViewPadding(start = dip(if (cashback.isNullOrEmpty()) 8 else 16), end = dip(8))
       allCaps = cashback.isNullOrEmpty()
       textColorResource = if (cashback.isNullOrEmpty()) R.color.white else R.color.color_333333
       backgroundResource = if (cashback.isNullOrEmpty()) R.drawable.bg_filled_orange_rounded_corner else R.drawable.bg_filled_yellow_rounded_corner
