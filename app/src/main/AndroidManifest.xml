@@ -148,6 +148,12 @@
       android:theme="@style/AppTheme.NoActionBar"
       android:windowSoftInputMode="adjustResize" />
 
+    <activity
+      android:name=".auth.ui.RegisterActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/AppTheme.NoActionBar"
+      android:windowSoftInputMode="adjustResize" />
+
   </application>
 
 </manifest>

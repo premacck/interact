@@ -66,6 +66,35 @@
       app:cet_inputType="password"
       app:cet_title="@string/repeat_password" />
 
+    <CheckedTextView
+      android:id="@+id/tv_i_agree_to_terms_of_use"
+      style="@style/BlueCheckedTextView"
+      android:layout_marginStart="@dimen/margin_16dp"
+      android:layout_marginTop="@dimen/margin_48dp"
+      android:layout_marginEnd="@dimen/margin_16dp"
+      android:checked="true"
+      android:text="@string/i_agree_to_terms_of_use"
+      android:visibility="gone" />
+
+    <CheckedTextView
+      android:id="@+id/tv_i_use_continuous_medication"
+      style="@style/BlueCheckedTextView"
+      android:layout_marginStart="@dimen/margin_16dp"
+      android:layout_marginTop="@dimen/margin_12dp"
+      android:layout_marginEnd="@dimen/margin_16dp"
+      android:text="@string/i_use_continuous_medication"
+      android:visibility="gone" />
+
+    <TextView
+      android:id="@+id/tv_continuous_medication_usage_message"
+      style="@style/Text14MatchWrap"
+      android:layout_marginStart="@dimen/margin_48dp"
+      android:layout_marginTop="@dimen/margin_4dp"
+      android:layout_marginEnd="@dimen/margin_16dp"
+      android:layout_marginBottom="@dimen/margin_16dp"
+      android:text="@string/continuous_medication_usage_message"
+      android:visibility="gone" />
+
     <Button
       android:id="@+id/btn_continue"
       style="@style/ButtonPrimary"

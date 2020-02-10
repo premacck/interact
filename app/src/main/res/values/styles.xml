@@ -5,8 +5,9 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorAccent">@color/color_5B5B5F</item>
         <item name="colorControlHighlight">@color/color_e5e5e5</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Activity</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
@@ -253,5 +254,14 @@
         <item name="android:colorControlNormal">@color/color_ffd400</item>
         <item name="android:colorControlActivated">@color/DarkGoldenrod</item>
         <item name="android:colorControlHighlight">@color/color_ffd400</item>
+    </style>
+
+    <style name="BlueCheckedTextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color_5B5B5F</item>
+        <item name="android:textSize">@dimen/txt_size_16sp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:drawableStart">?android:listChoiceIndicatorMultiple</item>
     </style>
 </resources>

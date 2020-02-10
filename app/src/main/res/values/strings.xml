@@ -186,5 +186,9 @@
   <string name="add_money_hint">88,88</string>
   <string name="now_you_are_part_of_intera_club">Agora você faz parte do Clube Intera :)</string>
   <string name="save">Salvar</string>
+  <string name="my_data">Meus Dados</string>
+  <string name="i_agree_to_terms_of_use">Concordo com os termos de uso</string>
+  <string name="i_use_continuous_medication">Faço uso de medicamento contínuo</string>
+  <string name="continuous_medication_usage_message">Ao assinalar que faz uso de medicamentos contínuos pediremos a indicação de qual(is) para enviar lembretes e promoções</string>
 </resources>
 <!--\u000D-->

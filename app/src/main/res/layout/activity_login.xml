@@ -124,6 +124,22 @@
             android:text="ENTRAR"
             android:textColor="@color/white" />
 
+        <TextView
+          style="@style/Text14BoldWrapWrap"
+          android:layout_gravity="center_horizontal"
+          android:layout_marginTop="@dimen/margin_20dp"
+          android:layout_marginBottom="@dimen/margin_20dp"
+          android:text="Não tem cadastro ainda?"
+          />
+
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_36dp"
+            android:background="@color/appThemeColor"
+            android:text="cadastrar"
+            android:textColor="@color/white" />
+
     </LinearLayout>
 
 </RelativeLayout>
