@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:fillViewport="true">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.techmesystem.intera.base.view.InteraToolbar
+      android:id="@+id/toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:backNavigationDrawable="@drawable/ic_back_arrow"
+      app:backgroundColor="@color/white"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:toolbarElevation="0"
+      app:toolbarTitle="@string/address" />
+
+    <View
+      android:id="@+id/v_top_shadow"
+      style="@style/ShadowBottom"
+      android:layout_marginStart="@dimen/margin_8dp"
+      android:layout_marginEnd="@dimen/margin_8dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <com.techmesystem.intera.base.view.CustomEditText
+      android:id="@+id/cet_cep"
+      android:layout_width="@dimen/margin_0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/margin_4dp"
+      app:cet_doubleFields="false"
+      app:cet_hintOne="01244 - 010"
+      app:cet_inputType="normal"
+      app:cet_title="@string/cep"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/toolbar"
+      app:layout_constraintWidth_percent="0.5" />
+
+    <TextView
+      android:id="@+id/tv_delivery_address_header"
+      style="@style/Text12WrapWrap"
+      android:layout_marginStart="@dimen/margin_16dp"
+      android:layout_marginTop="@dimen/margin_24dp"
+      android:text="@string/delivery_address"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/cet_cep" />
+
+    <View
+      android:id="@+id/separator_1"
+      style="@style/ThinLine"
+      android:layout_marginStart="@dimen/margin_16dp"
+      android:layout_marginTop="@dimen/margin_12dp"
+      android:layout_marginEnd="@dimen/margin_16dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/tv_delivery_address_header" />
+
+    <ImageView
+      android:id="@+id/iv_location_pin"
+      android:layout_width="@dimen/margin_56dp"
+      android:layout_height="@dimen/margin_56dp"
+      android:contentDescription="@string/image"
+      android:padding="@dimen/margin_16dp"
+      android:src="@drawable/ic_location_pin"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/separator_1" />
+
+    <TextView
+      android:id="@+id/tv_delivery_address_input"
+      style="@style/Text16WrapWrap"
+      android:layout_marginTop="@dimen/margin_14dp"
+      android:lineSpacingExtra="6sp"
+      android:text="Rua Minas Gerais\nHigienópolis - São Paulo - SP"
+      app:layout_constraintStart_toEndOf="@id/iv_location_pin"
+      app:layout_constraintTop_toBottomOf="@id/separator_1" />
+
+    <View
+      android:id="@+id/separator_2"
+      style="@style/ThinLine"
+      android:layout_marginStart="@dimen/margin_16dp"
+      android:layout_marginTop="@dimen/margin_16dp"
+      android:layout_marginEnd="@dimen/margin_16dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/tv_delivery_address_input" />
+
+    <com.techmesystem.intera.base.view.CustomEditText
+      android:id="@+id/cet_number"
+      android:layout_width="@dimen/margin_0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/margin_4dp"
+      app:cet_doubleFields="false"
+      app:cet_inputType="normal"
+      app:cet_title="@string/number"
+      app:layout_constraintEnd_toStartOf="@id/cet_complement"
+      app:layout_constraintHorizontal_bias="0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/separator_2" />
+
+    <com.techmesystem.intera.base.view.CustomEditText
+      android:id="@+id/cet_complement"
+      android:layout_width="@dimen/margin_0dp"
+      android:layout_height="wrap_content"
+      app:cet_doubleFields="false"
+      app:cet_inputType="normal"
+      app:cet_title="@string/complement"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0"
+      app:layout_constraintStart_toEndOf="@id/cet_number"
+      app:layout_constraintTop_toTopOf="@id/cet_number" />
+
+    <com.techmesystem.intera.base.view.CustomEditText
+      android:id="@+id/cet_address_type"
+      android:layout_width="@dimen/margin_0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/margin_4dp"
+      android:layout_marginBottom="@dimen/margin_28dp"
+      app:cet_doubleFields="false"
+      app:cet_hintOne="@string/home"
+      app:cet_inputType="normal"
+      app:cet_title="@string/address_type"
+      app:layout_constraintBottom_toTopOf="@+id/btn_continue"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/cet_number"
+      app:layout_constraintVertical_bias="0" />
+
+    <Button
+      android:id="@+id/btn_continue"
+      style="@style/ButtonPrimary"
+      android:layout_width="@dimen/margin_0dp"
+      android:layout_margin="@dimen/margin_16dp"
+      android:text="@string/continue_"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,9 +1,14 @@
 package com.techmesystem.intera.auth.ui
 
+import android.app.Activity
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import com.techmesystem.intera.R
 import com.techmesystem.intera.base.BaseActivity
+import com.techmesystem.intera.home.ui.HomeActivity
+import com.techmesystem.intera.profile.ui.AddressActivity
+import com.techmesystem.intera.profile.ui.AddressActivity.Companion.REQUEST_REGISTER
 import com.techmesystem.intera.util.onDebounceClick
 import com.techmesystem.intera.util.showView
 import kotlinx.android.synthetic.main.fragment_personal_data.*
@@ -38,6 +43,17 @@ class RegisterActivity : BaseActivity() {
     }
     tv_i_use_continuous_medication.onDebounceClick {
       tv_i_use_continuous_medication.isChecked = !tv_i_use_continuous_medication.isChecked
+    }
+    btn_continue.onDebounceClick {
+      AddressActivity.launchForResult(this)
+    }
+  }
+
+  override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+    super.onActivityResult(requestCode, resultCode, data)
+    if (requestCode == REQUEST_REGISTER && resultCode == Activity.RESULT_OK) {
+      HomeActivity.launch(this)
+      finish()
     }
   }
 }

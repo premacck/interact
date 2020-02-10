@@ -28,6 +28,9 @@ class LoginActivity : AppCompatActivity() {
       overridePendingTransition(R.anim.enter_anim, R.anim.exit_anim)
     }
 
-    btn_register.onDebounceClick { RegisterActivity.launch(this) }
+    btn_register.onDebounceClick {
+      RegisterActivity.launch(this)
+      finish()
+    }
   }
 }

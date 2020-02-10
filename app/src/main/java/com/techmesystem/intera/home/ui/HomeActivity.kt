@@ -1,5 +1,6 @@
 package com.techmesystem.intera.home.ui
 
+import android.content.Context
 import android.os.Bundle
 import androidx.annotation.IdRes
 import androidx.fragment.app.Fragment
@@ -11,6 +12,7 @@ import com.techmesystem.intera.favorite.ui.FavoriteFragment
 import com.techmesystem.intera.help.ui.HelpFragment
 import com.techmesystem.intera.profile.ui.ProfileFragment
 import kotlinx.android.synthetic.main.activity_home.*
+import org.jetbrains.anko.startActivity
 
 class HomeActivity : BaseActivity() {
 
@@ -20,6 +22,10 @@ class HomeActivity : BaseActivity() {
   private lateinit var helpFragment: HelpFragment
   private lateinit var checkoutFragment: CheckoutFragment
   private lateinit var profileFragment: ProfileFragment
+
+  companion object {
+    fun launch(from: Context?) = from?.run { startActivity<HomeActivity>() }
+  }
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
