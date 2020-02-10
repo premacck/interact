@@ -148,5 +148,9 @@
   <string name="reload_and_complete">Recarregue e concorra</string>
   <string name="upload_and_compete">Carregar e concorrer</string>
   <string name="congratulations">Parabéns!</string>
+  <string name="sample_notification_title_1"><![CDATA[Parabéns! Você recebeu <b>R$ 50,00</b><br/>de volta na compra deste produto]]></string>
+  <string name="sample_notification_title_2"><![CDATA[Seu produto chegou!<br/>Você já cadastrou seu tratamento?]]></string>
+  <string name="sample_notification_title_3"><![CDATA[Parabéns! Você recebeu R$ 50,00 <br/>de volta na compra deste produto]]></string>
+  <string name="no_notifications">Nenhuma notificaçãos</string>
 </resources>
 <!--\u000D-->

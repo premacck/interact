@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:app="http://schemas.android.com/apk/res-auto"
   xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/cl_root"
   android:layout_width="match_parent"
   android:layout_height="match_parent">
 
@@ -21,8 +22,8 @@
     android:id="@+id/erv_list"
     android:layout_width="@dimen/margin_0dp"
     android:layout_height="@dimen/margin_0dp"
-    android:padding="@dimen/margin_16dp"
     android:background="@color/white"
+    android:padding="@dimen/margin_16dp"
     app:itemSpacing="@dimen/margin_8dp"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toEndOf="parent"

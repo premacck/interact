@@ -115,6 +115,13 @@
       android:theme="@style/AppTheme.NoActionBar"
       android:windowSoftInputMode="adjustResize" />
 
+    <activity
+      android:name=".notification.ui.NotificationActivity"
+      android:configChanges="keyboardHidden"
+      android:screenOrientation="portrait"
+      android:theme="@style/AppTheme.NoActionBar"
+      android:windowSoftInputMode="adjustResize" />
+
   </application>
 
 </manifest>

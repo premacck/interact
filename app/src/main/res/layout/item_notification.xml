@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content">
+
+  <ImageButton
+    android:id="@+id/btn_remove"
+    android:layout_width="@dimen/margin_56dp"
+    android:layout_height="@dimen/margin_56dp"
+    android:background="?android:selectableItemBackgroundBorderless"
+    android:contentDescription="@string/image"
+    android:src="@drawable/ic_cross_grey"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+  <TextView
+    android:id="@+id/tv_title"
+    style="@style/Text14WrapWrap"
+    android:layout_width="@dimen/margin_0dp"
+    android:layout_marginStart="@dimen/margin_22dp"
+    android:layout_marginTop="@dimen/margin_12dp"
+    android:layout_marginEnd="@dimen/margin_22dp"
+    android:ellipsize="end"
+    android:maxLines="2"
+    android:textColor="@color/color_5B5B5F"
+    app:layout_constraintEnd_toStartOf="@id/btn_remove"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:text="@tools:sample/lorem/random" />
+
+  <androidx.constraintlayout.widget.Barrier
+    android:id="@+id/b_top"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:barrierDirection="bottom"
+    app:constraint_referenced_ids="tv_title,btn_remove" />
+
+  <View
+    android:id="@+id/separator_1"
+    style="@style/ThinLine"
+    android:layout_width="@dimen/margin_0dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/b_top" />
+
+  <ImageView
+    android:id="@+id/iv_product_thumbnail"
+    android:layout_width="@dimen/margin_0dp"
+    android:layout_height="@dimen/margin_0dp"
+    android:layout_marginStart="@dimen/margin_12dp"
+    android:layout_marginTop="@dimen/margin_12dp"
+    android:layout_marginBottom="@dimen/margin_12dp"
+    android:contentDescription="@string/image"
+    android:scaleType="centerCrop"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintDimensionRatio="1:1"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/separator_1"
+    app:layout_constraintWidth_percent="0.2"
+    tools:src="@tools:sample/backgrounds/scenic" />
+
+  <TextView
+    android:id="@+id/tv_product_caption"
+    style="@style/Text14WrapWrap"
+    android:layout_width="@dimen/margin_0dp"
+    android:layout_marginStart="@dimen/margin_18dp"
+    android:layout_marginEnd="@dimen/margin_12dp"
+    android:ellipsize="end"
+    android:maxLines="2"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="@id/iv_product_thumbnail"
+    app:layout_constraintTop_toTopOf="@id/iv_product_thumbnail"
+    tools:text="@tools:sample/lorem/random" />
+
+  <TextView
+    android:id="@+id/tv_product_company"
+    style="@style/Text12WrapWrap"
+    android:layout_width="@dimen/margin_0dp"
+    android:layout_marginTop="@dimen/margin_4dp"
+    android:ellipsize="end"
+    android:maxLines="2"
+    app:layout_constraintEnd_toEndOf="@+id/tv_product_caption"
+    app:layout_constraintStart_toStartOf="@+id/tv_product_caption"
+    app:layout_constraintTop_toBottomOf="@+id/tv_product_caption"
+    tools:text="@tools:sample/lorem/random" />
+</androidx.constraintlayout.widget.ConstraintLayout>
