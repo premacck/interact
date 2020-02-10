@@ -1,14 +1,14 @@
-package com.techmesystem.intera
+package com.techmesystem.intera.home.ui
 
 import android.os.Bundle
 import androidx.annotation.IdRes
 import androidx.fragment.app.Fragment
 import com.google.android.material.tabs.TabLayout
+import com.techmesystem.intera.R
 import com.techmesystem.intera.base.BaseActivity
 import com.techmesystem.intera.checkout.ui.CheckoutFragment
 import com.techmesystem.intera.favorite.ui.FavoriteFragment
 import com.techmesystem.intera.help.ui.HelpFragment
-import com.techmesystem.intera.home.ui.HomeFragment
 import com.techmesystem.intera.profile.ui.ProfileFragment
 import kotlinx.android.synthetic.main.activity_home.*
 
