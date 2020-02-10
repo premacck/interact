@@ -2,9 +2,11 @@ package com.techmesystem.intera.payment.view
 
 import android.content.Context
 import android.os.Bundle
+import androidx.core.os.postDelayed
 import com.techmesystem.intera.R
 import com.techmesystem.intera.base.BaseActivity
 import com.techmesystem.intera.base.component.CardTextWatcher
+import com.techmesystem.intera.payment.component.ICardDataListener
 import com.techmesystem.intera.payment.mockdata.MonthList
 import com.techmesystem.intera.payment.mockdata.YearList
 import com.techmesystem.intera.payment.model.CardDetail
@@ -13,12 +15,11 @@ import kotlinx.android.synthetic.main.activity_card_data.*
 import org.jetbrains.anko.dip
 import org.jetbrains.anko.selector
 import org.jetbrains.anko.startActivity
-import org.jetbrains.anko.toast
 
 /**
  * Prem's creation, on 2020-02-10
  */
-class CardDataActivity : BaseActivity() {
+class CardDataActivity : BaseActivity(), ICardDataListener {
 
   private var cardDetail: CardDetail = CardDetail()
   private val cardTextWatcher: CardTextWatcher by lazy { CardTextWatcher(dip(8)) }
@@ -59,10 +60,7 @@ class CardDataActivity : BaseActivity() {
         dialog.dismiss()
       }
     }
-    btn_delete_card.onDebounceClick {
-      toast(R.string.card_deleted)
-      finish()
-    }
+    btn_delete_card.onDebounceClick { DeleteCardConfirmBottomSheet().show(supportFragmentManager) }
   }
 
   private fun initCard() {
@@ -73,5 +71,13 @@ class CardDataActivity : BaseActivity() {
       tv_card_month.text = cardDetail.cardMonth
       tv_card_year.text = cardDetail.cardYear
     }
+  }
+
+  override fun onCardDeleteDone() {
+    DeleteCardSuccessBottomSheet().show(supportFragmentManager)
+  }
+
+  override fun onCardDeleteFinish() {
+    handler.postDelayed(200) { finish() }
   }
 }

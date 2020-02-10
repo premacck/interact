@@ -36,8 +36,8 @@ abstract class InteraBottomSheet : BaseBottomSheet() {
     }
     tv_message?.showOrHide(!message.isNullOrEmpty()) {
       it.text = message
+      messageStartDrawable?.let { drawable -> it.setDrawables(start = drawable) }
     }
-    messageStartDrawable?.let { tv_message?.setDrawables(start = it) }
 
     btn_positive?.showOrHide(!positiveButtonText.isNullOrEmpty()) {
       it.text = positiveButtonText

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:layout_gravity="bottom"
+  android:paddingTop="98dp"
+  android:paddingBottom="90dp">
+
+  <TextView
+    style="@style/Text16BoldWrapWrap"
+    android:layout_gravity="center"
+    android:drawableTop="@drawable/ic_check_green_big"
+    android:drawablePadding="@dimen/margin_48dp"
+    android:gravity="center"
+    android:text="Cartão Removido\ncom sucesso!" />
+
+</FrameLayout>

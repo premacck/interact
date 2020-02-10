@@ -175,5 +175,8 @@
   <string name="select_month">Selecione o mês</string>
   <string name="cvv_caps">CVV</string>
   <string name="card_deleted">Cartão excluído</string>
+  <string name="are_you_sure_you_want_to_delete_card">Tem certeza que deseja excluir?</string>
+  <string name="no">Não</string>
+  <string name="yes">Sim</string>
 </resources>
 <!--\u000D-->
