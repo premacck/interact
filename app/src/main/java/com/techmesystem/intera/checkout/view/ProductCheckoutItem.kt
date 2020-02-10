@@ -24,6 +24,7 @@ import org.jetbrains.anko.imageResource
 
   private lateinit var product: Product
   private var isRemoveAllowed: Boolean = true
+  private var isFavoriteAllowed: Boolean = true
 
   init {
     attachLayout(R.layout.item_product_checkout)
@@ -31,6 +32,7 @@ import org.jetbrains.anko.imageResource
     val array = context.obtainStyledAttributes(attrs, R.styleable.ProductCheckoutItem)
 
     removeAllowed(array.getBoolean(R.styleable.ProductCheckoutItem_removeAllowed, true))
+    favoriteAllowed(array.getBoolean(R.styleable.ProductCheckoutItem_favoriteAllowed, true))
     editAllowed(array.getBoolean(R.styleable.ProductCheckoutItem_editAllowed, true))
     cashbackAllowed(array.getBoolean(R.styleable.ProductCheckoutItem_cashbackAllowed, true))
 
@@ -41,17 +43,18 @@ import org.jetbrains.anko.imageResource
     tv_cashback_members_info?.showOrHide(allowed)
   }
 
-  private fun removeAllowed(allowed: Boolean) {
+  @ModelProp fun removeAllowed(allowed: Boolean) {
     isRemoveAllowed = allowed
     btn_remove?.showOrHide(allowed)
   }
 
-  private fun editAllowed(allowed: Boolean) {
-    tv_selection_count?.showOrHide(allowed)
-    if (isRemoveAllowed) {
-      btn_remove?.showOrHide(allowed)
-    }
+  @ModelProp fun favoriteAllowed(allowed: Boolean) {
+    isFavoriteAllowed = allowed
     btn_favorite?.showOrHide(allowed)
+  }
+
+  @ModelProp fun editAllowed(allowed: Boolean) {
+    tv_selection_count?.showOrHide(allowed)
   }
 
   @ModelProp fun withProduct(product: Product) {
@@ -107,6 +110,10 @@ import org.jetbrains.anko.imageResource
     }
   }
 
+  @ModelProp fun isInFavoriteList(isInFavoriteList: Boolean) {
+    btn_favorite?.imageResource = if (isInFavoriteList) R.drawable.ic_favorite_red else R.drawable.ic_favorite
+  }
+
   private fun withImageThumbnail(@DrawableRes resourceId: Int) {
     if (resourceId != -1) {
       iv_product_thumbnail?.imageResource = resourceId
@@ -117,9 +124,9 @@ import org.jetbrains.anko.imageResource
     btn_favorite.isSelected = isFavorite
   }
 
-  @ModelProp(DoNotHash) fun onRemoveClick(action: (Product) -> Unit) = btn_remove?.onDebounceClick { action(product) }
+  @JvmOverloads @ModelProp(DoNotHash) fun onRemoveClick(action: ((Product) -> Unit)? = null) = btn_remove?.onDebounceClick { action?.invoke(product) }
 
-  @ModelProp(DoNotHash) fun onFavoriteClick(action: (Product) -> Unit) = btn_favorite?.onDebounceClick { action(product) }
+  @JvmOverloads @ModelProp(DoNotHash) fun onFavoriteClick(action: ((Product) -> Unit)? = null) = btn_favorite?.onDebounceClick { action?.invoke(product) }
 
-  @ModelProp(DoNotHash) fun onSelectionCountClick(action: (Product) -> Unit) = tv_selection_count?.onDebounceClick { action(product) }
+  @JvmOverloads @ModelProp(DoNotHash) fun onSelectionCountClick(action: ((Product) -> Unit)? = null) = tv_selection_count?.onDebounceClick { action?.invoke(product) }
 }

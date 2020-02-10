@@ -24,6 +24,8 @@ class RequestsActivity : BaseActivity() {
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.view_list_with_toolbar)
+    toolbar.onBackNavigation { onBackPressed() }
+    toolbar.title = getString(R.string.requests)
     initRecyclerView()
   }
 

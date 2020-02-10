@@ -10,6 +10,7 @@ import kotlinx.android.parcel.Parcelize
  * Prem's creation, on 2020-02-05
  */
 @Parcelize data class Product(
+  val id: Int,
   @DrawableRes val icon: Int,
   val tags: List<String> = listOf(),
   val caption: String = "",

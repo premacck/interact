@@ -2,8 +2,8 @@
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:app="http://schemas.android.com/apk/res-auto"
   android:layout_width="match_parent"
-  android:background="@color/white"
-  android:layout_height="match_parent">
+  android:layout_height="match_parent"
+  android:background="@color/white">
 
   <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
@@ -56,9 +56,11 @@
       android:layout_marginEnd="@dimen/margin_16dp"
       app:cashbackAllowed="false"
       app:editAllowed="false"
+      app:favoriteAllowed="false"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/tv_order_summary_header" />
+      app:layout_constraintTop_toBottomOf="@+id/tv_order_summary_header"
+      app:removeAllowed="false" />
 
     <com.techmesystem.intera.checkout.view.ProductCheckoutItem
       android:id="@+id/product_2"
@@ -68,9 +70,11 @@
       android:layout_marginTop="@dimen/margin_8dp"
       android:layout_marginEnd="@dimen/margin_16dp"
       app:editAllowed="false"
+      app:favoriteAllowed="false"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/product_1" />
+      app:layout_constraintTop_toBottomOf="@+id/product_1"
+      app:removeAllowed="false" />
 
     <TextView
       android:id="@+id/tv_installment_header"

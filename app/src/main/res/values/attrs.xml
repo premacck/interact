@@ -53,6 +53,7 @@
     <declare-styleable name="ProductCheckoutItem">
         <attr name="editAllowed" format="boolean" />
         <attr name="removeAllowed" format="boolean" />
+        <attr name="favoriteAllowed" format="boolean" />
         <attr name="cashbackAllowed" format="boolean" />
     </declare-styleable>
 

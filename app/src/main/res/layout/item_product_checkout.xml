@@ -106,12 +106,12 @@
     android:layout_height="wrap_content"
     android:ellipsize="end"
     android:maxLines="2"
-    app:layout_constraintBottom_toTopOf="@+id/tv_selection_count"
     android:textColor="@color/color_4063A5"
-    app:layout_constraintVertical_chainStyle="packed"
+    app:layout_constraintBottom_toTopOf="@+id/tv_selection_count"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="@id/tv_associated_text"
     app:layout_constraintTop_toBottomOf="@+id/b_additional_associated_top"
+    app:layout_constraintVertical_chainStyle="packed"
     tools:text="@string/additional_price_x" />
 
   <androidx.constraintlayout.widget.Barrier
@@ -123,22 +123,22 @@
 
   <ImageButton
     android:id="@+id/btn_remove"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_width="@dimen/margin_56dp"
+    android:layout_height="@dimen/margin_56dp"
     android:background="?android:selectableItemBackgroundBorderless"
     android:contentDescription="@string/image"
-    android:padding="@dimen/margin_16dp"
     android:src="@drawable/ic_cross_grey"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintTop_toTopOf="parent" />
 
   <ImageButton
     android:id="@+id/btn_favorite"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_width="@dimen/margin_56dp"
+    android:layout_height="@dimen/margin_56dp"
     android:background="?android:selectableItemBackgroundBorderless"
     android:contentDescription="@string/image"
-    android:padding="@dimen/margin_14dp"
+    android:padding="@dimen/margin_18dp"
+    android:scaleType="centerInside"
     android:src="@drawable/ic_favorite"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintTop_toBottomOf="@+id/btn_remove" />

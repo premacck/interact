@@ -7,6 +7,7 @@ import com.techmesystem.intera.productdetail.model.Product
  * Prem's creation, on 2020-02-05
  */
 val PRODUCT_1 = Product(
+  1,
   R.drawable.product_one,
   listOf("Alergias", "Rinite Alergica", "Rinite Alergica"),
   "Protetor Solar Corporal Neutrogena Sun\nFresh FPS90 120ml",
@@ -20,6 +21,7 @@ val PRODUCT_1 = Product(
   "50,00"
 )
 val PRODUCT_2 = Product(
+  2,
   R.drawable.product_two,
   listOf("Alergias", "Rinite Alergica", "Rinite Alergica"),
   "Allegra Pediátrico 6MG/ML\nCloridrato de fexofenadina",
@@ -33,6 +35,7 @@ val PRODUCT_2 = Product(
   captionShort = "Allegra Pediátrico 6MG/ML"
 )
 val PRODUCT_1_EQUIVALENT = Product(
+  3,
   R.drawable.product_one,
   listOf("Alergias", "Rinite Alergica", "Rinite Alergica"),
   "Protetor Solar Corporal Neutrogena Sun\nFresh FPS90 120ml",
@@ -47,6 +50,7 @@ val PRODUCT_1_EQUIVALENT = Product(
   isNextDrawAvailable = true
 )
 val PRODUCT_2_EQUIVALENT = Product(
+  4,
   R.drawable.product_two,
   listOf("Alergias", "Rinite Alergica", "Rinite Alergica"),
   "Allegra Pediátrico 6MG/ML\nCloridrato de fexofenadina",
