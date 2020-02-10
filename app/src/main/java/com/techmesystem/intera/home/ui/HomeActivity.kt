@@ -35,8 +35,8 @@ class HomeActivity : BaseActivity() {
 
   private fun initRootFragments() {
     homeFragment = HomeFragment()
-    favoriteFragment = FavoriteFragment()
-    helpFragment = HelpFragment()
+    favoriteFragment = FavoriteFragment.newInstance()
+    helpFragment = HelpFragment.newInstance()
     checkoutFragment = CheckoutFragment()
     profileFragment = ProfileFragment()
   }

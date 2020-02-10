@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import com.techmesystem.intera.R
 import com.techmesystem.intera.base.BaseFragment
+import com.techmesystem.intera.favorite.ui.FavoriteActivity
 import com.techmesystem.intera.request.ui.RequestsActivity
 import com.techmesystem.intera.util.onDebounceClick
 import kotlinx.android.synthetic.main.fragment_profile.*
@@ -27,11 +28,11 @@ class ProfileFragment : BaseFragment() {
   private fun initListeners() {
     tv_personal_data?.onDebounceClick { PersonalDataActivity.launch(context) }
     tv_requests?.onDebounceClick { RequestsActivity.launch(context) }
+    tv_favorites?.onDebounceClick { FavoriteActivity.launch(context) }
     tv_allow_fingerprint?.onDebounceClick {  }
     tv_qualidoc?.onDebounceClick {  }
     tv_refer_a_friend?.onDebounceClick {  }
     tv_notifications?.onDebounceClick {  }
-    tv_favorites?.onDebounceClick {  }
     tv_forms_of_payment?.onDebounceClick {  }
     tv_sweepstakes?.onDebounceClick {  }
     tv_cancel_account?.onDebounceClick {  }

@@ -108,6 +108,13 @@
       android:screenOrientation="portrait"
       android:theme="@style/AppTheme.NoActionBar" />
 
+    <activity
+      android:name=".favorite.ui.FavoriteActivity"
+      android:configChanges="keyboardHidden"
+      android:screenOrientation="portrait"
+      android:theme="@style/AppTheme.NoActionBar"
+      android:windowSoftInputMode="adjustResize" />
+
   </application>
 
 </manifest>
