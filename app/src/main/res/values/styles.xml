@@ -245,4 +245,13 @@
         <item name="colorControlActivated">@color/colorAccent</item>
         <item name="colorControlHighlight">@color/colorAccent</item>
     </style>
+
+    <style name="Theme.App.Base.CustomEditTextMoney" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorControlNormal">@color/color_ffd400</item>
+        <item name="colorControlActivated">@color/DarkGoldenrod</item>
+        <item name="colorControlHighlight">@color/color_ffd400</item>
+        <item name="android:colorControlNormal">@color/color_ffd400</item>
+        <item name="android:colorControlActivated">@color/DarkGoldenrod</item>
+        <item name="android:colorControlHighlight">@color/color_ffd400</item>
+    </style>
 </resources>

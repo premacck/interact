@@ -28,6 +28,8 @@ class ProfileFragment : BaseFragment() {
   }
 
   private fun initListeners() {
+    btn_add?.onDebounceClick { AddMoneyActivity.launch(context) }
+
     tv_personal_data?.onDebounceClick { PersonalDataActivity.launch(context) }
     tv_requests?.onDebounceClick { RequestsActivity.launch(context) }
     tv_favorites?.onDebounceClick { FavoriteActivity.launch(context) }

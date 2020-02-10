@@ -9,6 +9,7 @@
   <string name="not_associated_price_x">Não Associado\u000D\nR$ %1$s</string>
   <string name="compare_and_prove">Compare E Comprove</string>
   <string name="not_associated">Não Associado</string>
+  <string name="associated">Associado</string>
   <string name="cashback_x">R$%1$s de volta</string>
   <string name="product_details">Detalhes do produto</string>
   <string name="package_leaflet">Bula do medicamento</string>
@@ -178,5 +179,11 @@
   <string name="are_you_sure_you_want_to_delete_card">Tem certeza que deseja excluir?</string>
   <string name="no">Não</string>
   <string name="yes">Sim</string>
+  <string name="add_money">Adicionar dinheiro</string>
+  <string name="enter_the_value">Digite o valor</string>
+  <string name="just_dollar">R$&#160;</string>
+  <string name="sample_add_money">30,00</string>
+  <string name="add_money_hint">88,88</string>
+  <string name="now_you_are_part_of_intera_club">Agora você faz parte do Clube Intera :)</string>
 </resources>
 <!--\u000D-->

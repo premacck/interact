@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/color_f9f7ec">
+
+  <com.techmesystem.intera.base.view.InteraToolbar
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:backNavigationDrawable="@drawable/ic_back_arrow"
+    app:backgroundColor="@color/white"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:toolbarElevation="0"
+    app:toolbarTitle="@string/add_money" />
+
+  <View
+    android:id="@+id/v_top_shadow"
+    style="@style/ShadowBottom"
+    android:layout_marginStart="@dimen/margin_8dp"
+    android:layout_marginEnd="@dimen/margin_8dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+  <androidx.constraintlayout.widget.Guideline
+    android:id="@+id/gl_top"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:layout_constraintGuide_percent="0.22" />
+
+  <TextView
+    android:id="@+id/tv_enter_value_header"
+    style="@style/Text14WrapWrap"
+    android:text="@string/enter_the_value"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/gl_top" />
+
+  <TextView
+    style="@style/Text14BoldWrapWrap"
+    android:layout_height="0dp"
+    android:layout_marginStart="@dimen/margin_36dp"
+    android:layout_marginBottom="@dimen/margin_14dp"
+    android:gravity="center_vertical"
+    android:importantForAutofill="no"
+    android:text="@string/just_dollar"
+    android:textSize="@dimen/txt_size_24sp"
+    app:layout_constraintBottom_toBottomOf="@+id/et_add_money"
+    app:layout_constraintHorizontal_chainStyle="packed"
+    app:layout_constraintStart_toStartOf="@+id/et_add_money"
+    app:layout_constraintTop_toTopOf="@+id/et_add_money" />
+
+  <EditText
+    android:id="@+id/et_add_money"
+    style="@style/Text14BoldWrapWrap"
+    android:hint="@string/add_money_hint"
+    android:importantForAutofill="no"
+    android:inputType="number"
+    android:paddingStart="@dimen/margin_72dp"
+    android:paddingEnd="@dimen/margin_36dp"
+    android:paddingBottom="@dimen/margin_24dp"
+    android:text="@string/sample_add_money"
+    android:textSize="@dimen/txt_size_24sp"
+    android:theme="@style/Theme.App.Base.CustomEditTextMoney"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/tv_enter_value_header" />
+
+  <Button
+    android:id="@+id/btn_continue"
+    style="@style/ButtonPrimary"
+    android:layout_width="@dimen/margin_0dp"
+    android:layout_marginStart="@dimen/margin_16dp"
+    android:layout_marginTop="40dp"
+    android:layout_marginEnd="@dimen/margin_16dp"
+    android:text="@string/continue_"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/et_add_money" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
