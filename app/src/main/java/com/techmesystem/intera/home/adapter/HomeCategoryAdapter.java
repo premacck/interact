@@ -1,23 +1,26 @@
-package com.techmesystem.intera.Adapter;
+package com.techmesystem.intera.home.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.techmesystem.intera.R;
+import com.techmesystem.intera.home.model.HomeDataModel;
 
 import java.util.ArrayList;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class CasmaticProductAdapter extends RecyclerView.Adapter<CasmaticProductAdapter.ViewHolder> {
+public class HomeCategoryAdapter extends RecyclerView.Adapter<HomeCategoryAdapter.ViewHolder> {
     private clickItemInterface itemInterface;
     private Context mContext;
-    private ArrayList<String> categoryModels_all;
+    private ArrayList<HomeDataModel> categoryModels_all;
 
-    public CasmaticProductAdapter(Context mContext, ArrayList<String> models) {
+    public HomeCategoryAdapter(Context mContext, ArrayList<HomeDataModel> models) {
         this.mContext = mContext;
         this.categoryModels_all = models;
     }
@@ -29,19 +32,21 @@ public class CasmaticProductAdapter extends RecyclerView.Adapter<CasmaticProduct
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.casmatic_product_recycler_design, parent, false);
+        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.home_category_recycler_design, parent, false);
         return new ViewHolder(itemView);
     }
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
+        HomeDataModel homeDataModel = categoryModels_all.get(position);
 
+        holder.categoryPic.setImageResource(homeDataModel.getPicture());
+        holder.titleTv.setText(homeDataModel.getName());
     }
 
     @Override
     public int getItemCount() {
-        //return categoryModels_all == null ? 0 : categoryModels_all.size();
-        return 11;
+        return categoryModels_all == null ? 0 : categoryModels_all.size();
     }
 
     public interface clickItemInterface {
@@ -50,9 +55,15 @@ public class CasmaticProductAdapter extends RecyclerView.Adapter<CasmaticProduct
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {
+        ImageView categoryPic;
+        TextView titleTv;
+
 
         ViewHolder(View itemView) {
             super(itemView);
+
+            categoryPic = itemView.findViewById(R.id.categoryPic_ids);
+            titleTv = itemView.findViewById(R.id.titleTv_ids);
         }
     }
 }

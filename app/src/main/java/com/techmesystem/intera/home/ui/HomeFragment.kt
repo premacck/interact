@@ -2,9 +2,9 @@ package com.techmesystem.intera.home.ui
 
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.techmesystem.intera.Adapter.*
 import com.techmesystem.intera.R
 import com.techmesystem.intera.base.BaseFragment
+import com.techmesystem.intera.home.adapter.*
 import com.techmesystem.intera.home.mockdata.categoryALL
 import com.techmesystem.intera.home.mockdata.servicesALL
 import kotlinx.android.synthetic.main.fragment_home.*
@@ -41,7 +41,7 @@ class HomeFragment : BaseFragment() {
     productTwoRecycler_ids?.hasFixedSize()
     productTwoRecycler_ids?.isNestedScrollingEnabled = false
 
-    val homeProductTwoAdapter = HomeProductTwoAdapter(context, arrayListP2)
+    val homeProductTwoAdapter = context?.let { HomeProductTwoAdapter(it, arrayListP2) }
     productTwoRecycler_ids?.adapter = homeProductTwoAdapter
 
     val arrayListS = servicesALL
@@ -57,7 +57,7 @@ class HomeFragment : BaseFragment() {
     casmaticRecycler_ids?.hasFixedSize()
     casmaticRecycler_ids?.isNestedScrollingEnabled = false
 
-    val casmaticProductAdapter = CasmaticProductAdapter(context, arrayListC)
+    val casmaticProductAdapter = context?.let { CasmaticProductAdapter(it, arrayListC) }
     casmaticRecycler_ids?.adapter = casmaticProductAdapter
 
   }
