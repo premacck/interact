@@ -6,6 +6,7 @@ import com.techmesystem.intera.R
 import com.techmesystem.intera.base.BaseFragment
 import com.techmesystem.intera.favorite.ui.FavoriteActivity
 import com.techmesystem.intera.notification.ui.NotificationActivity
+import com.techmesystem.intera.payment.ui.FormOfPaymentActivity
 import com.techmesystem.intera.request.ui.RequestsActivity
 import com.techmesystem.intera.util.onDebounceClick
 import kotlinx.android.synthetic.main.fragment_profile.*
@@ -31,10 +32,10 @@ class ProfileFragment : BaseFragment() {
     tv_requests?.onDebounceClick { RequestsActivity.launch(context) }
     tv_favorites?.onDebounceClick { FavoriteActivity.launch(context) }
     tv_notifications?.onDebounceClick { NotificationActivity.launch(context) }
+    tv_forms_of_payment?.onDebounceClick { FormOfPaymentActivity.launch(context) }
     tv_allow_fingerprint?.onDebounceClick {  }
     tv_qualidoc?.onDebounceClick {  }
     tv_refer_a_friend?.onDebounceClick {  }
-    tv_forms_of_payment?.onDebounceClick {  }
     tv_sweepstakes?.onDebounceClick {  }
     tv_cancel_account?.onDebounceClick {  }
   }

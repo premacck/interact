@@ -36,6 +36,7 @@ class CustomTextView @JvmOverloads constructor(
     mainText(array.getString(R.styleable.CustomTextView_ctv_mainText))
     boldTitle(array.getBoolean(R.styleable.CustomTextView_ctv_boldTitle, true))
     setDrawables(array.getResourceId(R.styleable.CustomTextView_ctv_drawableStart, 0))
+    bottomLineVisible(array.getBoolean(R.styleable.CustomTextView_ctv_bottomLineVisible, true))
 
     array.recycle()
   }
@@ -54,6 +55,10 @@ class CustomTextView @JvmOverloads constructor(
 
   private fun mainText(string: String?) {
     tv_main_text?.text = string
+  }
+
+  private fun bottomLineVisible(isVisible: Boolean) {
+    v_bottom_line?.showOrHide(isVisible)
   }
 
   fun onClick(action: () -> Unit) = onDebounceClick(500, action)

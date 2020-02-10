@@ -116,7 +116,7 @@
   <string name="sample_recipient">Bruna Cerasi</string>
   <string name="address">Endereço</string>
   <string name="sample_payment_text">•••• 7055 (VISA)</string>
-  <string name="form_of_payment">Forma de pagamento</string>
+  <string name="form_of_payment">Forma de Pagamento&#160;</string>
   <string name="shipping_cost">Custo do frete</string>
   <string name="interacash">Interacash</string>
   <string name="cancel">Cancelar</string>
@@ -152,5 +152,28 @@
   <string name="sample_notification_title_2"><![CDATA[Seu produto chegou!<br/>Você já cadastrou seu tratamento?]]></string>
   <string name="sample_notification_title_3"><![CDATA[Parabéns! Você recebeu R$ 50,00 <br/>de volta na compra deste produto]]></string>
   <string name="no_notifications">Nenhuma notificaçãos</string>
+  <string name="saved_cards">Cartões salvos</string>
+  <string name="add_payment_method">Adicionar forma de pagamento</string>
+  <string name="debit_or_credit_card">Cartão de débito ou credito</string>
+  <string name="google_pay">Google Pay</string>
+  <string name="apple_pay">Apple Pay</string>
+  <string name="money">Dinheiro</string>
+  <string name="pic_pay">Picpay</string>
+  <string name="safra_pay">Safrapay</string>
+  <string name="ame_digital">Ame Digital</string>
+  <string name="pay_pal">PayPal</string>
+  <string name="card_data">Dados do Cartão</string>
+  <string name="card_number">Número do cartão</string>
+  <string name="sample_card_number">•••• •••• •••• 7055</string>
+  <string name="sample_cvv_number">888</string>
+  <string name="name_printed_on_card">Nome impresso no cartão</string>
+  <string name="expiration_date">Data de validade</string>
+  <string name="year">Ano</string>
+  <string name="month">Mês</string>
+  <string name="delete_card">Excluir cartão</string>
+  <string name="select_year">Selecione o ano</string>
+  <string name="select_month">Selecione o mês</string>
+  <string name="cvv_caps">CVV</string>
+  <string name="card_deleted">Cartão excluído</string>
 </resources>
 <!--\u000D-->

@@ -25,6 +25,7 @@
     tools:text="Title" />
 
   <View
+    android:id="@+id/v_bottom_line"
     style="@style/ThinLine"
     android:layout_marginStart="@dimen/margin_16dp"
     android:layout_marginEnd="@dimen/margin_16dp"

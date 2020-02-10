@@ -38,6 +38,7 @@
         <attr name="ctv_mainText" format="string" />
         <attr name="ctv_boldTitle" format="boolean" />
         <attr name="ctv_drawableStart" format="reference" />
+        <attr name="ctv_bottomLineVisible" format="boolean" />
     </declare-styleable>
 
     <declare-styleable name="CustomTextInputEditText">
@@ -67,5 +68,11 @@
 
     <declare-styleable name="OrderLogistics">
         <attr name="ol_viewsEnabled" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="PaymentOptionItem">
+        <attr name="poi_text" format="string" />
+        <attr name="poi_drawableStart" format="reference" />
+        <attr name="poi_drawableEnd" format="reference" />
     </declare-styleable>
 </resources>

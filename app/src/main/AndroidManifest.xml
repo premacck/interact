@@ -122,6 +122,20 @@
       android:theme="@style/AppTheme.NoActionBar"
       android:windowSoftInputMode="adjustResize" />
 
+    <activity
+      android:name=".payment.ui.FormOfPaymentActivity"
+      android:configChanges="keyboardHidden"
+      android:screenOrientation="portrait"
+      android:theme="@style/AppTheme.NoActionBar"
+      android:windowSoftInputMode="adjustResize" />
+
+    <activity
+      android:name=".payment.view.CardDataActivity"
+      android:configChanges="keyboardHidden"
+      android:screenOrientation="portrait"
+      android:theme="@style/AppTheme.NoActionBar"
+      android:windowSoftInputMode="adjustResize" />
+
   </application>
 
 </manifest>
