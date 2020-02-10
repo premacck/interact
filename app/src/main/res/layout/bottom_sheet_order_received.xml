@@ -29,7 +29,7 @@
   <TextView
     android:id="@+id/tv_reload_and_complete"
     style="@style/Text18BoldWrapWrap"
-    android:layout_marginTop="@dimen/margin_72dp"
+    android:layout_marginTop="@dimen/margin_56dp"
     android:text="@string/reload_and_complete"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"

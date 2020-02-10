@@ -5,6 +5,7 @@ import android.os.Bundle
 import com.techmesystem.intera.R
 import com.techmesystem.intera.base.BaseActivity
 import com.techmesystem.intera.help.ui.HelpActivity
+import com.techmesystem.intera.payment.ui.FormOfPaymentActivity
 import com.techmesystem.intera.request.model.ProductRequest
 import com.techmesystem.intera.util.onDebounceClick
 import kotlinx.android.synthetic.main.activity_request_detail.*
@@ -45,6 +46,9 @@ class RequestDetailActivity : BaseActivity() {
     btn_help.onDebounceClick {
       toast("help")
       HelpActivity.launch(this)
+    }
+    order_logistics.onFormOfPaymentClick {
+      FormOfPaymentActivity.launchForResult(this)
     }
     btn_cancel.onDebounceClick { finish() }
   }

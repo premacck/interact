@@ -6,6 +6,7 @@ import android.widget.FrameLayout
 import com.techmesystem.intera.R
 import com.techmesystem.intera.util.attachLayout
 import com.techmesystem.intera.util.enableOrDisable
+import com.techmesystem.intera.util.onDebounceClick
 import kotlinx.android.synthetic.main.item_order_logistics.view.*
 
 /**
@@ -30,4 +31,6 @@ class OrderLogistics @JvmOverloads constructor(
     et_address?.enableOrDisable(isEnabled, 1f)
     tv_payment?.enableOrDisable(isEnabled, 1f)
   }
+
+  fun onFormOfPaymentClick(action: () -> Unit) = tv_payment?.onDebounceClick { action() }
 }

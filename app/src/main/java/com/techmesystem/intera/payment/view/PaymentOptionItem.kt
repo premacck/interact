@@ -7,6 +7,7 @@ import androidx.annotation.DrawableRes
 import com.techmesystem.intera.R
 import com.techmesystem.intera.util.attachLayout
 import kotlinx.android.synthetic.main.item_payment_option.view.*
+import org.jetbrains.anko.backgroundResource
 import org.jetbrains.anko.imageResource
 
 /**
@@ -19,6 +20,7 @@ class PaymentOptionItem @JvmOverloads constructor(
   init {
     orientation = HORIZONTAL
     attachLayout(R.layout.item_payment_option)
+    backgroundResource = R.drawable.ripple_rect
 
     val array = context.obtainStyledAttributes(attrs, R.styleable.PaymentOptionItem)
 

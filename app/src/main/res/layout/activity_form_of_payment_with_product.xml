@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/color_f9f7ec">
+
+  <com.techmesystem.intera.base.view.InteraToolbar
+    android:id="@+id/toolbar"
+    android:layout_width="@dimen/margin_0dp"
+    android:layout_height="wrap_content"
+    app:backNavigationDrawable="@drawable/ic_back_arrow"
+    app:backgroundColor="@color/white"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:toolbarElevation="0"
+    app:toolbarTitle="@string/form_of_payment" />
+
+  <View
+    android:id="@+id/v_top_shadow"
+    style="@style/ShadowBottom"
+    android:layout_marginStart="@dimen/margin_8dp"
+    android:layout_marginEnd="@dimen/margin_8dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+  <ScrollView
+    android:layout_width="@dimen/margin_0dp"
+    android:layout_height="0dp"
+    app:layout_constraintBottom_toTopOf="@id/cl_bottom_layout"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+      <TextView
+        android:id="@+id/tv_other_payment_header"
+        style="@style/Text12WrapWrap"
+        android:layout_marginStart="@dimen/margin_16dp"
+        android:layout_marginTop="@dimen/margin_28dp"
+        android:text="@string/add_payment_method" />
+
+      <com.techmesystem.intera.payment.view.PaymentOptionItem
+        android:id="@+id/poi_debit_or_credit_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_10dp"
+        app:poi_drawableStart="@drawable/ic_payment"
+        app:poi_text="@string/debit_or_credit_card" />
+
+      <com.techmesystem.intera.payment.view.PaymentOptionItem
+        android:id="@+id/poi_google_pay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:poi_drawableStart="@drawable/ic_google_pay"
+        app:poi_text="@string/google_pay" />
+
+      <com.techmesystem.intera.payment.view.PaymentOptionItem
+        android:id="@+id/poi_apple_pay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:poi_drawableStart="@drawable/ic_apple_pay"
+        app:poi_text="@string/apple_pay" />
+
+      <com.techmesystem.intera.payment.view.PaymentOptionItem
+        android:id="@+id/poi_money"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:poi_drawableStart="@drawable/ic_money"
+        app:poi_text="@string/money" />
+
+      <com.techmesystem.intera.payment.view.PaymentOptionItem
+        android:id="@+id/poi_pic_pay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:poi_drawableStart="@drawable/ic_pic_pay"
+        app:poi_text="@string/pic_pay" />
+
+      <com.techmesystem.intera.payment.view.PaymentOptionItem
+        android:id="@+id/poi_safra_pay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:poi_drawableStart="@drawable/ic_payment"
+        app:poi_text="@string/safra_pay" />
+
+      <com.techmesystem.intera.payment.view.PaymentOptionItem
+        android:id="@+id/poi_ame_digital"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:poi_drawableStart="@drawable/ic_ame_digital"
+        app:poi_text="@string/ame_digital" />
+
+      <com.techmesystem.intera.payment.view.PaymentOptionItem
+        android:id="@+id/poi_pay_pal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:poi_drawableStart="@drawable/ic_pay_pal"
+        app:poi_text="@string/pay_pal" />
+    </LinearLayout>
+  </ScrollView>
+
+  <View
+    style="@style/ShadowTop"
+    android:layout_width="0dp"
+    app:layout_constraintBottom_toTopOf="@+id/cl_bottom_layout"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent" />
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/cl_bottom_layout"
+    android:layout_width="@dimen/margin_0dp"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent">
+
+    <com.techmesystem.intera.base.view.TotalAmountItem
+      android:id="@+id/total_amount"
+      android:layout_width="@dimen/margin_0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/margin_20dp"
+      app:amount_cashbackAllowed="true"
+      app:amount_interaCash="8,95"
+      app:amount_purchaseAmount="88,95"
+      app:amount_shippingCost="10,00"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+      android:id="@+id/btn_continue"
+      style="@style/ButtonPrimary"
+      android:layout_width="@dimen/margin_0dp"
+      android:layout_margin="@dimen/margin_16dp"
+      android:text="@string/continue_"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/total_amount" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

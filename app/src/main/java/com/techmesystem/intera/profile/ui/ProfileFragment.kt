@@ -7,6 +7,7 @@ import com.techmesystem.intera.base.BaseFragment
 import com.techmesystem.intera.favorite.ui.FavoriteActivity
 import com.techmesystem.intera.notification.ui.NotificationActivity
 import com.techmesystem.intera.payment.ui.FormOfPaymentActivity
+import com.techmesystem.intera.payment.ui.FormOfPaymentWithProductActivity
 import com.techmesystem.intera.request.ui.RequestsActivity
 import com.techmesystem.intera.util.onDebounceClick
 import kotlinx.android.synthetic.main.fragment_profile.*
@@ -29,6 +30,8 @@ class ProfileFragment : BaseFragment() {
 
   private fun initListeners() {
     btn_add?.onDebounceClick { AddMoneyActivity.launch(context) }
+    tv_interacash_balance?.onDebounceClick { FormOfPaymentWithProductActivity.launch(context) }
+    tv_edit_interacash_balance?.onDebounceClick { FormOfPaymentWithProductActivity.launch(context) }
 
     tv_personal_data?.onDebounceClick { PersonalDataActivity.launch(context) }
     tv_requests?.onDebounceClick { RequestsActivity.launch(context) }

@@ -53,6 +53,7 @@ class CustomEditText @JvmOverloads constructor(
       }
       2 -> { // Password
         et_input_text_1?.inputType = TYPE_CLASS_TEXT or TYPE_TEXT_VARIATION_PASSWORD
+        tv_title?.typeface?.let { et_input_text_1?.typeface = it }
       }
       3 -> { // Email
         et_input_text_1?.inputType = TYPE_TEXT_VARIATION_EMAIL_ADDRESS
