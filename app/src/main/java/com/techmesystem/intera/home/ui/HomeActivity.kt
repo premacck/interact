@@ -28,7 +28,7 @@ class HomeActivity : BaseActivity() {
     loadAndHideRootFragments()
 
     activeFragment = homeFragment
-    navigateBeforeAttachingChildren(R.id.navigation_profile)
+    navigateBeforeAttachingChildren(R.id.navigation_home)
 
     initListeners()
   }
