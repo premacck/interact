@@ -243,6 +243,7 @@
       app:layout_constraintTop_toTopOf="@+id/rb_associated_total_text" />
 
     <View
+      android:id="@+id/v_unassociated"
       android:layout_width="0dp"
       android:layout_height="0dp"
       android:layout_marginStart="@dimen/margin_16dp"
@@ -310,7 +311,7 @@
       android:id="@+id/group_content_layout"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      app:constraint_referenced_ids="erv_product,pb_remaining_free_shipping_amount,tv_missing_amount_for,tv_free_shipping_text,rg_shipping_mode,tv_choose_your_best_option,rg_payment_type" />
+      app:constraint_referenced_ids="erv_product,pb_remaining_free_shipping_amount,tv_missing_amount_for,tv_free_shipping_text,rg_shipping_mode,tv_choose_your_best_option,rg_payment_type,cl_associated,tv_total_purchase_amount_header,tv_total_purchase_amount,tv_interacash_header,tv_interacash,rb_associated_total_text,tv_associated_total_amount,v_unassociated,rb_unassociated_total_text,tv_unassociated_total_amount" />
 
     <TextView
       android:id="@+id/tv_no_content"
