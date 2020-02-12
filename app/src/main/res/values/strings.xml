@@ -197,5 +197,9 @@
   <string name="address_type">Tipo do endereço</string>
   <string name="intera_suggestions">Sugestões Intera</string>
   <string name="i_do_not_want_free_shipping">Não quero frete grátis</string>
+  <string name="period">Período</string>
+  <string name="sample_you_saved_with_this_purchase">Você economizou R$ 30,00 nesta compra</string>
+  <string name="you_saved_x_with_this_purchase">Você economizou R$ %1$s nesta compra</string>
+  <string name="total_amount_paid_">Valor total pago:</string>
 </resources>
 <!--\u000D-->

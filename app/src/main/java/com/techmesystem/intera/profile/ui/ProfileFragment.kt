@@ -29,6 +29,7 @@ class ProfileFragment : BaseFragment() {
   }
 
   private fun initListeners() {
+    btn_extract?.onDebounceClick { ProductHistoryActivity.launch(context) }
     btn_add?.onDebounceClick { AddMoneyActivity.launch(context) }
     tv_interacash_balance?.onDebounceClick { FormOfPaymentWithProductActivity.launch(context) }
     tv_edit_interacash_balance?.onDebounceClick { FormOfPaymentWithProductActivity.launch(context) }

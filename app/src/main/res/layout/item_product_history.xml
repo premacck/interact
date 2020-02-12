@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content">
+
+  <TextView
+    android:id="@+id/tv_savings"
+    style="@style/Text12WrapWrap"
+    android:layout_width="@dimen/margin_0dp"
+    android:paddingStart="@dimen/margin_18dp"
+    android:paddingTop="@dimen/margin_8dp"
+    android:paddingEnd="@dimen/margin_18dp"
+    android:paddingBottom="@dimen/margin_8dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:text="@string/sample_you_saved_with_this_purchase" />
+
+  <View
+    android:id="@+id/divider_1"
+    style="@style/ThinLine"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/tv_savings" />
+
+  <TextView
+    android:id="@+id/tv_caption"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/margin_20dp"
+    android:layout_marginTop="@dimen/margin_16dp"
+    android:layout_marginEnd="@dimen/margin_20dp"
+    android:ellipsize="end"
+    android:maxLines="2"
+    android:text="@string/product_two_caption_short"
+    android:textColor="@color/black"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/divider_1"
+    app:layout_constraintVertical_chainStyle="packed" />
+
+  <TextView
+    android:id="@+id/tv_company"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/margin_20dp"
+    android:ellipsize="end"
+    android:maxLines="2"
+    android:text="@string/product_two_company"
+    android:textAllCaps="true"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="@+id/tv_caption"
+    app:layout_constraintTop_toBottomOf="@+id/tv_caption" />
+
+  <View
+    android:id="@+id/divider_2"
+    style="@style/ThinLine"
+    android:layout_marginTop="@dimen/margin_20dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/tv_company" />
+
+  <TextView
+    android:id="@+id/tv_total_amount_paid_text"
+    style="@style/Text16WrapWrap"
+    android:layout_width="@dimen/margin_0dp"
+    android:layout_marginStart="@dimen/margin_20dp"
+    android:layout_marginTop="@dimen/margin_10dp"
+    android:layout_marginBottom="@dimen/margin_10dp"
+    android:text="@string/total_amount_paid_"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toStartOf="@+id/tv_total_amount_paid"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/divider_2" />
+
+  <TextView
+    android:id="@+id/tv_total_amount_paid"
+    style="@style/Text16BoldWrapWrap"
+    android:layout_marginTop="@dimen/margin_10dp"
+    android:layout_marginEnd="@dimen/margin_20dp"
+    android:layout_marginBottom="@dimen/margin_10dp"
+    android:textColor="@color/buttonPrimary"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/divider_2"
+    tools:text="@string/sample_total_amount" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

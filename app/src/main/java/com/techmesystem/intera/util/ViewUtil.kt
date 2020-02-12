@@ -15,8 +15,10 @@ import androidx.core.view.isVisible
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
+import com.airbnb.epoxy.DiffResult
 import com.airbnb.epoxy.EpoxyController
 import com.airbnb.epoxy.EpoxyRecyclerView
+import com.airbnb.epoxy.OnModelBuildFinishedListener
 import com.jakewharton.rxbinding2.view.RxView
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
@@ -121,3 +123,12 @@ fun View.setViewPadding(start: Int? = null, top: Int? = null, end: Int? = null, 
 fun EpoxyRecyclerView.buildModels(init: EpoxyController.() -> Unit) = buildModelsWith(object : EpoxyRecyclerView.ModelBuilderCallback {
   override fun buildModels(controller: EpoxyController) = controller.init()
 })
+
+fun EpoxyController.afterModelBuild(action: () -> Unit) {
+  addModelBuildListener(object : OnModelBuildFinishedListener {
+    override fun onModelBuildFinished(result: DiffResult) {
+      removeModelBuildListener(this)
+      action()
+    }
+  })
+}

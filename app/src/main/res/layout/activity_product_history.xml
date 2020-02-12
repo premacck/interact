@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:background="@color/color_f9f7ec"
+  android:layout_height="match_parent">
+
+  <com.techmesystem.intera.base.view.InteraToolbar
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:backNavigationDrawable="@drawable/ic_back_arrow"
+    app:backgroundColor="@color/white"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:toolbarElevation="0"
+    app:toolbarTitle="@string/interacash" />
+
+  <View
+    android:layout_width="@dimen/margin_0dp"
+    android:layout_height="@dimen/margin_0dp"
+    android:background="@color/white"
+    app:layout_constraintBottom_toTopOf="@id/v_top_shadow"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+  <TextView
+    android:id="@+id/tv_interacash_balance"
+    style="@style/Text18BoldWrapWrap"
+    android:layout_width="@dimen/margin_0dp"
+    android:layout_marginTop="@dimen/margin_24dp"
+    android:gravity="center"
+    android:textColor="@color/buttonPrimary"
+    android:textSize="48sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/toolbar"
+    tools:text="@string/dollar" />
+
+  <TextView
+    android:id="@+id/tv_edit_interacash_balance"
+    style="@style/Text12WrapWrap"
+    android:drawableEnd="@drawable/ic_edit"
+    android:drawablePadding="@dimen/margin_10dp"
+    android:gravity="center_vertical"
+    android:padding="@dimen/margin_6dp"
+    android:text="@string/my_interacash_balance"
+    android:textColor="@color/buttonPrimary"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/tv_interacash_balance" />
+
+  <View
+    android:id="@+id/separator_1"
+    style="@style/MediumThinLine"
+    android:layout_width="@dimen/margin_0dp"
+    android:layout_marginStart="@dimen/margin_20dp"
+    android:layout_marginTop="@dimen/margin_8dp"
+    android:layout_marginEnd="@dimen/margin_20dp"
+    android:background="@color/color_1A000000"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/tv_edit_interacash_balance" />
+
+  <Button
+    android:id="@+id/btn_add"
+    style="@style/BorderlessButton"
+    android:layout_width="@dimen/margin_0dp"
+    android:layout_height="wrap_content"
+    android:text="@string/add"
+    android:textColor="@color/color_5B5B5F"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/separator_1" />
+
+  <View
+    android:id="@+id/v_top_shadow"
+    style="@style/ShadowBottom"
+    android:layout_marginStart="@dimen/margin_8dp"
+    android:layout_marginEnd="@dimen/margin_8dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/btn_add" />
+
+  <com.airbnb.epoxy.EpoxyRecyclerView
+    android:id="@+id/erv_history"
+    android:layout_width="@dimen/margin_0dp"
+    android:layout_height="@dimen/margin_0dp"
+    android:paddingStart="@dimen/margin_12dp"
+    android:paddingTop="@dimen/margin_12dp"
+    android:paddingEnd="@dimen/margin_12dp"
+    android:paddingBottom="@dimen/margin_24dp"
+    app:itemSpacing="@dimen/margin_16dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/btn_add"
+    tools:listitem="@layout/item_product_history" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

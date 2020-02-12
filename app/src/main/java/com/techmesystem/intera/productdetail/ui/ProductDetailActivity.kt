@@ -12,7 +12,6 @@ import androidx.core.view.postDelayed
 import com.techmesystem.intera.R
 import com.techmesystem.intera.base.BaseActivity
 import com.techmesystem.intera.compareandprove.ui.CompareAndProveActivity
-import com.techmesystem.intera.compareandprove.ui.CompareAndProveActivity.Companion.PRODUCT
 import com.techmesystem.intera.compareandprove.ui.CompareAndProveActivity.Companion.REQUEST_COMPARISON
 import com.techmesystem.intera.productdetail.data.PRODUCT_1
 import com.techmesystem.intera.productdetail.data.PRODUCT_1_EQUIVALENT
@@ -42,9 +41,12 @@ class ProductDetailActivity : BaseActivity() {
   companion object {
     private const val IS_FIRST_PRODUCT = "isFirstProduct"
     private const val IS_EQUIVALENT = "isEquivalent"
+    private const val PRODUCT = "product"
 
     fun launch(from: Context?, isFirstProduct: Boolean, isEquivalent: Boolean) =
       from?.run { startActivity<ProductDetailActivity>(IS_FIRST_PRODUCT to isFirstProduct, IS_EQUIVALENT to isEquivalent) }
+
+    fun launch(from: Context?, product: Product) = from?.run { startActivity<ProductDetailActivity>(PRODUCT to product) }
   }
 
   override fun onCreate(savedInstanceState: Bundle?) {
@@ -58,10 +60,15 @@ class ProductDetailActivity : BaseActivity() {
   private fun initMembers() {
     isFirstProduct = intent?.getBooleanExtra(IS_FIRST_PRODUCT, true) ?: true
     isEquivalent = intent?.getBooleanExtra(IS_EQUIVALENT, false) ?: false
-    mainProduct = if (isFirstProduct) {
-      if (isEquivalent) PRODUCT_1_EQUIVALENT else PRODUCT_1
+
+    mainProduct = if (intent?.hasExtra(PRODUCT) == true) {
+      intent?.getParcelableExtra(PRODUCT) ?: return
     } else {
-      if (isEquivalent) PRODUCT_2_EQUIVALENT else PRODUCT_2
+      if (isFirstProduct) {
+        if (isEquivalent) PRODUCT_1_EQUIVALENT else PRODUCT_1
+      } else {
+        if (isEquivalent) PRODUCT_2_EQUIVALENT else PRODUCT_2
+      }
     }
   }
 
