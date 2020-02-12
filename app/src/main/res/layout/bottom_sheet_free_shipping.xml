@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:layout_gravity="bottom">
+
+  <TextView
+    android:id="@+id/tv_missing_amount_for"
+    style="@style/Text16WrapWrap"
+    android:layout_marginTop="@dimen/margin_24dp"
+    android:text="@string/missing_x_for"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_chainStyle="packed"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+  <TextView
+    android:id="@+id/tv_free_shipping_text"
+    style="@style/Text16BoldWrapWrap"
+    android:layout_marginStart="@dimen/margin_4dp"
+    android:layout_marginTop="@dimen/margin_4dp"
+    android:text="@string/free_shipping_caps"
+    android:textColor="@color/buttonPrimary"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/tv_missing_amount_for" />
+
+  <ProgressBar
+    android:id="@+id/pb_remaining_free_shipping_amount"
+    style="?android:progressBarStyleHorizontal"
+    android:layout_width="@dimen/margin_0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/margin_16dp"
+    android:layout_marginTop="@dimen/margin_14dp"
+    android:layout_marginEnd="@dimen/margin_16dp"
+    android:max="100"
+    android:progress="75"
+    android:progressDrawable="@drawable/bg_progress_primary"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/tv_free_shipping_text" />
+
+  <TextView
+    android:id="@+id/tv_suggestions"
+    style="@style/Text16WrapWrap"
+    android:layout_marginStart="@dimen/margin_16dp"
+    android:layout_marginTop="@dimen/margin_36dp"
+    android:text="@string/intera_suggestions"
+    app:layout_constraintHorizontal_chainStyle="packed"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/pb_remaining_free_shipping_amount" />
+
+  <androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/rv_suggestions"
+    android:layout_width="@dimen/margin_0dp"
+    android:layout_height="wrap_content"
+    android:clipToPadding="false"
+    android:orientation="horizontal"
+    android:paddingStart="@dimen/margin_16dp"
+    android:paddingEnd="@dimen/margin_16dp"
+    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/tv_suggestions"
+    tools:itemCount="3"
+    tools:listitem="@layout/casmatic_product_recycler_design" />
+
+  <Button
+    android:id="@+id/btn_do_not_want_free_shipping"
+    style="@style/ButtonGhost"
+    android:layout_width="@dimen/margin_0dp"
+    android:layout_marginStart="@dimen/margin_16dp"
+    android:layout_marginTop="@dimen/margin_28dp"
+    android:layout_marginEnd="@dimen/margin_16dp"
+    android:text="@string/i_do_not_want_free_shipping"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_marginBottom="@dimen/margin_16dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/rv_suggestions" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

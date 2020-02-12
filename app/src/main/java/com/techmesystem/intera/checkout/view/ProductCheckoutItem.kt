@@ -43,17 +43,17 @@ import org.jetbrains.anko.imageResource
     tv_cashback_members_info?.showOrHide(allowed)
   }
 
-  @ModelProp fun removeAllowed(allowed: Boolean) {
+  @JvmOverloads @ModelProp fun removeAllowed(allowed: Boolean = true) {
     isRemoveAllowed = allowed
     btn_remove?.showOrHide(allowed)
   }
 
-  @ModelProp fun favoriteAllowed(allowed: Boolean) {
+  @JvmOverloads @ModelProp fun favoriteAllowed(allowed: Boolean = true) {
     isFavoriteAllowed = allowed
     btn_favorite?.showOrHide(allowed)
   }
 
-  @ModelProp fun editAllowed(allowed: Boolean) {
+  @JvmOverloads @ModelProp fun editAllowed(allowed: Boolean = true) {
     tv_selection_count?.showOrHide(allowed)
   }
 

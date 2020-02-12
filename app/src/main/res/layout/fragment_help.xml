@@ -17,7 +17,7 @@
       app:backNavigationDrawable="@drawable/ic_back_arrow"
       app:backgroundColor="@color/white"
       app:toolbarElevation="8"
-      app:toolbarTitle="@string/bag" />
+      app:toolbarTitle="@string/help" />
 
     <View
       android:id="@+id/v_top_shadow"

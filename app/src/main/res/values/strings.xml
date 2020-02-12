@@ -195,5 +195,7 @@
   <string name="number">Número</string>
   <string name="complement">Complemento</string>
   <string name="address_type">Tipo do endereço</string>
+  <string name="intera_suggestions">Sugestões Intera</string>
+  <string name="i_do_not_want_free_shipping">Não quero frete grátis</string>
 </resources>
 <!--\u000D-->
