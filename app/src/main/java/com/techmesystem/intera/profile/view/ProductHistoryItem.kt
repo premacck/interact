@@ -33,6 +33,7 @@ import org.jetbrains.anko.dip
   }
 
   @ModelProp fun withHistory(history: ProductHistory) {
+    this.history = history
     divider_1?.showOrHide(!history.cashback.isNullOrEmpty())
     tv_savings?.showOrHide(!history.cashback.isNullOrEmpty()) {
       it.text = context.getString(R.string.you_saved_x_with_this_purchase, history.cashback)
