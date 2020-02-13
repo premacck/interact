@@ -7,6 +7,8 @@ import com.techmesystem.intera.base.BaseFragment
 import com.techmesystem.intera.home.adapter.*
 import com.techmesystem.intera.home.mockdata.categoryALL
 import com.techmesystem.intera.home.mockdata.servicesALL
+import com.techmesystem.intera.profile.ui.ProductHistoryActivity
+import com.techmesystem.intera.util.onDebounceClick
 import kotlinx.android.synthetic.main.fragment_home.*
 import java.util.*
 
@@ -60,5 +62,6 @@ class HomeFragment : BaseFragment() {
     val casmaticProductAdapter = context?.let { CasmaticProductAdapter(it, arrayListC) }
     casmaticRecycler_ids?.adapter = casmaticProductAdapter
 
+    ll_history?.onDebounceClick { ProductHistoryActivity.launch(context) }
   }
 }
