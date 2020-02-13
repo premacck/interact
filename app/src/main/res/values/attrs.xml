@@ -17,7 +17,8 @@
         <attr name="productPriceAssociated" format="string" />
         <attr name="productPriceAdditionalAssociated" format="string" />
         <attr name="isInList" format="boolean" />
-        <attr name="showBars" format="boolean" />
+        <attr name="showLeftBar" format="boolean" />
+        <attr name="showRightBar" format="boolean" />
     </declare-styleable>
 
     <declare-styleable name="CustomEditText">
@@ -38,6 +39,7 @@
         <attr name="ctv_mainText" format="string" />
         <attr name="ctv_boldTitle" format="boolean" />
         <attr name="ctv_drawableStart" format="reference" />
+        <attr name="ctv_drawableEnd" format="reference" />
         <attr name="ctv_bottomLineVisible" format="boolean" />
     </declare-styleable>
 

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+  <ImageView
+    android:id="@+id/iv_search_thumbnail"
+    android:layout_width="@dimen/margin_0dp"
+    android:layout_height="@dimen/margin_0dp"
+    android:contentDescription="@string/image"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintDimensionRatio="1:1"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintWidth_percent="0.15"
+    tools:background="@tools:sample/backgrounds/scenic" />
+
+  <TextView
+    android:id="@+id/tv_search_name"
+    style="@style/Text16WrapWrap"
+    android:layout_width="@dimen/margin_0dp"
+    android:layout_marginStart="@dimen/margin_16dp"
+    android:paddingTop="@dimen/margin_8dp"
+    android:paddingBottom="@dimen/margin_8dp"
+    android:singleLine="true"
+    android:textColor="@color/color_5C5B60"
+    app:layout_constraintBottom_toBottomOf="@id/iv_search_thumbnail"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="@id/iv_search_thumbnail"
+    app:layout_constraintTop_toTopOf="@id/iv_search_thumbnail"
+    tools:text="@tools:sample/lorem/random" />
+
+</merge>

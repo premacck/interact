@@ -68,7 +68,8 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/margin_48dp">
 
-        <EditText
+        <TextView
+          android:id="@+id/tv_compare_and_prove"
           android:layout_width="match_parent"
           android:layout_height="@dimen/margin_36dp"
           android:layout_centerInParent="true"
@@ -76,9 +77,10 @@
           android:background="@null"
           android:ellipsize="end"
           android:focusableInTouchMode="true"
-          android:hint="Compare e comprove"
-          android:imeOptions="actionDone"
+          android:gravity="center_vertical"
+          android:hint="@string/compare_and_prove"
           android:padding="@dimen/margin_4dp"
+          android:paddingStart="@dimen/margin_14dp"
           android:singleLine="true" />
 
         <ImageView
@@ -106,7 +108,8 @@
     <RelativeLayout
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_margin="@dimen/margin_8dp">
+      android:layout_marginStart="@dimen/margin_8dp"
+      android:layout_marginEnd="@dimen/margin_8dp">
 
       <TextView
         android:layout_width="wrap_content"
@@ -117,14 +120,18 @@
         android:textColor="@color/black"
         android:textSize="@dimen/txt_size_16sp" />
 
-      <TextView
+      <Button
+        android:id="@+id/btn_see_all_departments"
+        style="@style/BorderlessButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_centerInParent="true"
         android:text="Ver todas"
+        android:textAllCaps="false"
         android:textColor="@color/appThemeColor"
-        android:textSize="@dimen/txt_size_14sp" />
+        android:textSize="@dimen/txt_size_14sp"
+        android:textStyle="normal" />
 
     </RelativeLayout>
 

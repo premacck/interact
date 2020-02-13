@@ -17,6 +17,6 @@ class AddressesFragment : BaseFragment() {
   override fun layoutRes(): Int = R.layout.fragment_addresses
 
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-    ctv_address_1.onClick { toast("Address 1") }
+    ctv_address_1.onClick { toast("Address 1 : $it") }
   }
 }

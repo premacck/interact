@@ -5,6 +5,7 @@ import android.graphics.drawable.Drawable
 import android.util.Log
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
 import android.widget.TextView
 import androidx.annotation.ColorRes
 import androidx.annotation.DrawableRes
@@ -20,7 +21,9 @@ import com.airbnb.epoxy.EpoxyController
 import com.airbnb.epoxy.EpoxyRecyclerView
 import com.airbnb.epoxy.OnModelBuildFinishedListener
 import com.jakewharton.rxbinding2.view.RxView
+import com.techmesystem.intera.base.component.RxSearch
 import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
 import java.util.concurrent.TimeUnit
 
@@ -132,3 +135,7 @@ fun EpoxyController.afterModelBuild(action: () -> Unit) {
     }
   })
 }
+
+fun EditText.searchOnTextChange(
+  disposable: CompositeDisposable, searchAction: (searchString: String) -> Unit
+) = disposable.add(RxSearch.addTo(this, subscribe = searchAction))

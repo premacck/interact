@@ -11,6 +11,7 @@
     android:layout_height="wrap_content"
     app:backNavigationDrawable="@drawable/ic_back_arrow"
     app:backgroundColor="@color/white"
+    app:elevation="@dimen/margin_0dp"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent"

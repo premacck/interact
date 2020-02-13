@@ -70,7 +70,8 @@ class CompareAndProveActivity : BaseActivity() {
   }
 
   private fun initView() {
-    item_product.showEdgeMarkers(false)
+    item_product.showLeftMarker(false)
+    item_product.showRightMarker(false)
     item_product.withProduct(product)
     tv_selection_count.text = product.selectionCount.toString()
     btn_favorite.isSelected = product.isFavorite

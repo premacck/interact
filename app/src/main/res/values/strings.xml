@@ -7,7 +7,7 @@
   <string name="associated_price_x">Associado\nR$ %1$s</string>
   <string name="additional_price_x">+ R$ %1$s InteraCash</string>
   <string name="not_associated_price_x">Não Associado\u000D\nR$ %1$s</string>
-  <string name="compare_and_prove">Compare E Comprove</string>
+  <string name="compare_and_prove">Compare e Comprove</string>
   <string name="not_associated">Não Associado</string>
   <string name="associated">Associado</string>
   <string name="cashback_x">R$%1$s de volta</string>
@@ -201,5 +201,21 @@
   <string name="sample_you_saved_with_this_purchase">Você economizou R$ 30,00 nesta compra</string>
   <string name="you_saved_x_with_this_purchase">Você economizou R$ %1$s nesta compra</string>
   <string name="total_amount_paid_">Valor total pago:</string>
+  <string name="what_are_you_looking_for">O que você procura</string>
+  <string name="most_searched_terms">Termos mais buscados</string>
+  <string name="all_departments">Todos os departamentos</string>
+  <string name="medicines">Medicamentos</string>
+  <string name="self_care">Autocuidado</string>
+  <string name="most_searched_products">Produtos mais buscados</string>
+  <string name="equivalent_products">Produtos Equivalentes</string>
+  <string name="allergy">Alergia</string>
+  <string name="filter">Filtros</string>
+  <string name="sort">Ordenar</string>
+  <string name="go_back">Voltar</string>
+  <string name="brands">Marcas</string>
+  <string name="types_of_medicines">Tipos de medicamentos</string>
+  <string name="price_range">Faixa de preços</string>
+  <string name="best_sellers">Mais vendidos</string>
+  <string name="order_by">Ordenar por</string>
 </resources>
 <!--\u000D-->

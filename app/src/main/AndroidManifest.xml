@@ -166,6 +166,24 @@
       android:theme="@style/AppTheme.NoActionBar"
       android:windowSoftInputMode="adjustResize" />
 
+    <activity
+      android:name=".search.ui.CategorySearchActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/AppTheme.NoActionBar"
+      android:windowSoftInputMode="adjustResize" />
+
+    <activity
+      android:name=".search.ui.DepartmentActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/AppTheme.NoActionBar"
+      android:windowSoftInputMode="adjustResize" />
+
+    <activity
+      android:name=".search.ui.ProductSearchActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/AppTheme.NoActionBar"
+      android:windowSoftInputMode="adjustResize" />
+
   </application>
 
 </manifest>

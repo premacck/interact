@@ -77,7 +77,8 @@
     app:layout_constraintBottom_toTopOf="@+id/cv_bottom_layout"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
-    app:showBars="false" />
+    app:showLeftBar="false"
+    app:showRightBar="false" />
 
   <View
     android:id="@+id/compare_and_prove_top_shadow"

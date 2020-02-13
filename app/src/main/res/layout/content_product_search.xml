@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+  <com.techmesystem.intera.base.view.InteraToolbar
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:backNavigationDrawable="@drawable/ic_back_arrow"
+    app:backgroundColor="@color/white"
+    app:elevation="@dimen/margin_0dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:toolbarElevation="0" />
+
+  <View
+    android:id="@+id/view_1"
+    android:layout_width="@dimen/margin_0dp"
+    android:layout_height="@dimen/margin_0dp"
+    android:background="@color/white"
+    app:layout_constraintBottom_toBottomOf="@id/tv_filter"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+  <TextView
+    android:id="@+id/tv_filter"
+    style="@style/Text16WrapWrap"
+    android:layout_width="@dimen/margin_0dp"
+    android:layout_marginStart="@dimen/margin_16dp"
+    android:layout_marginTop="@dimen/margin_16dp"
+    android:layout_marginEnd="@dimen/margin_16dp"
+    android:layout_marginBottom="@dimen/margin_16dp"
+    android:background="@drawable/bg_rounded_corners"
+    android:drawableEnd="@drawable/ic_filter_2"
+    android:foreground="@drawable/ripple_rect"
+    android:gravity="center"
+    android:paddingStart="@dimen/margin_16dp"
+    android:paddingTop="@dimen/margin_8dp"
+    android:paddingEnd="@dimen/margin_16dp"
+    android:paddingBottom="@dimen/margin_8dp"
+    android:stateListAnimator="@animator/scale_on_touch"
+    android:text="@string/filter"
+    app:layout_constraintBottom_toBottomOf="@id/view_1"
+    app:layout_constraintEnd_toStartOf="@+id/tv_sort"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="@id/view_1"
+    tools:ignore="UnusedAttribute" />
+
+  <TextView
+    android:id="@+id/tv_sort"
+    style="@style/Text16WrapWrap"
+    android:layout_width="@dimen/margin_0dp"
+    android:layout_marginTop="@dimen/margin_16dp"
+    android:layout_marginEnd="@dimen/margin_16dp"
+    android:layout_marginBottom="@dimen/margin_16dp"
+    android:background="@drawable/bg_rounded_corners"
+    android:drawableEnd="@drawable/ic_arrow_down_small"
+    android:foreground="@drawable/ripple_rect"
+    android:gravity="center"
+    android:paddingStart="@dimen/margin_16dp"
+    android:paddingTop="@dimen/margin_8dp"
+    android:paddingEnd="@dimen/margin_16dp"
+    android:paddingBottom="@dimen/margin_8dp"
+    android:stateListAnimator="@animator/scale_on_touch"
+    android:text="@string/sort"
+    app:layout_constraintBottom_toBottomOf="@id/view_1"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="@id/tv_filter"
+    app:layout_constraintTop_toTopOf="@id/view_1"
+    tools:ignore="UnusedAttribute" />
+
+  <com.airbnb.epoxy.EpoxyRecyclerView
+    android:id="@+id/erv_search_items"
+    android:layout_width="@dimen/margin_0dp"
+    android:layout_height="@dimen/margin_0dp"
+    android:background="@color/color_f9f7ec"
+    android:padding="@dimen/margin_10dp"
+    app:itemSpacing="@dimen/margin_10dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="@id/v_top_shadow"
+    tools:listitem="@layout/item_product" />
+
+  <View
+    android:id="@+id/v_top_shadow"
+    style="@style/ShadowBottom"
+    android:layout_marginStart="@dimen/margin_8dp"
+    android:layout_marginEnd="@dimen/margin_8dp"
+    android:elevation="@dimen/margin_10dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/view_1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

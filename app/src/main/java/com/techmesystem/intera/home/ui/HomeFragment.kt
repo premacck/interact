@@ -8,6 +8,9 @@ import com.techmesystem.intera.home.adapter.*
 import com.techmesystem.intera.home.mockdata.categoryALL
 import com.techmesystem.intera.home.mockdata.servicesALL
 import com.techmesystem.intera.profile.ui.ProductHistoryActivity
+import com.techmesystem.intera.search.mockdata.ALL_DEPARTMENT_LIST
+import com.techmesystem.intera.search.ui.CategorySearchActivity
+import com.techmesystem.intera.search.ui.DepartmentActivity
 import com.techmesystem.intera.util.onDebounceClick
 import kotlinx.android.synthetic.main.fragment_home.*
 import java.util.*
@@ -63,5 +66,9 @@ class HomeFragment : BaseFragment() {
     casmaticRecycler_ids?.adapter = casmaticProductAdapter
 
     ll_history?.onDebounceClick { ProductHistoryActivity.launch(context) }
+
+    tv_compare_and_prove?.onDebounceClick { CategorySearchActivity.launch(activity) }
+
+    btn_see_all_departments?.onDebounceClick { DepartmentActivity.launch(context, R.string.all_departments, ALL_DEPARTMENT_LIST) }
   }
 }
