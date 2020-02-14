@@ -9,6 +9,7 @@ import com.techmesystem.intera.home.mockdata.categoryALL
 import com.techmesystem.intera.home.mockdata.servicesALL
 import com.techmesystem.intera.profile.ui.ProductHistoryActivity
 import com.techmesystem.intera.search.mockdata.ALL_DEPARTMENT_LIST
+import com.techmesystem.intera.search.ui.BarcodeScannerActivity
 import com.techmesystem.intera.search.ui.CategorySearchActivity
 import com.techmesystem.intera.search.ui.DepartmentActivity
 import com.techmesystem.intera.util.onDebounceClick
@@ -70,5 +71,9 @@ class HomeFragment : BaseFragment() {
     tv_compare_and_prove?.onDebounceClick { CategorySearchActivity.launch(activity) }
 
     btn_see_all_departments?.onDebounceClick { DepartmentActivity.launch(context, R.string.all_departments, ALL_DEPARTMENT_LIST) }
+
+    barCodeIcon?.onDebounceClick { BarcodeScannerActivity.launch(context) }
+
+    searchIcon?.onDebounceClick {  }
   }
 }

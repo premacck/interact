@@ -217,5 +217,12 @@
   <string name="price_range">Faixa de preços</string>
   <string name="best_sellers">Mais vendidos</string>
   <string name="order_by">Ordenar por</string>
+  <string name="enter_barcode">Digite código de barras</string>
+  <string name="scan_results">Resultados da verificação</string>
+  <string name="not_found">Não encontrado</string>
+  <string name="okay">OK</string>
+  <string name="hint_enter_barcode">000 000 000 000 000 000 000 000</string>
+  <string name="search">Buscar</string>
+  <string name="position_the_camera_over_the_code">Posicione a câmera sobre o código</string>
 </resources>
 <!--\u000D-->

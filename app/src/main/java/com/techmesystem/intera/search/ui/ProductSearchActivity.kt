@@ -79,7 +79,7 @@ class ProductSearchActivity : BaseActivity(), FilterContainer {
   }
 
   private fun openSortPage() {
-    val sortFragment = SortFragment()
+    val sortFragment = SortFragment.newInstance(if (filterFacets.sortId == 0) R.id.rb_1 else filterFacets.sortId)
     supportFragmentManager.beginTransaction().replace(R.id.fl_product_search_drawer, sortFragment, sortFragment.TAG).commit()
   }
 
@@ -124,6 +124,7 @@ class ProductSearchActivity : BaseActivity(), FilterContainer {
   }
 
   override fun onSortClick(@IdRes viewId: Int) {
-
+    setSelectedValue(viewId)
+    dl_product_search?.closeEnd()
   }
 }

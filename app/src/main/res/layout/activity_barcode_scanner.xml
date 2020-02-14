@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:background="@color/black">
+
+  <me.dm7.barcodescanner.zbar.ZBarScannerView
+    android:id="@+id/bar_code_scanner"
+    android:layout_width="@dimen/margin_0dp"
+    android:layout_height="@dimen/margin_0dp"
+    app:layout_constraintBottom_toBottomOf="@id/anchor_bottom"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+  <TextView
+    style="@style/Text14WrapWrap"
+    android:text="@string/position_the_camera_over_the_code"
+    android:textColor="@color/white"
+    app:layout_constraintBottom_toTopOf="@id/v_bottom_view"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.8" />
+
+  <View
+    android:id="@+id/anchor_bottom"
+    android:layout_width="@dimen/margin_1dp"
+    android:layout_height="@dimen/margin_10dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="@id/v_bottom_view" />
+
+  <View
+    android:id="@+id/v_bottom_view"
+    android:layout_width="@dimen/margin_0dp"
+    android:layout_height="@dimen/margin_0dp"
+    android:background="@drawable/bg_bottom_sheet"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHeight_percent="0.3"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="1" />
+
+  <com.techmesystem.intera.base.view.InteraToolbar
+    android:id="@+id/toolbar"
+    android:layout_width="@dimen/margin_0dp"
+    android:layout_height="wrap_content"
+    app:backNavigationDrawable="@drawable/ic_back_arrow"
+    app:backgroundColor="@color/white"
+    app:elevation="@dimen/margin_0dp"
+    app:layout_constraintEnd_toEndOf="@id/v_bottom_view"
+    app:layout_constraintStart_toStartOf="@id/v_bottom_view"
+    app:layout_constraintTop_toBottomOf="@id/anchor_bottom"
+    app:navigationIcon="@drawable/ic_back_arrow"
+    app:toolbarTitle="@string/compare_and_prove" />
+
+  <TextView
+    android:id="@+id/tv_enter_barcode"
+    style="@style/Text14MatchWrap"
+    android:layout_marginStart="@dimen/margin_16dp"
+    android:layout_marginEnd="@dimen/margin_16dp"
+    android:background="@drawable/ripple_bg_rounded_corners"
+    android:padding="@dimen/margin_16dp"
+    android:stateListAnimator="@animator/scale_on_touch"
+    android:text="@string/enter_barcode"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="@id/v_bottom_view"
+    app:layout_constraintStart_toStartOf="@id/v_bottom_view"
+    app:layout_constraintTop_toBottomOf="@+id/toolbar"
+    app:layout_constraintVertical_bias="0.35" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

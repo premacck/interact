@@ -45,7 +45,7 @@ class DepartmentActivity : BaseActivity(), DepartmentController.Listener {
 
   private fun initListeners() {
     et_search.searchOnTextChange(disposable) { controller.filterBy(it) }
-    btn_scan_bar_code.onDebounceClick { }
+    btn_scan_bar_code.onDebounceClick { BarcodeScannerActivity.launch(this) }
     btn_search.onDebounceClick { }
   }
 
